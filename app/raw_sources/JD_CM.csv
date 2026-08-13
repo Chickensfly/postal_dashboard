@@ -1,0 +1,370 @@
+country_lc,country_en,country_code,postal_code,region1_lc,region1_en,region2_lc,region2_en,region3_lc,region3_en,timezone,utc,latitude,longitude
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Djerem,Djerem,Ngaoundal,Ngaoundal,Africa/Douala,UTC +1.0,6.31884978130668,13.1072440469312
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Djerem,Djerem,Tibati,Tibati,Africa/Douala,UTC +1.0,6.53784919956518,12.546356004948
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Faro et Déo,Faro et Déo,Galim Tignère,Galim Tignère,Africa/Douala,UTC +1.0,7.13558295120747,12.3844690329057
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Faro et Déo,Faro et Déo,Mayo Baléo,Mayo Baléo,Africa/Douala,UTC +1.0,7.65855019394117,12.2800617303911
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Faro et Déo,Faro et Déo,Tignère,Tignère,Africa/Douala,UTC +1.0,7.39963663691201,12.7706190326859
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mayo Banyo,Mayo Banyo,Bankim,Bankim,Africa/Douala,UTC +1.0,6.27118010823698,11.4667606668593
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mayo Banyo,Mayo Banyo,Banyo,Banyo,Africa/Douala,UTC +1.0,6.77890030996936,11.9057320533211
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mayo Banyo,Mayo Banyo,Mayo Darlé,Mayo Darlé,Africa/Douala,UTC +1.0,6.50192516042054,11.6635514447421
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mbéré,Mbéré,Dir,Dir,Africa/Douala,UTC +1.0,6.34009619519064,13.8062133979341
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mbéré,Mbéré,Djohong,Djohong,Africa/Douala,UTC +1.0,6.92501718767002,14.8703223445541
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Mbéré,Mbéré,Meiganga,Meiganga,Africa/Douala,UTC +1.0,6.4629181287331,14.4873332283705
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Belel,Belel,Africa/Douala,UTC +1.0,7.06241901498577,14.4017928374618
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Martap,Martap,Africa/Douala,UTC +1.0,7.16958212667134,13.2323948640359
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Mbé,Mbé,Africa/Douala,UTC +1.0,7.77814113873258,13.562702631324
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Nganha,Nganha,Africa/Douala,UTC +1.0,7.45598973505623,13.9549453237791
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Ngaoundéré 1,Ngaoundéré 1,Africa/Douala,UTC +1.0,7.29941093924539,13.6018284991298
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Ngaoundéré 2,Ngaoundéré 2,Africa/Douala,UTC +1.0,7.40247594314325,13.770810563945
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Ngaoundéré 3,Ngaoundéré 3,Africa/Douala,UTC +1.0,7.50023843391533,13.6294022568817
+Cameroon,Cameroon,CM,,Adamaoua,Adamaoua,Vina,Vina,Nyambaka,Nyambaka,Africa/Douala,UTC +1.0,6.94913049219292,13.8405786222517
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Bibé,Bibé,Africa/Douala,UTC +1.0,4.84465872180985,12.8595755915765
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Lembé Yézoum,Lembé Yézoum,Africa/Douala,UTC +1.0,4.2828837953887,12.2018596770004
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Mbandjock,Mbandjock,Africa/Douala,UTC +1.0,4.4452623741696,11.8935135489563
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Minta,Minta,Africa/Douala,UTC +1.0,4.68656995530355,13.0025853727918
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Nanga Eboko,Nanga Eboko,Africa/Douala,UTC +1.0,4.76796341943195,12.4825778049014
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Nkoteng,Nkoteng,Africa/Douala,UTC +1.0,4.51418268029575,12.1821030979269
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Nsem,Nsem,Africa/Douala,UTC +1.0,5.04386258938609,12.8988228654545
+Cameroon,Cameroon,CM,,Centre,Centre,Haute Sanaga,Haute Sanaga,Nsem,Nsem,Africa/Douala,UTC +1.0,5.27200304200535,12.7810561304094
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Batchenga,Batchenga,Africa/Douala,UTC +1.0,4.27866814909482,11.6477560720307
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Ebebda,Ebebda,Africa/Douala,UTC +1.0,4.29395357785017,11.3112752182499
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Elig Mfomo,Elig Mfomo,Africa/Douala,UTC +1.0,4.16490361602109,11.3196476066372
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Evodoula,Evodoula,Africa/Douala,UTC +1.0,4.12047197790243,11.1980693237214
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Lobo,Lobo,Africa/Douala,UTC +1.0,3.88396949595169,11.2429103956456
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Monatelé,Monatelé,Africa/Douala,UTC +1.0,4.22546961893923,11.2358993763922
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Obala,Obala,Africa/Douala,UTC +1.0,4.1306713407353,11.4958574302462
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Okola,Okola,Africa/Douala,UTC +1.0,4.00241100735823,11.3412719511573
+Cameroon,Cameroon,CM,,Centre,Centre,Lekié,Lekié,Sa'a,Sa'a,Africa/Douala,UTC +1.0,4.35548703397071,11.4457662718938
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Bafia,Bafia,Africa/Douala,UTC +1.0,4.76192986155935,11.2381650302461
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Bokito,Bokito,Africa/Douala,UTC +1.0,4.47552219390768,11.1039151499693
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Deuk,Deuk,Africa/Douala,UTC +1.0,5.02729276425248,11.1723617768452
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Kiiki,Kiiki,Africa/Douala,UTC +1.0,4.71355820638749,11.1661812906623
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Kon-Yambetta,Kon-Yambetta,Africa/Douala,UTC +1.0,4.83091013725915,11.0913494195442
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Makénéné,Makénéné,Africa/Douala,UTC +1.0,4.86544457481492,10.6690281175994
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Ndikiniméki,Ndikiniméki,Africa/Douala,UTC +1.0,4.6778147381539,10.6898275158239
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Ntoukou,Ntoukou,Africa/Douala,UTC +1.0,4.65187653422295,10.8910852899337
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Inoubou,Mbam et Inoubou,Ombessa,Ombessa,Africa/Douala,UTC +1.0,4.62126046515612,11.2988496252397
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Kim,Mbam et Kim,Mbangassina,Mbangassina,Africa/Douala,UTC +1.0,4.61402533486809,11.4207366712529
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Kim,Mbam et Kim,Ngambé Tikar,Ngambé Tikar,Africa/Douala,UTC +1.0,5.71478425036013,11.6485185689197
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Kim,Mbam et Kim,Ngoro,Ngoro,Africa/Douala,UTC +1.0,5.03018790160283,11.3981720664039
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Kim,Mbam et Kim,Ntui,Ntui,Africa/Douala,UTC +1.0,4.67480838061216,11.6570346401605
+Cameroon,Cameroon,CM,,Centre,Centre,Mbam et Kim,Mbam et Kim,Yoko,Yoko,Africa/Douala,UTC +1.0,5.46679442099065,12.2428769167507
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Afanloum,Afanloum,Africa/Douala,UTC +1.0,4.1472908234419,12.0826741143381
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Assamba,Assamba,Africa/Douala,UTC +1.0,3.99941506356892,12.0412917646136
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Awaé,Awaé,Africa/Douala,UTC +1.0,3.91402406309476,11.8601520148952
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Edzendouan,Edzendouan,Africa/Douala,UTC +1.0,4.20995229153796,11.7422033829553
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Esse,Esse,Africa/Douala,UTC +1.0,4.10220434378361,11.8762582481374
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Mfou,Mfou,Africa/Douala,UTC +1.0,3.69292127238581,11.628392319137
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Nlolofamba,Nlolofamba,Africa/Douala,UTC +1.0,3.84368388872649,11.7036339908638
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Afamba,Mefou et Afamba,Soa,Soa,Africa/Douala,UTC +1.0,4.00561121027189,11.6225339927355
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Akono,Mefou et Akono,Akono,Akono,Africa/Douala,UTC +1.0,3.48907338647786,11.2992728562735
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Akono,Mefou et Akono,Bikok,Bikok,Africa/Douala,UTC +1.0,3.54643813282093,11.427093159442
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Akono,Mefou et Akono,Mbankomo,Mbankomo,Africa/Douala,UTC +1.0,3.7725251003654,11.3581657818891
+Cameroon,Cameroon,CM,,Centre,Centre,Mefou et Akono,Mefou et Akono,Ngoumou,Ngoumou,Africa/Douala,UTC +1.0,3.63100804434541,11.2984621602473
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 1,Yaoundé 1,Africa/Douala,UTC +1.0,3.95496288773722,11.5398321107291
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 2,Yaoundé 2,Africa/Douala,UTC +1.0,3.91167435207486,11.4892516607242
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 3,Yaoundé 3,Africa/Douala,UTC +1.0,3.79254992044682,11.4893728517109
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 4,Yaoundé 4,Africa/Douala,UTC +1.0,3.81154078420347,11.5329089814799
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 5,Yaoundé 5,Africa/Douala,UTC +1.0,3.88897063405301,11.5532807725702
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 6,Yaoundé 6,Africa/Douala,UTC +1.0,3.86315385269838,11.4698450676394
+Cameroon,Cameroon,CM,,Centre,Centre,Mfoundi,Mfoundi,Yaoundé 7,Yaoundé 7,Africa/Douala,UTC +1.0,3.95019605336965,11.4955434872699
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Biyouha,Biyouha,Africa/Douala,UTC +1.0,3.80260823610103,10.7194764171617
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Bondjock,Bondjock,Africa/Douala,UTC +1.0,3.68295301616034,11.1193146863702
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Bot Makak,Bot Makak,Africa/Douala,UTC +1.0,4.0199864480729,11.0252678312799
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Dibang,Dibang,Africa/Douala,UTC +1.0,3.97287783043184,10.7561905382244
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Eséka,Eséka,Africa/Douala,UTC +1.0,3.63749283433436,10.8311752082464
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Makak,Makak,Africa/Douala,UTC +1.0,3.54590481339633,11.0511848097
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Matomb,Matomb,Africa/Douala,UTC +1.0,3.81859104258838,11.077138270686
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Messondo,Messondo,Africa/Douala,UTC +1.0,3.57255457766389,10.4944223845222
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Ngog Mapubi,Ngog Mapubi,Africa/Douala,UTC +1.0,3.91440728975156,10.9087441147623
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Kéllé,Nyong et Kéllé,Nguibassal,Nguibassal,Africa/Douala,UTC +1.0,4.0972163570825,11.0847280860944
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Mfoumou,Nyong et Mfoumou,Akonolinga,Akonolinga,Africa/Douala,UTC +1.0,3.85814543522436,12.3252468741383
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Mfoumou,Nyong et Mfoumou,Ayos,Ayos,Africa/Douala,UTC +1.0,4.10721152915155,12.5664535733234
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Mfoumou,Nyong et Mfoumou,Endom,Endom,Africa/Douala,UTC +1.0,3.48167600534897,12.0699990114281
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Mfoumou,Nyong et Mfoumou,Mengang,Mengang,Africa/Douala,UTC +1.0,3.85787859785856,12.1127806321247
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et Mfoumou,Nyong et Mfoumou,Nyakokombo,Nyakokombo,Africa/Douala,UTC +1.0,4.06631726815956,12.7297109167147
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Akoéman,Akoéman,Africa/Douala,UTC +1.0,3.26787997890225,11.5902673157042
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Dzeng,Dzeng,Africa/Douala,UTC +1.0,3.67491323943961,11.842468870676
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Mbalmayo,Mbalmayo,Africa/Douala,UTC +1.0,3.49338382341891,11.5586351500826
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Mengueme,Mengueme,Africa/Douala,UTC +1.0,3.26318513500957,11.3795232753841
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Ngomedzap,Ngomedzap,Africa/Douala,UTC +1.0,3.31936239189199,11.2071691642839
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Nkolmetet,Nkolmetet,Africa/Douala,UTC +1.0,3.44798300381159,11.7627640137556
+Cameroon,Cameroon,CM,,Centre,Centre,Nyong et So'o,Nyong et So'o,Nkolmetet,Nkolmetet,Africa/Douala,UTC +1.0,3.53565755805353,11.8111306940307
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Gari Gombo,Gari Gombo,Africa/Douala,UTC +1.0,3.70439970636679,14.8881029975732
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Moloundou,Moloundou,Africa/Douala,UTC +1.0,2.23576214287046,15.4441328360507
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Moloundou,Moloundou,Africa/Douala,UTC +1.0,2.55549910254455,16.0762931763347
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Salapoumbé,Salapoumbé,Africa/Douala,UTC +1.0,2.69755722608612,15.3445544947788
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Salapoumbé,Salapoumbé,Africa/Douala,UTC +1.0,2.79795252798731,16.0635792074425
+Cameroon,Cameroon,CM,,Est,Est,Boumba et Ngoko,Boumba et Ngoko,Yokadouma,Yokadouma,Africa/Douala,UTC +1.0,3.15714038105935,15.0919829352864
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Abong Mbang,Abong Mbang,Africa/Douala,UTC +1.0,3.89237629197644,13.2785368162563
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Atok,Atok,Africa/Douala,UTC +1.0,3.93230260838465,12.7923921271725
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Dimako,Dimako,Africa/Douala,UTC +1.0,4.35064092457671,13.617904856526
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Dja,Dja,Africa/Douala,UTC +1.0,3.60275155895699,13.7889355675208
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Doumé,Doumé,Africa/Douala,UTC +1.0,4.34785264377245,13.4476868714479
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Doumétang,Doumétang,Africa/Douala,UTC +1.0,4.2127941946625,13.2580576682949
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Lomié,Lomié,Africa/Douala,UTC +1.0,3.1573988506072,13.5389207950759
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Mboma,Mboma,Africa/Douala,UTC +1.0,4.20255929314745,12.9315803515791
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Mbouanz,Mbouanz,Africa/Douala,UTC +1.0,4.10807595422658,12.9698200194648
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Messamena,Messamena,Africa/Douala,UTC +1.0,3.63451077198453,12.8938323417269
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Messok,Messok,Africa/Douala,UTC +1.0,3.08042209263615,14.18917435578
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Ngoïla,Ngoïla,Africa/Douala,UTC +1.0,2.53022767449253,14.1014683781664
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Nguélémendouga,Nguélémendouga,Africa/Douala,UTC +1.0,4.4182602427011,12.9807096688516
+Cameroon,Cameroon,CM,,Est,Est,Haut Nyong,Haut Nyong,Somalomo,Somalomo,Africa/Douala,UTC +1.0,3.3400289399906,12.9728350992117
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Batouri,Batouri,Africa/Douala,UTC +1.0,4.48151850430071,14.413090009156
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Bombé,Bombé,Africa/Douala,UTC +1.0,4.30508255915292,14.9690452339084
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Kétté,Kétté,Africa/Douala,UTC +1.0,4.80454699789058,14.528935814592
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Mbang,Mbang,Africa/Douala,UTC +1.0,3.986932356706,14.2345072522453
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Mbotoro,Mbotoro,Africa/Douala,UTC +1.0,5.12334165060708,14.5701063229114
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Ndélélé,Ndélélé,Africa/Douala,UTC +1.0,4.06101105908301,14.8463331149167
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Ndem Nam,Ndem Nam,Africa/Douala,UTC +1.0,4.20240892227167,13.8304036318355
+Cameroon,Cameroon,CM,,Est,Est,Kadey,Kadey,Ndem Nam,Ndem Nam,Africa/Douala,UTC +1.0,4.41366157866673,13.9752716423335
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Bélabo,Bélabo,Africa/Douala,UTC +1.0,5.15132603385594,13.4067033142355
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Bertoua 1,Bertoua 1,Africa/Douala,UTC +1.0,4.55647277184384,13.7009734350476
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Bertoua 2,Bertoua 2,Africa/Douala,UTC +1.0,4.5823668798463,13.7803461562047
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Bétaré Oya,Bétaré Oya,Africa/Douala,UTC +1.0,5.64656853680554,13.8005132866895
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Diang,Diang,Africa/Douala,UTC +1.0,4.63161198033638,13.4219285243613
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Garoua Boulaî,Garoua Boulaî,Africa/Douala,UTC +1.0,5.75829444457305,14.4644421673349
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Mandjou,Mandjou,Africa/Douala,UTC +1.0,4.83478145041014,13.9001947985569
+Cameroon,Cameroon,CM,,Est,Est,Lom et Djerem,Lom et Djerem,Ngoura,Ngoura,Africa/Douala,UTC +1.0,4.95996138655877,14.2072913723964
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Bogo,Bogo,Africa/Douala,UTC +1.0,10.7720116333505,14.701907019736
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Dargala,Dargala,Africa/Douala,UTC +1.0,10.5527641761991,14.5949433811903
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Gasawa,Gasawa,Africa/Douala,UTC +1.0,10.5959881249801,14.1367868815782
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Maroua 1,Maroua 1,Africa/Douala,UTC +1.0,10.5616690215687,14.3637479751032
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Maroua 2,Maroua 2,Africa/Douala,UTC +1.0,10.6273297879843,14.3130606111319
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Maroua 3,Maroua 3,Africa/Douala,UTC +1.0,10.8147417730896,14.4510573485852
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Méri,Méri,Africa/Douala,UTC +1.0,10.7418244523518,14.2277506752176
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Ndoukoula,Ndoukoula,Africa/Douala,UTC +1.0,10.3838018258855,14.089647394756
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Diamaré,Diamaré,Pété,Pété,Africa/Douala,UTC +1.0,10.9808927052925,14.5760360330955
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Blangoua,Blangoua,Africa/Douala,UTC +1.0,12.7310397881887,14.4995379614556
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Darrak,Darrak,Africa/Douala,UTC +1.0,12.9485269743349,14.3274728213527
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Goulfey,Goulfey,Africa/Douala,UTC +1.0,12.4676073205019,14.7595050906036
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Goulfey,Goulfey,Africa/Douala,UTC +1.0,12.6875042980817,14.7143455571315
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Hilé Alifa,Hilé Alifa,Africa/Douala,UTC +1.0,12.5934179364703,14.2910986817142
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Kousséri,Kousséri,Africa/Douala,UTC +1.0,12.0923832306444,14.9525073160427
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Logone Birni,Logone Birni,Africa/Douala,UTC +1.0,11.8566175443223,14.8962819504558
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Makari,Makari,Africa/Douala,UTC +1.0,12.3834774173653,14.6154095198197
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Waza,Waza,Africa/Douala,UTC +1.0,11.4433532602552,14.7452726381149
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Logone et Chari,Logone et Chari,Zina,Zina,Africa/Douala,UTC +1.0,11.1733432307348,14.9888420543095
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Datchéka,Datchéka,Africa/Douala,UTC +1.0,10.0329542910426,15.1339083157256
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Gobo,Gobo,Africa/Douala,UTC +1.0,10.0154328161762,15.5025884320944
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Guéré,Guéré,Africa/Douala,UTC +1.0,10.1005637835763,15.3738486475832
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Kalfou,Kalfou,Africa/Douala,UTC +1.0,10.3231584834526,15.080641937319
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Kar Hay,Kar Hay,Africa/Douala,UTC +1.0,10.1470418950565,15.0433040527168
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Kay Kay,Kay Kay,Africa/Douala,UTC +1.0,10.6598268428215,14.9743220638823
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Maga,Maga,Africa/Douala,UTC +1.0,10.9008448019779,14.9316455336877
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Porhi,Porhi,Africa/Douala,UTC +1.0,10.2623915835866,14.9359854007749
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Tchatibali,Tchatibali,Africa/Douala,UTC +1.0,10.0381669139052,14.9421871110804
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Vélé,Vélé,Africa/Douala,UTC +1.0,10.4852084072772,15.0837427630394
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Wina,Wina,Africa/Douala,UTC +1.0,10.1035361346415,15.2344378296428
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Danay,Mayo Danay,Yagoua,Yagoua,Africa/Douala,UTC +1.0,10.2567995538794,15.2746059471681
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Guidiguis,Guidiguis,Africa/Douala,UTC +1.0,10.1058235001805,14.7020034497619
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Kaele,Kaele,Africa/Douala,UTC +1.0,10.1632925789526,14.4447096531737
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Mindif,Mindif,Africa/Douala,UTC +1.0,10.4214673441063,14.5382925120415
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Montouroua,Montouroua,Africa/Douala,UTC +1.0,10.2535463921399,14.1917896196768
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Moulvouday,Moulvouday,Africa/Douala,UTC +1.0,10.3844871116656,14.8130636968409
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Kani,Mayo Kani,Taîbong,Taîbong,Africa/Douala,UTC +1.0,10.0516222325561,14.7970539405133
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Sava,Mayo Sava,Kolofata,Kolofata,Africa/Douala,UTC +1.0,11.1510780450907,14.0527980885395
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Sava,Mayo Sava,Mora,Mora,Africa/Douala,UTC +1.0,11.1242951927314,14.2954462667293
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Sava,Mayo Sava,Tokombéré,Tokombéré,Africa/Douala,UTC +1.0,10.8837339627966,14.159226021138
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Bourrah,Bourrah,Africa/Douala,UTC +1.0,10.2756290291654,13.6166508153301
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Hina,Hina,Africa/Douala,UTC +1.0,10.3693652545716,13.8938042394685
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Koza,Koza,Africa/Douala,UTC +1.0,10.8774030105004,13.9542046072774
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Mayo Moskota,Mayo Moskota,Africa/Douala,UTC +1.0,11.0148736985364,13.9124058083341
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Mogodé,Mogodé,Africa/Douala,UTC +1.0,10.5656778646797,13.7058930251262
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Mokolo,Mokolo,Africa/Douala,UTC +1.0,10.7431466184483,13.873005862869
+Cameroon,Cameroon,CM,,Extrême-Nord,Extrême-Nord,Mayo Tsanaga,Mayo Tsanaga,Soulédé Roua,Soulédé Roua,Africa/Douala,UTC +1.0,10.789657925106,14.0085946105487
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Baré Bakem,Baré Bakem,Africa/Douala,UTC +1.0,4.99884664061394,10.0373213628388
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Bonaléa,Bonaléa,Africa/Douala,UTC +1.0,4.34563007329207,9.68494452424095
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Dibombari,Dibombari,Africa/Douala,UTC +1.0,4.19648899464619,9.60489105313805
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Loum,Loum,Africa/Douala,UTC +1.0,4.72188967098939,9.84594226619891
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Manjo,Manjo,Africa/Douala,UTC +1.0,4.86825928841128,9.81467510698897
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Mbanga,Mbanga,Africa/Douala,UTC +1.0,4.4315379109252,9.57873606858393
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Melong,Melong,Africa/Douala,UTC +1.0,5.15769497948946,9.88746086645035
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Mombo,Mombo,Africa/Douala,UTC +1.0,4.57025678042506,9.59749856189016
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Njombé Penja,Njombé Penja,Africa/Douala,UTC +1.0,4.60976263514797,9.70905683865288
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Nkongsamba 1,Nkongsamba 1,Africa/Douala,UTC +1.0,4.93669060163059,10.0128619711727
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Nkongsamba 2,Nkongsamba 2,Africa/Douala,UTC +1.0,4.99144144668383,9.93052330011031
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Nkongsamba 3,Nkongsamba 3,Africa/Douala,UTC +1.0,4.94764663336917,9.92757812806933
+Cameroon,Cameroon,CM,,Littoral,Littoral,Moungo,Moungo,Nlonako,Nlonako,Africa/Douala,UTC +1.0,4.85223525809023,9.96070916520355
+Cameroon,Cameroon,CM,,Littoral,Littoral,Nkam,Nkam,Baré,Baré,Africa/Douala,UTC +1.0,4.78802040366015,10.1221490501924
+Cameroon,Cameroon,CM,,Littoral,Littoral,Nkam,Nkam,Nkondjock,Nkondjock,Africa/Douala,UTC +1.0,4.83912830258748,10.2589963770893
+Cameroon,Cameroon,CM,,Littoral,Littoral,Nkam,Nkam,Nord Makombé,Nord Makombé,Africa/Douala,UTC +1.0,4.9561086698092,10.3581793898936
+Cameroon,Cameroon,CM,,Littoral,Littoral,Nkam,Nkam,Yabassi,Yabassi,Africa/Douala,UTC +1.0,4.40420361028166,10.0066592865999
+Cameroon,Cameroon,CM,,Littoral,Littoral,Nkam,Nkam,Yingui,Yingui,Africa/Douala,UTC +1.0,4.41816060143017,10.3378140927705
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Dibamba,Dibamba,Africa/Douala,UTC +1.0,4.01950236353126,10.0598456731014
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Dizangué,Dizangué,Africa/Douala,UTC +1.0,3.83044982614352,9.91201827983098
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Douala 6,Douala 6,Africa/Douala,UTC +1.0,3.83480804190782,9.69256569150132
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Edéa 1,Edéa 1,Africa/Douala,UTC +1.0,3.53482064866794,10.0199807445528
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Edéa 2,Edéa 2,Africa/Douala,UTC +1.0,4.0126320865058,10.2911766629305
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Massok Song Loulou,Massok Song Loulou,Africa/Douala,UTC +1.0,4.12925749437247,10.6355596028757
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Mouanko,Mouanko,Africa/Douala,UTC +1.0,3.63354844710008,9.82721903062304
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Ndom,Ndom,Africa/Douala,UTC +1.0,4.42865112787221,10.849554036665
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Ngambé,Ngambé,Africa/Douala,UTC +1.0,4.31733064026198,10.6247459150183
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Ngwei,Ngwei,Africa/Douala,UTC +1.0,3.77647245338382,10.319761410699
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Nyanon,Nyanon,Africa/Douala,UTC +1.0,4.21279683794801,10.9279142066258
+Cameroon,Cameroon,CM,,Littoral,Littoral,Sanaga Maritime,Sanaga Maritime,Pouma,Pouma,Africa/Douala,UTC +1.0,3.93293021856362,10.5640014719713
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 1,Douala 1,Africa/Douala,UTC +1.0,4.05922554295472,9.69589012485441
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 2,Douala 2,Africa/Douala,UTC +1.0,3.97794894260807,9.86377320239604
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 2,Douala 2,Africa/Douala,UTC +1.0,3.97836518906561,9.75291047093386
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 3,Douala 3,Africa/Douala,UTC +1.0,4.0561128041867,9.78288394505283
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 4,Douala 4,Africa/Douala,UTC +1.0,4.01689852649155,9.52612433066148
+Cameroon,Cameroon,CM,,Littoral,Littoral,Wouri,Wouri,Douala 5,Douala 5,Africa/Douala,UTC +1.0,4.14362087369621,9.7904026017517
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Bachéo,Bachéo,Africa/Douala,UTC +1.0,9.7649256480258,13.4014852729406
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Bardanké,Bardanké,Africa/Douala,UTC +1.0,9.35408761634324,13.1921859854583
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Bibémi,Bibémi,Africa/Douala,UTC +1.0,9.32713645387954,13.963886693918
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Dembo,Dembo,Africa/Douala,UTC +1.0,9.77963561916983,13.5700985868112
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Demsa,Demsa,Africa/Douala,UTC +1.0,9.48779235192229,13.3295105844364
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Garoua 1,Garoua 1,Africa/Douala,UTC +1.0,9.32762291438299,13.4743758113398
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Garoua 2,Garoua 2,Africa/Douala,UTC +1.0,9.36567437422975,13.5296396040046
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Garoua 3,Garoua 3,Africa/Douala,UTC +1.0,9.26955106822276,13.5497080272954
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Lagdo,Lagdo,Africa/Douala,UTC +1.0,8.75720666584294,13.6061444318479
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Pitoa,Pitoa,Africa/Douala,UTC +1.0,9.46411208504452,13.7266812248351
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Tchéboa,Tchéboa,Africa/Douala,UTC +1.0,8.95569037851406,13.3746284986919
+Cameroon,Cameroon,CM,,Nord,Nord,Bénoué,Bénoué,Touroua,Touroua,Africa/Douala,UTC +1.0,9.06965436370494,13.0350873562453
+Cameroon,Cameroon,CM,,Nord,Nord,Faro,Faro,Béka,Béka,Africa/Douala,UTC +1.0,8.5670697812139,12.6201313764749
+Cameroon,Cameroon,CM,,Nord,Nord,Faro,Faro,Kontcha,Kontcha,Africa/Douala,UTC +1.0,8.06372126180869,12.3964927019569
+Cameroon,Cameroon,CM,,Nord,Nord,Faro,Faro,Poli,Poli,Africa/Douala,UTC +1.0,8.17081571322347,12.9509998151586
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Louti,Mayo Louti,Figuil,Figuil,Africa/Douala,UTC +1.0,9.87720262287213,14.084870593392
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Louti,Mayo Louti,Guider,Guider,Africa/Douala,UTC +1.0,9.93050822612496,13.9321868679589
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Louti,Mayo Louti,Mayo Oulo,Mayo Oulo,Africa/Douala,UTC +1.0,9.97603361302409,13.666863906334
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Rey,Mayo Rey,Madingring,Madingring,Africa/Douala,UTC +1.0,8.24995592965358,15.0138690846636
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Rey,Mayo Rey,Rey Bouba,Rey Bouba,Africa/Douala,UTC +1.0,8.82128239828183,14.3664804001461
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Rey,Mayo Rey,Tcholliré,Tcholliré,Africa/Douala,UTC +1.0,8.02295106762383,14.1004217803531
+Cameroon,Cameroon,CM,,Nord,Nord,Mayo Rey,Mayo Rey,Touboro,Touboro,Africa/Douala,UTC +1.0,7.63178736613571,15.0356273803723
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Boyo,Boyo,Belo,Belo,Africa/Douala,UTC +1.0,6.17993747685787,10.3668155917555
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Boyo,Boyo,Bum,Bum,Africa/Douala,UTC +1.0,6.53400149930308,10.43137088165
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Boyo,Boyo,Fundong,Fundong,Africa/Douala,UTC +1.0,6.33925655002458,10.3560214450805
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Boyo,Boyo,Njinikom,Njinikom,Africa/Douala,UTC +1.0,6.22641774264746,10.2283071477261
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Jakiri,Jakiri,Africa/Douala,UTC +1.0,6.09681521581736,10.7032913354169
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Kumbo,Kumbo,Africa/Douala,UTC +1.0,6.22346117501675,10.7546661197496
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Mbven,Mbven,Africa/Douala,UTC +1.0,6.15898228687764,10.9245499505307
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Nkum,Nkum,Africa/Douala,UTC +1.0,6.31094725738748,10.7956885424887
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Noni,Noni,Africa/Douala,UTC +1.0,6.36433259599676,10.6180496113576
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Bui,Bui,Oku,Oku,Africa/Douala,UTC +1.0,6.20870377009091,10.5309360838946
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Donga Mantung,Donga Mantung,Ako,Ako,Africa/Douala,UTC +1.0,6.87485028509773,10.7211607244644
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Donga Mantung,Donga Mantung,Misaje,Misaje,Africa/Douala,UTC +1.0,6.70923777592534,10.574975991993
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Donga Mantung,Donga Mantung,Ndu,Ndu,Africa/Douala,UTC +1.0,6.40527024793145,10.9156356681317
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Donga Mantung,Donga Mantung,Nkambe,Nkambe,Africa/Douala,UTC +1.0,6.56114203233028,10.780635981438
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Donga Mantung,Donga Mantung,Nwa,Nwa,Africa/Douala,UTC +1.0,6.48201783190556,11.0719529909606
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Menchum,Menchum,Fungom,Fungom,Africa/Douala,UTC +1.0,6.63731376957425,10.0786715500161
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Menchum,Menchum,Furu Awa,Furu Awa,Africa/Douala,UTC +1.0,6.82575858191778,10.2417376243288
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Menchum,Menchum,Menchum Valley,Menchum Valley,Africa/Douala,UTC +1.0,6.42245656084987,9.89996991699384
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Menchum,Menchum,Wum,Wum,Africa/Douala,UTC +1.0,6.39265866102989,10.1394851542753
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Bafut,Bafut,Africa/Douala,UTC +1.0,6.16908315419556,10.0718959183408
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Bali,Bali,Africa/Douala,UTC +1.0,5.87752512339521,10.0528454289535
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Bamenda 1,Bamenda 1,Africa/Douala,UTC +1.0,5.93119550782034,10.2425217056783
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Bamenda 2,Bamenda 2,Africa/Douala,UTC +1.0,5.9966737938111,10.122276102397
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Bamenda 3,Bamenda 3,Africa/Douala,UTC +1.0,5.98699792812926,10.2410098543446
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Santa,Santa,Africa/Douala,UTC +1.0,5.79900628481998,10.1570774895307
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Mezam,Mezam,Tubah,Tubah,Africa/Douala,UTC +1.0,6.05249101995835,10.2920386701601
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Momo,Momo,Batibo,Batibo,Africa/Douala,UTC +1.0,5.82158572757469,9.92336776109183
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Momo,Momo,Mbeggwi,Mbeggwi,Africa/Douala,UTC +1.0,6.03097583280623,9.99065724270143
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Momo,Momo,Ngie,Ngie,Africa/Douala,UTC +1.0,5.974659171649,9.85939692845994
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Momo,Momo,Njikwa,Njikwa,Africa/Douala,UTC +1.0,6.13918782305224,9.86167844808501
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Momo,Momo,Widikum Menka,Widikum Menka,Africa/Douala,UTC +1.0,5.93150774966185,9.74135498991215
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Ngo Ketunjia,Ngo Ketunjia,Babessi,Babessi,Africa/Douala,UTC +1.0,6.05772368368123,10.50187520166
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Ngo Ketunjia,Ngo Ketunjia,Balikumbat,Balikumbat,Africa/Douala,UTC +1.0,5.88219257180414,10.3995875170398
+Cameroon,Cameroon,CM,,Nord-Ouest,Nord-Ouest,Ngo Ketunjia,Ngo Ketunjia,Ndop,Ndop,Africa/Douala,UTC +1.0,5.94338607120943,10.5225302659059
+Cameroon,Cameroon,CM,,Ouest,Ouest,Bamboutos,Bamboutos,Babadjou,Babadjou,Africa/Douala,UTC +1.0,5.69556370467706,10.1638633012131
+Cameroon,Cameroon,CM,,Ouest,Ouest,Bamboutos,Bamboutos,Batcham,Batcham,Africa/Douala,UTC +1.0,5.57272577726414,10.2003318296255
+Cameroon,Cameroon,CM,,Ouest,Ouest,Bamboutos,Bamboutos,Galim,Galim,Africa/Douala,UTC +1.0,5.73437756608438,10.4189971515994
+Cameroon,Cameroon,CM,,Ouest,Ouest,Bamboutos,Bamboutos,Mbouda,Mbouda,Africa/Douala,UTC +1.0,5.62501486085774,10.328865950125
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Bafang,Bafang,Africa/Douala,UTC +1.0,5.13070713435795,10.1672067915216
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Bakou,Bakou,Africa/Douala,UTC +1.0,5.02085550117688,10.1453695749784
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Bana,Bana,Africa/Douala,UTC +1.0,5.12401334849652,10.2914049319759
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Bandja,Bandja,Africa/Douala,UTC +1.0,5.26344265325327,10.223851054406
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Banka,Banka,Africa/Douala,UTC +1.0,5.20308697866148,10.195054177601
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Banwa,Banwa,Africa/Douala,UTC +1.0,5.07547482067558,10.0781536253301
+Cameroon,Cameroon,CM,,Ouest,Ouest,Haut Nkam,Haut Nkam,Kekem,Kekem,Africa/Douala,UTC +1.0,5.15482111209752,10.0688605344388
+Cameroon,Cameroon,CM,,Ouest,Ouest,Hauts Plateaux,Hauts Plateaux,Baham,Baham,Africa/Douala,UTC +1.0,5.31305014598285,10.3844691420697
+Cameroon,Cameroon,CM,,Ouest,Ouest,Hauts Plateaux,Hauts Plateaux,Bamendjou,Bamendjou,Africa/Douala,UTC +1.0,5.37790560052709,10.3145979351227
+Cameroon,Cameroon,CM,,Ouest,Ouest,Hauts Plateaux,Hauts Plateaux,Bangou,Bangou,Africa/Douala,UTC +1.0,5.22586776140555,10.3655931378756
+Cameroon,Cameroon,CM,,Ouest,Ouest,Hauts Plateaux,Hauts Plateaux,Batie,Batie,Africa/Douala,UTC +1.0,5.28928428203981,10.2903381444187
+Cameroon,Cameroon,CM,,Ouest,Ouest,Koung Khi,Koung Khi,Bandjoun,Bandjoun,Africa/Douala,UTC +1.0,5.42178830773607,10.4430850222337
+Cameroon,Cameroon,CM,,Ouest,Ouest,Koung Khi,Koung Khi,Bayangam,Bayangam,Africa/Douala,UTC +1.0,5.26431060126008,10.4663850385567
+Cameroon,Cameroon,CM,,Ouest,Ouest,Koung Khi,Koung Khi,Djemrem,Djemrem,Africa/Douala,UTC +1.0,5.32044222610196,10.5131849182242
+Cameroon,Cameroon,CM,,Ouest,Ouest,Koung Khi,Koung Khi,Poumegne,Poumegne,Africa/Douala,UTC +1.0,5.37658220845187,10.4331591694642
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Dschang,Dschang,Africa/Douala,UTC +1.0,5.42652091533894,10.0257893652748
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Fokoue,Fokoue,Africa/Douala,UTC +1.0,5.33225707483887,10.1241399522125
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Fongo Tongo,Fongo Tongo,Africa/Douala,UTC +1.0,5.54429628901316,10.0112712735816
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Nkong-Nkhi,Nkong-Nkhi,Africa/Douala,UTC +1.0,5.51997055277753,10.1102794021518
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Penka Michel,Penka Michel,Africa/Douala,UTC +1.0,5.44052958404767,10.23576331336
+Cameroon,Cameroon,CM,,Ouest,Ouest,Menoua,Menoua,Santchou,Santchou,Africa/Douala,UTC +1.0,5.29568572589133,9.97391612527128
+Cameroon,Cameroon,CM,,Ouest,Ouest,Mifi,Mifi,Bafoussam 1,Bafoussam 1,Africa/Douala,UTC +1.0,5.49802045679305,10.4905631870278
+Cameroon,Cameroon,CM,,Ouest,Ouest,Mifi,Mifi,Bafoussam 2,Bafoussam 2,Africa/Douala,UTC +1.0,5.55731313932294,10.4235551982687
+Cameroon,Cameroon,CM,,Ouest,Ouest,Mifi,Mifi,Bafoussam 3,Bafoussam 3,Africa/Douala,UTC +1.0,5.49829506816801,10.3597697510716
+Cameroon,Cameroon,CM,,Ouest,Ouest,Ndé,Ndé,Bangangté,Bangangté,Africa/Douala,UTC +1.0,5.12625563568224,10.6318182779932
+Cameroon,Cameroon,CM,,Ouest,Ouest,Ndé,Ndé,Bassamba,Bassamba,Africa/Douala,UTC +1.0,5.06087704316574,10.5626718981382
+Cameroon,Cameroon,CM,,Ouest,Ouest,Ndé,Ndé,Bazou,Bazou,Africa/Douala,UTC +1.0,5.05015714084016,10.4390641548159
+Cameroon,Cameroon,CM,,Ouest,Ouest,Ndé,Ndé,Tonga,Tonga,Africa/Douala,UTC +1.0,4.96422213804044,10.5810351174375
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Bangourain,Bangourain,Africa/Douala,UTC +1.0,5.89000125649559,10.7406687426518
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Foumban,Foumban,Africa/Douala,UTC +1.0,5.70621270916845,10.9352823605557
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Foumbot,Foumbot,Africa/Douala,UTC +1.0,5.4209733461481,10.6683936232374
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Kouoptamo,Kouoptamo,Africa/Douala,UTC +1.0,5.66447429711736,10.6060111724761
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Koutaba,Koutaba,Africa/Douala,UTC +1.0,5.65848004509057,10.7970327570686
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Magba,Magba,Africa/Douala,UTC +1.0,6.08660900446105,11.15196713861
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Malantouen,Malantouen,Africa/Douala,UTC +1.0,5.67953527147375,11.1546887214038
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Massangam,Massangam,Africa/Douala,UTC +1.0,5.31375768660442,10.9285966006701
+Cameroon,Cameroon,CM,,Ouest,Ouest,Noun,Noun,Njimom,Njimom,Africa/Douala,UTC +1.0,5.88989088014932,11.0162616877607
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Bengbis,Bengbis,Africa/Douala,UTC +1.0,3.31652404457781,12.504178836518
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Djoum,Djoum,Africa/Douala,UTC +1.0,2.56865776794692,12.8107686124442
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Meyomessala,Meyomessala,Africa/Douala,UTC +1.0,3.1053599887985,12.2678795097008
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Meyomessi,Meyomessi,Africa/Douala,UTC +1.0,2.76397908667783,12.2965486032409
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Mintom 2,Mintom 2,Africa/Douala,UTC +1.0,2.52166643875854,13.4176426132257
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Mintom 2,Mintom 2,Africa/Douala,UTC +1.0,2.83820634866678,13.0792043346668
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Oveng,Oveng,Africa/Douala,UTC +1.0,2.45584853961677,12.2910313597932
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Sangmélima,Sangmélima,Africa/Douala,UTC +1.0,2.91687515500491,11.9243635873163
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Zoétélé,Zoétélé,Africa/Douala,UTC +1.0,3.18904030258634,11.6873050786514
+Cameroon,Cameroon,CM,,Sud,Sud,Dja et Lobo,Dja et Lobo,Zoétélé,Zoétélé,Africa/Douala,UTC +1.0,3.27477610081277,11.8824706548929
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Biwong Bane,Biwong Bane,Africa/Douala,UTC +1.0,3.10716890229303,11.1069036305094
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Biwong Bulu,Biwong Bulu,Africa/Douala,UTC +1.0,2.8040373291021,11.5347977852279
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Ebolowa 1,Ebolowa 1,Africa/Douala,UTC +1.0,2.95059238136712,10.8923740793041
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Ebolowa 2,Ebolowa 2,Africa/Douala,UTC +1.0,2.71349838126909,11.2723515425029
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Efoulan,Efoulan,Africa/Douala,UTC +1.0,3.09082125744374,10.8092294341441
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Mengong,Mengong,Africa/Douala,UTC +1.0,2.9604315505987,11.4283302155866
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Mvangan,Mvangan,Africa/Douala,UTC +1.0,2.52147652012013,11.8875971668371
+Cameroon,Cameroon,CM,,Sud,Sud,Mvila,Mvila,Ngoulémakong,Ngoulémakong,Africa/Douala,UTC +1.0,3.08993120468285,11.484710917565
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Akom 2,Akom 2,Africa/Douala,UTC +1.0,2.8261499228168,10.4201374260709
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Bipindi,Bipindi,Africa/Douala,UTC +1.0,3.20275822877192,10.4338404902489
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Campo,Campo,Africa/Douala,UTC +1.0,2.42282970798389,10.1096678300054
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Kribi 1,Kribi 1,Africa/Douala,UTC +1.0,2.77882060464287,9.90082020116158
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Kribi 2,Kribi 2,Africa/Douala,UTC +1.0,3.03299004485509,9.97799121163805
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Lokoundje,Lokoundje,Africa/Douala,UTC +1.0,3.20156978236682,10.1149726584267
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Lolodorf,Lolodorf,Africa/Douala,UTC +1.0,3.27052344634089,10.6876563963361
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Mvengué,Mvengué,Africa/Douala,UTC +1.0,3.2729763023394,10.981194976461
+Cameroon,Cameroon,CM,,Sud,Sud,Océan,Océan,Nyé'été,Nyé'été,Africa/Douala,UTC +1.0,2.7334561273415,10.0906721471437
+Cameroon,Cameroon,CM,,Sud,Sud,Vallée du Ntem,Vallée du Ntem,Ambam,Ambam,Africa/Douala,UTC +1.0,2.47692961910156,11.247369607627
+Cameroon,Cameroon,CM,,Sud,Sud,Vallée du Ntem,Vallée du Ntem,Kyé Ossi,Kyé Ossi,Africa/Douala,UTC +1.0,2.23164345502988,11.2725701332064
+Cameroon,Cameroon,CM,,Sud,Sud,Vallée du Ntem,Vallée du Ntem,Ma'an,Ma'an,Africa/Douala,UTC +1.0,2.43294706012847,10.6743220393113
+Cameroon,Cameroon,CM,,Sud,Sud,Vallée du Ntem,Vallée du Ntem,Olamzé,Olamzé,Africa/Douala,UTC +1.0,2.21955873335021,10.9523039145917
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Buéa,Buéa,Africa/Douala,UTC +1.0,4.16496014172653,9.22488004231155
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Limbé 1,Limbé 1,Africa/Douala,UTC +1.0,4.04272526596898,9.24745222093865
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Limbé 2,Limbé 2,Africa/Douala,UTC +1.0,4.03686281011204,9.13556094646898
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Limbé 3,Limbé 3,Africa/Douala,UTC +1.0,3.98912247127954,9.25480205549558
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Muyuka,Muyuka,Africa/Douala,UTC +1.0,4.32916596006219,9.34039535368982
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,Tiko,Tiko,Africa/Douala,UTC +1.0,4.07523947773927,9.40742189042421
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Fako,Fako,West Coast,West Coast,Africa/Douala,UTC +1.0,4.18373905826926,9.04049422155074
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Koupé Manengouba,Koupé Manengouba,Bangem,Bangem,Africa/Douala,UTC +1.0,5.07772712534383,9.68116087318877
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Koupé Manengouba,Koupé Manengouba,Nguti,Nguti,Africa/Douala,UTC +1.0,5.264155221197,9.54382020320432
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Koupé Manengouba,Koupé Manengouba,Tombel,Tombel,Africa/Douala,UTC +1.0,4.85854695345747,9.60971037791615
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Lebialem,Lebialem,Alou,Alou,Africa/Douala,UTC +1.0,5.52534734539355,9.9098548327366
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Lebialem,Lebialem,Fontem,Fontem,Africa/Douala,UTC +1.0,5.44403729099666,9.85561912050908
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Lebialem,Lebialem,Wabane,Wabane,Africa/Douala,UTC +1.0,5.6563685562269,9.97760694516183
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Manyu,Manyu,Akwaya,Akwaya,Africa/Douala,UTC +1.0,6.13202222942941,9.45537029565742
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Manyu,Manyu,Eyumodjock,Eyumodjock,Africa/Douala,UTC +1.0,5.65052358940106,9.05034680559866
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Manyu,Manyu,Mamfé,Mamfé,Africa/Douala,UTC +1.0,5.57711138854882,9.40220474326776
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Manyu,Manyu,Upper Bayang,Upper Bayang,Africa/Douala,UTC +1.0,5.63543104681816,9.71741380441074
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Meme,Meme,Konye,Konye,Africa/Douala,UTC +1.0,4.8675132504276,9.35329991080956
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Meme,Meme,Kumba 1,Kumba 1,Africa/Douala,UTC +1.0,4.5566623882628,9.35068526059604
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Meme,Meme,Kumba 2,Kumba 2,Africa/Douala,UTC +1.0,4.73554005683686,9.4709764074062
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Meme,Meme,Kumba 3,Kumba 3,Africa/Douala,UTC +1.0,4.52176863065753,9.46421358069728
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Meme,Meme,Mbongé,Mbongé,Africa/Douala,UTC +1.0,4.4246379331482,9.15044609388179
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Bamuso,Bamuso,Africa/Douala,UTC +1.0,4.48394777727719,8.97786982669744
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Dikome value,Dikome value,Africa/Douala,UTC +1.0,4.79033728001647,9.15459251091934
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Ekondo Titi,Ekondo Titi,Africa/Douala,UTC +1.0,4.70469916205196,9.00208627901548
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Idabato,Idabato,Africa/Douala,UTC +1.0,4.52493724945212,8.61078675455218
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Isangele,Isangele,Africa/Douala,UTC +1.0,4.81060076327755,8.6562331464027
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Kombo Abedimo,Kombo Abedimo,Africa/Douala,UTC +1.0,4.6295082592379,8.5982663131178
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Kombo Etindi,Kombo Etindi,Africa/Douala,UTC +1.0,4.64841420742807,8.77546898098343
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Mundemba,Mundemba,Africa/Douala,UTC +1.0,5.01174423709509,8.9297537745068
+Cameroon,Cameroon,CM,,Sud-Ouest,Sud-Ouest,Ndian,Ndian,Toko,Toko,Africa/Douala,UTC +1.0,5.18244991481959,9.12156523506271

@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+duckdb
+pandas
+pyarrow
+pycountry
+zipstream-ng
+openpyxl
+gdown
