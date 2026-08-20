@@ -22,8 +22,9 @@ app/on_demand_cache/
 # Never commit; each environment fetches its own copy.
 app/data/
 
-# web/public/catalog.json, web/public/parquet/, and web/public/raw_sources/ are NOT
-# ignored -- they're exactly what the deployed static site ships (see
-# scripts/build_catalog.py's docstring), generated on a machine with full `to JD/`
-# access. Committing them is what lets GitHub Pages -- or any other static host --
-# run without that tree, or a backend, at all. See README.md "Adding new data".
+# web/public/catalog.json, web/public/parquet/, web/public/raw_sources/, and
+# web/public/samples/ are NOT ignored -- they're exactly what the deployed static
+# site ships (see scripts/build_catalog.py's docstring), generated on a machine
+# with full `to JD/` access. Committing them is what lets GitHub Pages -- or any
+# other static host -- run without that tree, or a backend, at all. See README.md
+# "Adding new data".

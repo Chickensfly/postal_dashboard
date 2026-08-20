@@ -4,9 +4,10 @@ import CountryTable from './CountryTable'
 import { compare, type Sort, type SortKey } from './sorting'
 import { BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
-import { fetchCatalog } from './api'
-import { compactRows, prettyDate } from './format'
-import type { Catalog } from './types'
+import { fetchCatalog, sampleCsvUrl } from './api'
+import { downloadSelectionZip } from './zip'
+import { bytes, compactRows, prettyDate } from './format'
+import type { Catalog, Country } from './types'
 
 type Theme = 'light' | 'dark' | null
 
@@ -20,6 +21,8 @@ export default function App() {
   const [sort, setSort] = useState<Sort>({ key: 'name_en', dir: 'asc' })
   const [focused, setFocused] = useState<string | null>(null)
   const [theme] = useState<Theme>('dark')
+  const [checked, setChecked] = useState<Set<string>>(new Set())
+  const [zipping, setZipping] = useState(false)
 
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
 
@@ -50,9 +53,50 @@ export default function App() {
       .sort((a, b) => compare(a, b, sort))
   }, [catalog, search, region, status, sort])
 
+  // Selectable = has a sample CSV to put in the zip -- true for every country in
+  // practice (build_catalog.py generates one for covered and raw-source alike),
+  // but guarded rather than assumed.
+  const selectable = useMemo(() => visible.filter((c) => !!c.sample_csv), [visible])
+  const allSelected = selectable.length > 0 && selectable.every((c) => checked.has(c.iso2))
+
+  const selectedCountries = useMemo(() => {
+    if (!catalog) return [] as Country[]
+    return catalog.countries.filter((c) => checked.has(c.iso2))
+  }, [catalog, checked])
+  const sendable = selectedCountries.filter((c) => !!c.sample_csv)
+
   const focusCountry = (iso2: string) => {
     setFocused(iso2)
     rowRefs.current[iso2]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }
+
+  const toggleRow = (iso2: string) =>
+    setChecked((prev) => {
+      const next = new Set(prev)
+      if (!next.delete(iso2)) next.add(iso2)
+      return next
+    })
+
+  const toggleAll = () =>
+    setChecked((prev) => {
+      const next = new Set(prev)
+      if (allSelected) selectable.forEach((c) => next.delete(c.iso2))
+      else selectable.forEach((c) => next.add(c.iso2))
+      return next
+    })
+
+  const runZip = async () => {
+    setZipping(true)
+    try {
+      await downloadSelectionZip(
+        sendable.map((c) => ({ name: `${c.iso2}.csv`, url: sampleCsvUrl(c.iso2) })),
+        `postal-portal-samples-${sendable.length}.zip`,
+      )
+    } catch (e) {
+      setError((e as Error).message)
+    } finally {
+      setZipping(false)
+    }
   }
 
   if (error && !catalog) {
@@ -162,6 +206,11 @@ export default function App() {
               {visible.length} of {totals.countries_with_files} countries ·{' '}
               {compactRows(visible.reduce((n, c) => n + c.rows, 0))} codes listed
             </span>
+            {checked.size > 0 && (
+              <button type="button" onClick={() => setChecked(new Set())}>
+                clear selection
+              </button>
+            )}
           </div>
 
           <CountryTable
@@ -174,10 +223,45 @@ export default function App() {
                   : { key, dir: key === 'rows' || key === 'last_updated' ? 'desc' : 'asc' },
               )
             }
+            selectedRows={checked}
+            onToggleRow={toggleRow}
+            onToggleAll={toggleAll}
+            allSelected={allSelected}
             focused={focused}
             onFocus={focusCountry}
             rowRefs={rowRefs}
           />
+
+          <div className="selection-bar">
+            <span className="summary">
+              {checked.size === 0 ? (
+                <>Select countries to download their sample CSVs (first 100 rows each) as one zip.</>
+              ) : (
+                <>
+                  <b>{sendable.length}</b> selected ·{' '}
+                  <b>{bytes(sendable.reduce((n, c) => n + (c.sample_csv?.bytes ?? 0), 0))}</b> as
+                  sample CSVs
+                  {sendable.length < checked.size && (
+                    <>
+                      {' '}
+                      ·{' '}
+                      <span style={{ color: 'var(--status-warning)' }}>
+                        {checked.size - sendable.length} have no sample available
+                      </span>
+                    </>
+                  )}
+                </>
+              )}
+            </span>
+            <button
+              type="button"
+              className="btn-primary"
+              disabled={sendable.length === 0 || zipping}
+              onClick={runZip}
+            >
+              {zipping ? 'Zipping…' : `Download ${sendable.length || ''} as .zip`}
+            </button>
+          </div>
         </section>
       </div>
 

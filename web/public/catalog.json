@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T12:11:06+08:00",
+ "generated_at": "2026-08-20T16:45:21+08:00",
  "totals": {
   "countries": 79,
   "countries_with_files": 88,
@@ -18,7 +18,8 @@
    "2026-08-13"
   ],
   "download_bytes": {
-   "parquet": 51274139
+   "parquet": 51274139,
+   "sample_csv": 1749892
   }
  },
  "countries": [
@@ -82,9 +83,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1kF1HYS7RNOjGYY75u-m--B8zGtY_Osom/view",
-    "xlsx": "https://drive.google.com/file/d/1gF1s5uWaOF582OgdeaQtVAYPOKb1I0yU/view"
+   "sample_csv": {
+    "bytes": 22402,
+    "rows": 100
    }
   },
   {
@@ -154,9 +155,9 @@
      }
     }
    },
-   "drive_links": {
-    "xlsx": "https://drive.google.com/file/d/18rjbtH_zOo20adrFqogkaVGlUpahDiz1/view",
-    "csv": "https://drive.google.com/file/d/1Is5GcaDYvDlFmUlVz7a70yWX2L3GQwpy/view"
+   "sample_csv": {
+    "bytes": 26800,
+    "rows": 100
    }
   },
   {
@@ -233,9 +234,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1fOQ8GG_fqs2S2tzSIHm520wTCkJJfp6F/view",
-    "xlsx": "https://drive.google.com/file/d/17TN3u5Rj7y4P4Co3_c1C8pRwzGZ7Jm3t/view"
+   "sample_csv": {
+    "bytes": 24792,
+    "rows": 100
    }
   },
   {
@@ -305,9 +306,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1s8V2rFTcMHu7gVyGJCYaMmDlzjZ5E9EP/view",
-    "xlsx": "https://drive.google.com/file/d/1wFm0MygMuZ0VJscjHBJBjNyOthDo_P40/view"
+   "sample_csv": {
+    "bytes": 18529,
+    "rows": 100
    }
   },
   {
@@ -370,9 +371,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1P8GuUf5p10y7b_VcA7F7EvJ-FdZoaD9F/view",
-    "xlsx": "https://drive.google.com/file/d/19T2W4xpJCaGKc3AoaoX3n3JQ4b7mVXEd/view"
+   "sample_csv": {
+    "bytes": 16206,
+    "rows": 100
    }
   },
   {
@@ -442,9 +443,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1OeG4kzok7zHl3Xr-FTXOhfGYhuLhYnbY/view",
-    "xlsx": "https://drive.google.com/file/d/1HhOT8l9swT_i70a9x4Sjbjgu2DYejSOZ/view"
+   "sample_csv": {
+    "bytes": 17430,
+    "rows": 100
    }
   },
   {
@@ -518,7 +519,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 16707,
+    "rows": 100
+   }
   },
   {
    "iso2": "BR",
@@ -580,9 +585,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Y78NqiiDCy7gLi5wcQVIUhuflajHGIyb/view",
-    "xlsx": "https://drive.google.com/file/d/1teHbwJ81DxzFvMLyrLzzBqmrtPzAmcEq/view"
+   "sample_csv": {
+    "bytes": 18678,
+    "rows": 100
    }
   },
   {
@@ -652,9 +657,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1lijuOHhXK3zT8Ndzh3BvZinFJuVMsSik/view",
-    "xlsx": "https://drive.google.com/file/d/1CS5j_KjCatgMJdRg9s5mjELFsJn2iIFJ/view"
+   "sample_csv": {
+    "bytes": 21412,
+    "rows": 100
    }
   },
   {
@@ -724,9 +729,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1mWVWBEWNYpO0-BVKJetBGOErVPddIE43/view",
-    "xlsx": "https://drive.google.com/file/d/13B1FBX0kzLycB15dEL2p8ahyXKsP62bL/view"
+   "sample_csv": {
+    "bytes": 21236,
+    "rows": 100
    }
   },
   {
@@ -800,7 +805,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 16525,
+    "rows": 100
+   }
   },
   {
    "iso2": "CA",
@@ -869,9 +878,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Jcq4lRbLyJNU4-wPQDZPjnTtDY8YZZjO/view",
-    "xlsx": "https://drive.google.com/file/d/1PEUoUr_w6Z_mFdfvmM8yLk35cnupI2fb/view"
+   "sample_csv": {
+    "bytes": 20216,
+    "rows": 100
    }
   },
   {
@@ -941,9 +950,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/17JXiFRPBPk5AdYKEVbApra_lD8rkSdv3/view",
-    "xlsx": "https://drive.google.com/file/d/1erTv8Ls1RXyABMx0hpUnOZHfWPEdDvNm/view"
+   "sample_csv": {
+    "bytes": 21573,
+    "rows": 100
    }
   },
   {
@@ -1006,9 +1015,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1mVdIqwasFaBtp-Ji-CTcXzg4vmQEXd1N/view",
-    "xlsx": "https://drive.google.com/file/d/1O5ZIVu9RJ1wrSWh-NVbxnJcDwQFCNcQH/view"
+   "sample_csv": {
+    "bytes": 18892,
+    "rows": 100
    }
   },
   {
@@ -1075,7 +1084,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 8632,
+    "rows": 50
+   }
   },
   {
    "iso2": "CD",
@@ -1141,7 +1154,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 20351,
+    "rows": 100
+   }
   },
   {
    "iso2": "HR",
@@ -1210,9 +1227,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1gREtB76oJ4muIQwGhyZXOEhjAExR9qkU/view",
-    "xlsx": "https://drive.google.com/file/d/1t_W2hmftWPsE3gkKzM5qEM2KL6zP8JDP/view"
+   "sample_csv": {
+    "bytes": 18350,
+    "rows": 100
    }
   },
   {
@@ -1282,9 +1299,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1s-iTNNgiyA295W8eTjb3YWX0vYEzPQWx/view",
-    "xlsx": "https://drive.google.com/file/d/1xCTNTQvLJ-Ak3K6mcZ7YE82LWUwV-7uy/view"
+   "sample_csv": {
+    "bytes": 19986,
+    "rows": 100
    }
   },
   {
@@ -1354,9 +1371,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1FDYxae7aFIW6lt9hsY9TK8dbJViujeJ4/view",
-    "xlsx": "https://drive.google.com/file/d/1kCK0wxhRfNmlByUiLlkyDjz3mdsLx2Vv/view"
+   "sample_csv": {
+    "bytes": 20360,
+    "rows": 100
    }
   },
   {
@@ -1426,9 +1443,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1N9y2oD5ku8NSun75pu8V3BCUgq3vkBlE/view",
-    "xlsx": "https://drive.google.com/file/d/1Dt1FnIphvv6_Q4nhPo3_kAcG8vfw2o-9/view"
+   "sample_csv": {
+    "bytes": 18013,
+    "rows": 100
    }
   },
   {
@@ -1498,9 +1515,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1ON5pl2zy_MqlfyzVTGczzD_EGiRHkf3l/view",
-    "xlsx": "https://drive.google.com/file/d/1hBAu7cnc40h3vOCcAKTMo3JHSue8CliN/view"
+   "sample_csv": {
+    "bytes": 20744,
+    "rows": 100
    }
   },
   {
@@ -1570,9 +1587,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/14CB3qUhy7qXXuXuxBZr5r2ShI4_D1nn5/view",
-    "xlsx": "https://drive.google.com/file/d/1ASjuOLqy8c4-sfAzxHj8LPu-3HIRRlrr/view"
+   "sample_csv": {
+    "bytes": 14753,
+    "rows": 77
    }
   },
   {
@@ -1642,9 +1659,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1qciHzCmvjQg27eKubyGO1iaf0rP8feP5/view",
-    "xlsx": "https://drive.google.com/file/d/1dyfB98cRXlFlnMEk6HAd_GezHUv-aJZI/view"
+   "sample_csv": {
+    "bytes": 18692,
+    "rows": 100
    }
   },
   {
@@ -1714,9 +1731,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Uh4eBiHIfM_QAjGToR-MRMbGm5q8Ku6R/view",
-    "xlsx": "https://drive.google.com/file/d/1Wl95_rOWGbjGEOM9qIjisvk_ysqvx1L3/view"
+   "sample_csv": {
+    "bytes": 21118,
+    "rows": 100
    }
   },
   {
@@ -1786,9 +1803,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1NIAsW09UJCks--T0yW5opv3UjriuMdnU/view",
-    "xlsx": "https://drive.google.com/file/d/1X7FJT9yZsrUPJq7sM7X0zEE31YQglLrr/view"
+   "sample_csv": {
+    "bytes": 17830,
+    "rows": 100
    }
   },
   {
@@ -1865,9 +1882,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1BLm9dtPEoBAE6UQ5gOGapsNDMl99yr7R/view",
-    "xlsx": "https://drive.google.com/file/d/1HhDM07oeow35LHURM1DBA3TX2AWwCd6U/view"
+   "sample_csv": {
+    "bytes": 19848,
+    "rows": 100
    }
   },
   {
@@ -1937,9 +1954,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1PFGB3OJa8_20MGcfiLbFttTtuLhCAVp0/view",
-    "xlsx": "https://drive.google.com/file/d/1gnwWy4ke8DQsKIZ1oY7anJq5Xxgb4_G7/view"
+   "sample_csv": {
+    "bytes": 23009,
+    "rows": 100
    }
   },
   {
@@ -2009,9 +2026,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1UVq6M16HjOxuXTdqiSHp-Gh2p0NfcQVW/view",
-    "xlsx": "https://drive.google.com/file/d/135dUpbOSgNmtsYCGJdgSizlIkkYuFzcr/view"
+   "sample_csv": {
+    "bytes": 21836,
+    "rows": 100
    }
   },
   {
@@ -2081,9 +2098,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1sa4d_8wbBHKkOqXeSZsp3IUi_v-kgfWR/view",
-    "xlsx": "https://drive.google.com/file/d/14qATl6AS77PGpSI-shOcfmBeTzyA8HkL/view"
+   "sample_csv": {
+    "bytes": 26254,
+    "rows": 100
    }
   },
   {
@@ -2146,9 +2163,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/19XojpucgqUQScTTDvpg8Takfk6gn4nmY/view",
-    "xlsx": "https://drive.google.com/file/d/1ciYjHg-CcK1W0VgXCwmUNiMDdih4Eole/view"
+   "sample_csv": {
+    "bytes": 20461,
+    "rows": 100
    }
   },
   {
@@ -2218,9 +2235,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1EeQHXCwugWYN_ou1ohuLNqLvqkgnFKis/view",
-    "xlsx": "https://drive.google.com/file/d/1NMq2Ff_LhBEla1_w2ZHRvczpeKGSmMf4/view"
+   "sample_csv": {
+    "bytes": 18427,
+    "rows": 100
    }
   },
   {
@@ -2283,9 +2300,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1dxvKIsct_3MGlDn7soCvmMOJDN89HgwB/view",
-    "xlsx": "https://drive.google.com/file/d/1L2EifRWiSg82-mfHVjInShZ0gRpXai5k/view"
+   "sample_csv": {
+    "bytes": 18507,
+    "rows": 100
    }
   },
   {
@@ -2362,9 +2379,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1jDhIyecduH3QXbkKnx0QcnlR2gF1JgRe/view",
-    "xlsx": "https://drive.google.com/file/d/1rPCi8pNT8Sx69Sz7jaNkpgEGTqbj-yND/view"
+   "sample_csv": {
+    "bytes": 24397,
+    "rows": 100
    }
   },
   {
@@ -2427,9 +2444,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1wlFx4sWzuoLgM7lk3bXwrGubwxui1pCx/view",
-    "xlsx": "https://drive.google.com/file/d/13EGSG7Xfbcj6roMy-1RSIP9tq5WsXA47/view"
+   "sample_csv": {
+    "bytes": 23570,
+    "rows": 100
    }
   },
   {
@@ -2499,9 +2516,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1ft9PZP4qYPvee661DEgouBoXKDFBOOYN/view",
-    "xlsx": "https://drive.google.com/file/d/1x6V4hyZJg8BM6sPDeVyxg0VK5voRCyiE/view"
+   "sample_csv": {
+    "bytes": 19779,
+    "rows": 100
    }
   },
   {
@@ -2571,9 +2588,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1539sYBjgpOFRUX8FtFlcaWzvQkOx847M/view",
-    "xlsx": "https://drive.google.com/file/d/1zLV_slA5oo8EGbp2OqmPyjuE1v0E9zSk/view"
+   "sample_csv": {
+    "bytes": 17046,
+    "rows": 100
    }
   },
   {
@@ -2643,9 +2660,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1OJyZbqalaz32KCgMWMmVndw9szNcz9ef/view",
-    "xlsx": "https://drive.google.com/file/d/1pSpKjvWxCkHeN9k7weXzUfzKiijO4qXG/view"
+   "sample_csv": {
+    "bytes": 21413,
+    "rows": 100
    }
   },
   {
@@ -2722,9 +2739,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/12Lzj_sF8yp7YAbvcCSMrzYD7oRfMuzF9/view",
-    "xlsx": "https://drive.google.com/file/d/1vhxbwVYpqIljWo0y5aXq9t4YksjS-wVI/view"
+   "sample_csv": {
+    "bytes": 17875,
+    "rows": 100
    }
   },
   {
@@ -2794,9 +2811,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1XuboBZ9Q4JZ7-QrHq_sItObYQrSVW2Fa/view",
-    "xlsx": "https://drive.google.com/file/d/1YjCBVl5ORx4Qa6hstoxzsjML7eMm0N1Y/view"
+   "sample_csv": {
+    "bytes": 19759,
+    "rows": 100
    }
   },
   {
@@ -2873,9 +2890,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1nzM0RX-lqy30wZ91hhPDxOnlIxrkxs-H/view",
-    "xlsx": "https://drive.google.com/file/d/1DeLd3qldwfv6UZVK_AN6hjgtpx9jXwQY/view"
+   "sample_csv": {
+    "bytes": 21781,
+    "rows": 100
    }
   },
   {
@@ -2945,9 +2962,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Ag38zLTLJJd55fvdUgUFxBiohQKWcV9o/view",
-    "xlsx": "https://drive.google.com/file/d/1nK6mmkbeAfb2lSCrA6juABssShYSUKyu/view"
+   "sample_csv": {
+    "bytes": 18655,
+    "rows": 100
    }
   },
   {
@@ -3010,9 +3027,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1s6JL9brvwMC45yHhgC1XoWuwIKZjZFUz/view",
-    "xlsx": "https://drive.google.com/file/d/1kzDstHh_udvWyaxMVP3t9hGlVJJkBrQV/view"
+   "sample_csv": {
+    "bytes": 16907,
+    "rows": 100
    }
   },
   {
@@ -3090,7 +3107,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 14107,
+    "rows": 100
+   }
   },
   {
    "iso2": "MX",
@@ -3152,9 +3173,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1V51Vpaspym3C4ZuBnua6veI47ZQ3IYX7/view",
-    "xlsx": "https://drive.google.com/file/d/1wS2I9PBomoyLhxVIOq2JAx0jbUY9iZ09/view"
+   "sample_csv": {
+    "bytes": 19478,
+    "rows": 100
    }
   },
   {
@@ -3217,9 +3238,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/11fKLjND29Sm_R9MGHLGMcKHs7oLqvTNT/view",
-    "xlsx": "https://drive.google.com/file/d/19JvMGOwb2lhtU8lBKLI3tzgFZ-XiNUYD/view"
+   "sample_csv": {
+    "bytes": 19433,
+    "rows": 100
    }
   },
   {
@@ -3289,9 +3310,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1f06ASS3lZBBsmw47fOg68gYgzl6HKrAN/view",
-    "xlsx": "https://drive.google.com/file/d/1lLypI21dl06zN7pNO70yodFudoB1v20j/view"
+   "sample_csv": {
+    "bytes": 19932,
+    "rows": 100
    }
   },
   {
@@ -3354,9 +3375,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1ykJZOyF8uYtd9p7e1m--EBv-tmidsz28/view",
-    "xlsx": "https://drive.google.com/file/d/1kLOWtiaZxiTxkIY7WfPuTvL_ZJ7K3LVi/view"
+   "sample_csv": {
+    "bytes": 18666,
+    "rows": 100
    }
   },
   {
@@ -3426,9 +3447,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1wkjgF42aziDctlXl7TR6cf-EQBSHgQM9/view",
-    "xlsx": "https://drive.google.com/file/d/14dMJbomCqfpPHMqaKc2-QmoRWjw6Yuwu/view"
+   "sample_csv": {
+    "bytes": 22826,
+    "rows": 100
    }
   },
   {
@@ -3498,9 +3519,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Vx7nXrLl-Q0ylIRuluybOhvmFyk2NwGR/view",
-    "xlsx": "https://drive.google.com/file/d/1we7MR4STsC9lCRonCbQTVNEe_dGyRopz/view"
+   "sample_csv": {
+    "bytes": 18386,
+    "rows": 100
    }
   },
   {
@@ -3563,9 +3584,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1VYoNxtHjFJAhc0tHWQEKz-zZsGTViwmW/view",
-    "xlsx": "https://drive.google.com/file/d/1t2a8jC6cXEum-qdAEGCiFRLiIoMgCjhw/view"
+   "sample_csv": {
+    "bytes": 15702,
+    "rows": 100
    }
   },
   {
@@ -3628,9 +3649,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1B1LPabayDDipBSHOiZqR69jWExOQs8O6/view",
-    "xlsx": "https://drive.google.com/file/d/1h0Rp6xXu0kGWekWkJKazgKSTYBWLHPUW/view"
+   "sample_csv": {
+    "bytes": 14986,
+    "rows": 100
    }
   },
   {
@@ -3693,9 +3714,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/14xK710qeR7phPjo6X4qcb245mH4eUqHF/view",
-    "xlsx": "https://drive.google.com/file/d/1WAS3a0eD9cmkJEP0f_bxFMEFp6UgU5Ka/view"
+   "sample_csv": {
+    "bytes": 18523,
+    "rows": 100
    }
   },
   {
@@ -3758,9 +3779,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1RHBjr_cmrgis6AZtAipPqO6rR0y-J6Ds/view",
-    "xlsx": "https://drive.google.com/file/d/1Wj-hdEknK-3w2ZWuInLmwhjAf9ue6JbM/view"
+   "sample_csv": {
+    "bytes": 18881,
+    "rows": 100
    }
   },
   {
@@ -3830,9 +3851,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1-ymhBmStLt9T9ncV7iMSucUVQJA0lH91/view",
-    "xlsx": "https://drive.google.com/file/d/1Ns1_durBEPNJXHfvgsK2JY38TnBdcTW2/view"
+   "sample_csv": {
+    "bytes": 17828,
+    "rows": 100
    }
   },
   {
@@ -3902,9 +3923,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1jM7hoVo8mGUr38OCFwIREDHbkpGVr6GS/view",
-    "xlsx": "https://drive.google.com/file/d/123mu3PvYoc8qlKwn4TpoNXGwiKLZIwQ0/view"
+   "sample_csv": {
+    "bytes": 18587,
+    "rows": 100
    }
   },
   {
@@ -3974,9 +3995,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1x1okd9WrXqnFnbKgNkzc7rd5zF-6U0jI/view",
-    "xlsx": "https://drive.google.com/file/d/1e-A92oXmAWzGLi6obnhiKH9zqIDFh2Da/view"
+   "sample_csv": {
+    "bytes": 17416,
+    "rows": 100
    }
   },
   {
@@ -4053,9 +4074,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1kLbBK-pr7GFMxR1-rq2dtUriwr93MGs0/view",
-    "xlsx": "https://drive.google.com/file/d/1XkyjXlgBds3_3StuNi7oHnYO3C7SBpiO/view"
+   "sample_csv": {
+    "bytes": 17839,
+    "rows": 100
    }
   },
   {
@@ -4132,8 +4153,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Da5g1X-y8HEwT1vovlosHNJY42jlXkJB/view"
+   "sample_csv": {
+    "bytes": 21984,
+    "rows": 100
    }
   },
   {
@@ -4206,7 +4228,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 1049,
+    "rows": 7
+   }
   },
   {
    "iso2": "IE",
@@ -4275,9 +4301,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1ff_EKW0wyxX2UFy7aAIzLJMbfYpiBSqo/view",
-    "xlsx": "https://drive.google.com/file/d/1vPv4EK8ztw4qPH2yxRwedpZyzDdA_Ngu/view"
+   "sample_csv": {
+    "bytes": 18867,
+    "rows": 100
    }
   },
   {
@@ -4340,9 +4366,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1HpFgkh4IWQFzxMxHLbmRgvOCeUWVvchM/view",
-    "xlsx": "https://drive.google.com/file/d/1HPeXbgW6PM0FUEzr7vPEYC5I8bLc68iv/view"
+   "sample_csv": {
+    "bytes": 18141,
+    "rows": 100
    }
   },
   {
@@ -4412,8 +4438,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1If7-YK3PcVZqBQHMJ5En-1dNhMMqOnWS/view"
+   "sample_csv": {
+    "bytes": 24797,
+    "rows": 100
    }
   },
   {
@@ -4483,8 +4510,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/10cfSIE60GnB6IjIm00RiiitgJfXlZ-pK/view"
+   "sample_csv": {
+    "bytes": 28737,
+    "rows": 100
    }
   },
   {
@@ -4568,9 +4596,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1hk5hfzfGTxB8eemr3xH3enOTivjq43wp/view",
-    "xlsx": "https://drive.google.com/file/d/1k7lzXfZfwOh8M9UkSS_t02noCubzCF82/view"
+   "sample_csv": {
+    "bytes": 28567,
+    "rows": 100
    }
   },
   {
@@ -4633,8 +4661,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1yJi5N3F53a16QN8rRmsGaaRimw-DMoHZ/view"
+   "sample_csv": {
+    "bytes": 19731,
+    "rows": 100
    }
   },
   {
@@ -4704,9 +4733,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1IKoFtmu3jVkKuAnmbSaKpom9DIKcOBqG/view",
-    "xlsx": "https://drive.google.com/file/d/1kLEJbACjzbItp5XV0k1N5nvkbHN3fZmt/view"
+   "sample_csv": {
+    "bytes": 19620,
+    "rows": 100
    }
   },
   {
@@ -4762,9 +4791,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Flh72ZBiKb-M_D14QlzRUKPyM8bUxkjL/view",
-    "xlsx": "https://drive.google.com/file/d/1zfEoKyQS39sCcF-snoz0E--MgNE4NKRu/view"
+   "sample_csv": {
+    "bytes": 17883,
+    "rows": 100
    }
   },
   {
@@ -4834,8 +4863,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1X5uM4bhq0DK5jT219Hh0HZCPcx-ExSBM/view"
+   "sample_csv": {
+    "bytes": 22719,
+    "rows": 100
    }
   },
   {
@@ -4905,9 +4935,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1W5GR862ejn2WoQ7VyGYEQwlnQPGBh0wB/view",
-    "xlsx": "https://drive.google.com/file/d/1XYemny4JpmDYqXpItVu7httAM7SkOgB8/view"
+   "sample_csv": {
+    "bytes": 18727,
+    "rows": 100
    }
   },
   {
@@ -4984,9 +5014,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1O5NdqOe3ZZ9b1Y7Yqn2BgsFyozXPq9H-/view",
-    "xlsx": "https://drive.google.com/file/d/1xSmvT-6zMVcsTurg7-MVZnc0HqJLi8tW/view"
+   "sample_csv": {
+    "bytes": 19317,
+    "rows": 100
    }
   },
   {
@@ -5056,9 +5086,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1CrrjssJjhJzlExGW3F4DiD2XHu6ttnPj/view",
-    "xlsx": "https://drive.google.com/file/d/1FIX2s8QTj8Hz3w2ingy5LWAQ-VPP807I/view"
+   "sample_csv": {
+    "bytes": 21697,
+    "rows": 100
    }
   },
   {
@@ -5120,7 +5150,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 6463,
+    "rows": 62
+   }
   },
   {
    "iso2": "SE",
@@ -5189,8 +5223,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1e4Ism6w_zos80fRaObFw6jMOf__eiaUa/view"
+   "sample_csv": {
+    "bytes": 18996,
+    "rows": 100
    }
   },
   {
@@ -5260,9 +5295,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1PCbb0t-8tNZdF3Z6MOkpreM7PXAVFUca/view",
-    "xlsx": "https://drive.google.com/file/d/1HbaYJtW9VsrPOXBMedD3B-8Boyn6h1mh/view"
+   "sample_csv": {
+    "bytes": 18059,
+    "rows": 100
    }
   },
   {
@@ -5332,9 +5367,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/17gSRbdCS60r79fJh_aQk2qmZb5Cs1Woz/view",
-    "xlsx": "https://drive.google.com/file/d/1eO6nMwbm1_YUBzWgLqyMtoeBXYZM0WRX/view"
+   "sample_csv": {
+    "bytes": 21709,
+    "rows": 100
    }
   },
   {
@@ -5397,9 +5432,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/16UPh-OZhfI-6VHZyPsn6kDI4u6OW1pI7/view",
-    "xlsx": "https://drive.google.com/file/d/107n7niw_4MD3MVjdlmn8W1p-y7x1UWGd/view"
+   "sample_csv": {
+    "bytes": 25214,
+    "rows": 100
    }
   },
   {
@@ -5468,7 +5503,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 12367,
+    "rows": 100
+   }
   },
   {
    "iso2": "TR",
@@ -5537,8 +5576,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1DQotRlYOU3b6iEKXAEw0vNJG9FPfrV27/view"
+   "sample_csv": {
+    "bytes": 17199,
+    "rows": 100
    }
   },
   {
@@ -5621,7 +5661,11 @@
     }
    },
    "files_are_source": true,
-   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates.",
+   "sample_csv": {
+    "bytes": 14289,
+    "rows": 100
+   }
   },
   {
    "iso2": "UA",
@@ -5690,8 +5734,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1ZMh71E_ma2dFkYMKOkjPOsw8uAX_u9w0/view"
+   "sample_csv": {
+    "bytes": 28358,
+    "rows": 100
    }
   },
   {
@@ -5761,9 +5806,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Mwr3tk5dRJ6vRFv4qJ3FU70BFAxMagHb/view",
-    "xlsx": "https://drive.google.com/file/d/1_qtAfhRAc-CQiPuxF39SV3foqAW_JbwS/view"
+   "sample_csv": {
+    "bytes": 27890,
+    "rows": 100
    }
   },
   {
@@ -5840,9 +5885,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1zneJYtU3R0_ZRl_mEsG1m8_UsipMgFOd/view",
-    "xlsx": "https://drive.google.com/file/d/1HyBYJdr8EPjpZ0qpG7Y5xu5jv17EZKci/view"
+   "sample_csv": {
+    "bytes": 26398,
+    "rows": 100
    }
   },
   {
@@ -5912,8 +5957,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1AFD3WA5BRlBoab82CWAY1ZuYTKS1vJgH/view"
+   "sample_csv": {
+    "bytes": 22345,
+    "rows": 100
    }
   },
   {
@@ -5983,9 +6029,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1Bt9_TZ-au3asxoHuSzmpVGR9__O5UZ2Q/view",
-    "xlsx": "https://drive.google.com/file/d/1o_-zry1GdpDg5KahsuZekx6XwjZ1P99H/view"
+   "sample_csv": {
+    "bytes": 20104,
+    "rows": 100
    }
   },
   {
@@ -6055,9 +6101,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1izesFG9NW8QoLUtgyFD5ocetZFoBL5N7/view",
-    "xlsx": "https://drive.google.com/file/d/18p18m1PWhdLXc6dCBV1AjBIOnuwWd8Ov/view"
+   "sample_csv": {
+    "bytes": 29149,
+    "rows": 100
    }
   },
   {
@@ -6120,9 +6166,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1GznRWVrim2ZzcQKkdBPo3-Nb0WIS-Ksa/view",
-    "xlsx": "https://drive.google.com/file/d/12Cj0tKg0PcQcdIOr4cLTxSHgZ07qlkLk/view"
+   "sample_csv": {
+    "bytes": 21126,
+    "rows": 100
    }
   },
   {
@@ -6192,8 +6238,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1WCrVkqlzLKPSJ96tQmcFtMUgRHA7PzBi/view"
+   "sample_csv": {
+    "bytes": 21781,
+    "rows": 100
    }
   },
   {
@@ -6256,9 +6303,9 @@
      }
     }
    },
-   "drive_links": {
-    "csv": "https://drive.google.com/file/d/1TuIvFxN6NlMpdKT3tF6WUtk0TPjnpT7a/view",
-    "xlsx": "https://drive.google.com/file/d/1qW-Z4yrPjfE0PmPZ5hIUuT9Np2dVIZjX/view"
+   "sample_csv": {
+    "bytes": 34268,
+    "rows": 100
    }
   }
  ]

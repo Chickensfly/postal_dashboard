@@ -46,6 +46,14 @@ EXCEL_ROW_LIMIT = 1_048_575
 
 TEXT_FORMAT = "@"  # Excel's "Text" number format
 
+# How many rows a "sample" CSV keeps. Small enough to commit directly to git for
+# every country regardless of its full size (CA's full CSV is 157 MB -- past
+# GitHub's 100 MB hard per-file limit; its 100-row sample is a few KB) -- used by
+# build_catalog.py for the "select several, download as one zip" bulk feature and
+# as a quick, always-available look at a country's columns and shape. The full
+# file, when needed, is a Drive link instead (see link_drive_files.py).
+SAMPLE_ROWS = 100
+
 # Every country's data is inherently many-to-many: one postal code can cover many
 # admin areas and vice versa (e.g. DE's 23,296 rows collapse to 652 distinct
 # 3-level region tuples -- confirmed generic, proven out first on Australia, now

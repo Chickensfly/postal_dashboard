@@ -67,12 +67,12 @@ def list_folder(folder_id: str, api_key: str) -> list[dict]:
                 data = json.loads(resp.read())
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="replace")
-            sys.exit(
-                f"error: Drive API returned {e.code} for folder {folder_id}.\n"
-                "Most likely cause: the folder isn't shared as 'Anyone with the "
-                "link', or the API key isn't valid/isn't restricted to allow the "
-                f"Drive API.\n{body}"
-            )
+            sys.exit("\n".join([
+                f"error: Drive API returned {e.code} for folder {folder_id}.",
+                "Most likely cause: the folder isn't shared as 'Anyone with the link',",
+                "or the API key isn't valid/isn't restricted to allow the Drive API.",
+                body,
+            ]))
         files.extend(data.get("files", []))
         page_token = data.get("nextPageToken")
         if not page_token:
@@ -94,13 +94,11 @@ def main() -> None:
     args = parser.parse_args()
 
     if not args.folder_id or not args.api_key:
-        sys.exit(
-            "error: need both --folder-id and --api-key (or $DRIVE_FOLDER_ID / "
-            "$DRIVE_API_KEY).\nGet the folder ID from its share link: "
-            "https://drive.google.com/drive/folders/<FOLDER_ID>\n"
-            "Get an API key: Google Cloud Console -> APIs & Services -> "
-            "Credentials -> Create API Key (restrict it to the Drive API)."
-        )
+        sys.exit("\n".join([
+            "error: need both --folder-id and --api-key (or $DRIVE_FOLDER_ID / $DRIVE_API_KEY).",
+            "Get the folder ID from its share link: https://drive.google.com/drive/folders/<FOLDER_ID>",
+            "Get an API key: Google Cloud Console -> APIs & Services -> Credentials -> Create API Key (restrict it to the Drive API).",
+        ]))
 
     if not CATALOG_PATH.exists():
         sys.exit(f"error: {CATALOG_PATH} not found -- run scripts/build_catalog.py first.")
@@ -136,8 +134,10 @@ def main() -> None:
     linked_both = sum(1 for v in links.values() if "csv" in v and "xlsx" in v)
     linked_some = len(links)
     missing = sorted(set(covered) - set(links))
-    print(f"\nlinked {linked_some}/{len(covered)} covered countries "
-          f"({linked_both} with both csv+xlsx, {linked_some - linked_both} with only one)")
+    print(
+        f"\nlinked {linked_some}/{len(covered)} covered countries "
+        + f"({linked_both} with both csv+xlsx, {linked_some - linked_both} with only one)"
+    )
     if missing:
         print(f"not yet in the folder ({len(missing)}): {', '.join(missing)}")
     if unmatched:

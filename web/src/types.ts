@@ -59,6 +59,11 @@ export type Country = {
    *  all-rows (the postal-codes/admin-areas split stays parquet-only; see that
    *  script's docstring), so these links don't change with the view toggle. */
   drive_links?: Partial<Record<'csv' | 'xlsx', string>>
+  /** First 100 rows, committed directly to git (web/public/samples/<ISO2>.csv) --
+   *  present for every country regardless of its full size, since some (CA, IL)
+   *  exceed GitHub's 100 MB per-file limit in full. What the sidebar's bulk
+   *  "select several, download as one zip" feature bundles. */
+  sample_csv?: { bytes: number; rows: number }
 }
 
 export type Catalog = {

@@ -49,23 +49,42 @@ repo like `<you>.github.io` serves at the domain root; any other repo serves at
 ## How the data is arranged
 
 The dataset is **not** copied whole into the deployed app, and it is not converted to
-SQL. The static site ships three things, all under `web/public/` and all committed
+SQL. The static site ships four things, all under `web/public/` and all committed
 to git:
 
 | What | Where | Size |
 |---|---|---|
-| Catalog — everything the map and list need, one row per country | `web/public/catalog.json` | ~110 KB |
+| Catalog — everything the map and list need, one row per country | `web/public/catalog.json` | ~116 KB |
 | Per-country parquet — all-rows plus the postal-codes/admin-areas dedup views | `web/public/parquet/<ISO2>[.view].parquet` | 108 MB total, largest file 8.5 MB |
+| Sample CSVs — first 100 rows of every country, covered or not | `web/public/samples/<ISO2>.csv` | ~1.8 MB total |
 | Raw sources — the 9 no-postal-code countries' original JD files | `web/public/raw_sources/` | ~1.4 MB |
 
 That's the **entire** data footprint of the deployed site: **~110 MB**, none of it the
-`to JD/` tree, no backend needed to serve any of it. Parquet downloads are direct
-links to these files. Search runs **`duckdb-wasm` in the visitor's own browser**
-against whichever per-country file is on screen — nothing round-trips to a server.
-CSV/XLSX are the one thing a static site genuinely can't produce on demand: those are
-links out to a Google Drive folder instead (`drive_links` in the catalog, populated
-by `scripts/link_drive_files.py` — see "Adding new data"). No `.sql` dump anywhere
-either way (it would be *larger* than the CSVs and unusable until imported).
+`to JD/` tree, no backend needed to serve any of it. Parquet and sample-CSV downloads
+are direct links to these files. Search runs **`duckdb-wasm` in the visitor's own
+browser** against whichever per-country parquet file is on screen — nothing
+round-trips to a server.
+
+**Full CSV/XLSX are the one thing that can't just be committed to git** — most
+countries' files are small enough, but CA's full CSV is 157 MB and IL's is 126 MB,
+both past GitHub's **100 MB hard per-file limit** (a real, per-file block, not a
+repo-size guideline — this dataset's row-count spread is wide enough that some
+countries genuinely hit it: CA's postal codes are granular enough to need 892,801
+rows, versus 40,977 for the entire US). Rather than special-case just those two
+files, every covered country's *full* CSV/XLSX is a link out to a Google Drive
+folder instead (`drive_links` in the catalog, populated by
+`scripts/link_drive_files.py` — see "Adding new data"); the **sample CSV is what
+ships directly** so every country has *something* downloadable straight from
+GitHub Pages with zero setup, full files or not. No `.sql` dump anywhere either way
+(it would be *larger* than the CSVs and unusable until imported).
+
+**Selecting several countries and downloading their sample CSVs as one zip** runs
+entirely client-side (`web/src/zip.ts`, via the tiny `client-zip` library) — it
+fetches each selected country's already-tiny sample file and assembles the zip in
+the visitor's own browser, no backend involved. This only works because sample
+files are small and same-origin; it isn't a general bulk-download of full files
+(that would need a server to stream, which is exactly what a static site doesn't
+have — see "The sidebar").
 
 **Separately**, `server/main.py` is a small FastAPI + DuckDB tool for querying the
 *master* parquet (every country, every row, undeduped) directly — useful for local
@@ -104,11 +123,12 @@ cd "/Users/jeff/Downloads/Postal Portal"
 ```
 
 This regenerates `web/public/catalog.json`, `web/public/parquet/` (all-rows plus
-both dedup views, per country), and `web/public/raw_sources/` — **budget under a
-minute**, since the static site ships parquet only (csv/xlsx generation was dropped
-from this script entirely once CSV/XLSX became Drive links instead of on-demand
-files — see "How the data is arranged"). Commit the result afterward — everything
-under `web/public/` is meant to be committed — and push to `main`; GitHub Actions
+both dedup views, per country), `web/public/samples/` (100-row CSV per country),
+and `web/public/raw_sources/` — **budget a few seconds**, since the static site
+ships parquet + tiny samples only (full csv/xlsx generation was dropped from this
+script entirely once full CSV/XLSX became Drive links instead of on-demand files —
+see "How the data is arranged"). Commit the result afterward — everything under
+`web/public/` is meant to be committed — and push to `main`; GitHub Actions
 rebuilds and redeploys automatically (see "Deploying").
 
 **4. Keep the Drive-linked CSV/XLSX in sync** (only if this data change affects a
@@ -175,13 +195,22 @@ Hover for a tooltip, click to open a country. Scroll or use `+ − ⤾` to zoom.
 
 ## The sidebar
 
-One row per country: name (with native-script name), ISO2, region, admin depth,
-postal-code count, admin-area count, last-updated date, and a quick download button
-(all-rows Parquet, or the best available JD original for a no-postal-code country).
-Every column sorts; filter by region, status, or free text over name/ISO2/ISO3.
+One row per country: checkbox, name (with native-script name), ISO2, region, admin
+depth, postal-code count, admin-area count, last-updated date, and a quick download
+button (all-rows Parquet, or the best available JD original for a no-postal-code
+country). Every column sorts; filter by region, status, or free text over
+name/ISO2/ISO3.
 
 Click a row to open its detail drawer — search, the postal-codes/admin-areas view
-toggle, and every download (Parquet directly, CSV/XLSX via Drive) live there.
+toggle, and every download (Parquet and the sample CSV directly, full CSV/XLSX via
+Drive) live there.
+
+Tick several countries and the footer zips their **sample CSVs** (100 rows each)
+client-side, right in the browser — no backend, no size limit to worry about, since
+every sample is already tiny regardless of the country's full size. This is
+narrower than the old server-backed bulk download (which could zip arbitrarily
+large full files, in any format, in any view): it's sample-CSV-only, by design —
+see "How the data is arranged" for why full files aren't bundled this way.
 
 **Last updated** is the filesystem mtime of the country's authoritative source file
 under `../to JD/`, resolved through the pipeline's own
@@ -361,19 +390,21 @@ pointing into `web/public/raw_sources/`.
 
 ```
 scripts/build_catalog.py     dev-machine-only build step (needs full to JD/ access) --
-                              writes web/public/{catalog.json,parquet/,raw_sources/}
+                              writes web/public/{catalog.json,parquet/,samples/,raw_sources/}
 scripts/link_drive_files.py  scans a public Drive folder, writes drive_links into
-                              web/public/catalog.json for CSV/XLSX downloads
+                              web/public/catalog.json for full CSV/XLSX downloads
 scripts/sync_from_drive.py   fetches the master parquet for server/main.py's local-dev mode
-scripts/pp_lib/formats.py    shared parquet generation (build-time) + csv/xlsx (server/main.py only)
+scripts/pp_lib/formats.py    shared parquet + sample-CSV generation (build-time) + full csv/xlsx (server/main.py only)
 web/public/catalog.json      generated, committed -- what the deployed site fetches
 web/public/parquet/          generated, committed (108 MB) -- what the deployed site downloads/searches
+web/public/samples/          generated, committed (~1.8 MB) -- 100-row CSV per country
 web/public/raw_sources/      generated, committed (~1.4 MB)
 app/data/                    gitignored -- server/main.py's synced master parquet lives here
 app/on_demand_cache/         gitignored -- server/main.py's generated csv/xlsx/parquet
 server/main.py               FastAPI, local-dev-only (see "API") -- never deployed
 web/                          Vite + React + TypeScript -- the deployed site
 web/src/duckdb.ts             lazy-loaded duckdb-wasm instance + query helper, used by the search UI
+web/src/zip.ts                client-side zip (via `client-zip`) for the sample-CSV bulk download
 web/public/vendor/            countries-110m.json (Natural Earth 110m, vendored for offline use)
 .github/workflows/deploy.yml  builds web/ and publishes web/dist/ to GitHub Pages on push to main
 data/                         pre-existing, unused by the running app -- see .gitignore

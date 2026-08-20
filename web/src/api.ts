@@ -27,3 +27,7 @@ export const parquetUrl = (iso2: string, view?: View) =>
 /** A no-postal-code country's original JD source file, bundled directly in git
  *  (small enough not to need Drive -- see build_catalog.py's docstring). */
 export const rawSourceUrl = (filename: string) => `${BASE}raw_sources/${filename}`
+
+/** A country's 100-row sample CSV, committed directly to git regardless of the
+ *  country's full size -- see build_catalog.py's docstring and SAMPLE_ROWS. */
+export const sampleCsvUrl = (iso2: string) => `${BASE}samples/${iso2}.csv`

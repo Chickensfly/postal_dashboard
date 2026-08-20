@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Country, Format, Preview, View } from './types'
-import { parquetUrl, rawSourceUrl } from './api'
+import { parquetUrl, rawSourceUrl, sampleCsvUrl } from './api'
 import { queryParquet } from './duckdb'
 import { bytes, prettyDate } from './format'
 
@@ -161,6 +161,15 @@ export default function CountryDrawer({
                 {activeParquet && (
                   <a href={parquetUrl(country.iso2, supportsViews ? view : undefined)} download>
                     Parquet {bytes(activeParquet.bytes)}
+                  </a>
+                )}
+                {country.sample_csv && (
+                  <a
+                    href={sampleCsvUrl(country.iso2)}
+                    download
+                    title={`First ${country.sample_csv.rows} rows only, always all-rows scope — see the CSV/XLSX links for the full file`}
+                  >
+                    Sample CSV {bytes(country.sample_csv.bytes)}
                   </a>
                 )}
                 {(['xlsx', 'csv'] as const).map(

@@ -23,6 +23,14 @@ them into the static site with no extra wiring:
   web/public/raw_sources/*.csv,xlsx the 9 no-postal-code countries' original JD
                                      files (~1.4 MB total) -- small enough to commit
                                      directly, no Drive involvement needed for these.
+  web/public/samples/<ISO2>.csv     first 100 rows of every country's data (covered
+                                     and delivered-no-data alike) -- small enough to
+                                     commit directly regardless of the country's full
+                                     size (CA's full CSV is 157 MB, past GitHub's
+                                     100 MB hard per-file limit; its sample is a few
+                                     KB). This is what the sidebar's "select several,
+                                     download as one zip" feature bundles client-side
+                                     (see web/src/zip.ts) -- no backend involved.
 
 Reads, strictly read-only:
   <JD>/pipeline/data/interim/version_resolution.csv   one authoritative source file per country
@@ -69,7 +77,7 @@ PIPELINE = JD_ROOT / "pipeline"
 # scripts/lib package gets imported right below, and Python caches only one
 # module under a given name in sys.modules.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from pp_lib.formats import VIEW_KEYS, materialize  # noqa: E402
+from pp_lib.formats import SAMPLE_ROWS, VIEW_KEYS, materialize, write_csv  # noqa: E402
 
 # Reuse the pipeline's own offline pycountry-CLDR translation mechanism (one
 # implementation, not a second copy of it) to derive a local-language name for
@@ -93,6 +101,7 @@ WEB_PUBLIC = APP_ROOT / "web" / "public"
 OUT_CATALOG = WEB_PUBLIC / "catalog.json"
 OUT_PARQUET_DIR = WEB_PUBLIC / "parquet"
 OUT_RAW_SOURCES_DIR = WEB_PUBLIC / "raw_sources"
+OUT_SAMPLES_DIR = WEB_PUBLIC / "samples"
 
 REGION_LEVELS = range(1, 6)
 
@@ -309,6 +318,7 @@ def main() -> None:
     check_inputs()
     OUT_PARQUET_DIR.mkdir(parents=True, exist_ok=True)
     OUT_RAW_SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
 
     version_resolution = read_csv_str(VERSION_RESOLUTION)
     reference = read_csv_str(COUNTRIES_REF).set_index("country_iso2")
@@ -380,6 +390,17 @@ def main() -> None:
                 if view_path is None:
                     die(f"{iso2}: view {view!r} failed to materialize parquet")
                 entry["view_files"][view] = {"parquet": {"bytes": view_path.stat().st_size}}
+
+            # First SAMPLE_ROWS of the all-rows parquet we just wrote -- reading it
+            # back rather than re-querying the master parquet a second time. Small
+            # enough to commit to git regardless of the country's full size (this is
+            # the whole point: it stands in for a full CSV/XLSX download on a static
+            # site that can't host CA's 157 MB or IL's 126 MB, past GitHub's 100 MB
+            # hard per-file limit).
+            sample_path = OUT_SAMPLES_DIR / f"{iso2}.csv"
+            sample_df = pd.read_parquet(path).head(SAMPLE_ROWS)
+            write_csv(sample_df, sample_path)
+            entry["sample_csv"] = {"bytes": sample_path.stat().st_size, "rows": len(sample_df)}
         else:
             # A file was delivered but its postal_code column is absent or 100% blank,
             # so the pipeline dropped the country and there is no canonical output.
@@ -402,6 +423,23 @@ def main() -> None:
                 "in the canonical dataset. The download is JD's original source file, "
                 "un-normalized, kept for its administrative levels and coordinates."
             )
+
+            # Same SAMPLE_ROWS treatment as the covered countries, so the sidebar's
+            # bulk-zip feature has one uniform file to fetch for every country --
+            # these files are already tiny, but the truncation keeps behavior (and
+            # column headers, since it's read the same way source_stats() reads it)
+            # consistent rather than special-cased.
+            if "csv" in entry["files"]:
+                sample_src_df = pd.read_csv(
+                    source_path, dtype=str, keep_default_na=False, na_values=[],
+                    encoding=row["selected_encoding"] or "utf-8",
+                    sep=row["selected_delimiter"] or ",",
+                    engine="python", on_bad_lines="skip",
+                ).head(SAMPLE_ROWS)
+                sample_path = OUT_SAMPLES_DIR / f"{iso2}.csv"
+                write_csv(sample_src_df, sample_path)
+                entry["sample_csv"] = {"bytes": sample_path.stat().st_size, "rows": len(sample_src_df)}
+
             if iso2 not in no_postal:
                 print(f"  warning: {iso2} has no rows but is not in {NO_POSTAL_REPORT.name}")
 
@@ -425,7 +463,8 @@ def main() -> None:
                 max(c["last_updated"] for c in countries),
             ],
             "download_bytes": {
-                "parquet": sum(c["files"].get("parquet", {}).get("bytes", 0) for c in covered_entries)
+                "parquet": sum(c["files"].get("parquet", {}).get("bytes", 0) for c in covered_entries),
+                "sample_csv": sum(c.get("sample_csv", {}).get("bytes", 0) for c in countries),
             },
         },
         "countries": sorted(countries, key=lambda c: c["name_en"]),

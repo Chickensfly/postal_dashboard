@@ -59,17 +59,40 @@ type Props = {
   rows: Country[]
   sort: Sort
   onSort: (key: SortKey) => void
+  selectedRows: Set<string>
+  onToggleRow: (iso2: string) => void
+  onToggleAll: () => void
+  allSelected: boolean
   focused: string | null
   onFocus: (iso2: string) => void
   rowRefs: React.RefObject<Record<string, HTMLTableRowElement | null>>
 }
 
-export default function CountryTable({ rows, sort, onSort, focused, onFocus, rowRefs }: Props) {
+export default function CountryTable({
+  rows,
+  sort,
+  onSort,
+  selectedRows,
+  onToggleRow,
+  onToggleAll,
+  allSelected,
+  focused,
+  onFocus,
+  rowRefs,
+}: Props) {
   return (
     <div className="table-scroll">
       <table className="countries">
         <thead>
           <tr>
+            <th className="col-check">
+              <input
+                type="checkbox"
+                checked={allSelected}
+                onChange={onToggleAll}
+                aria-label="Select all listed countries with a sample CSV"
+              />
+            </th>
             {COLUMNS.map((col) => (
               <th key={col.key} className={col.numeric ? 'col-num' : undefined} title={col.title}>
                 <button type="button" onClick={() => onSort(col.key)}>
@@ -100,6 +123,15 @@ export default function CountryTable({ rows, sort, onSort, focused, onFocus, row
                   .filter(Boolean)
                   .join(' ')}
               >
+                <td className="col-check">
+                  <input
+                    type="checkbox"
+                    checked={selectedRows.has(c.iso2)}
+                    disabled={!c.sample_csv}
+                    onChange={() => onToggleRow(c.iso2)}
+                    aria-label={`Select ${c.name_en}`}
+                  />
+                </td>
                 <td>
                   <button
                     type="button"
@@ -160,7 +192,7 @@ export default function CountryTable({ rows, sort, onSort, focused, onFocus, row
           })}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={8} style={{ padding: '18px', textAlign: 'center', color: 'var(--text-muted)' }}>
+              <td colSpan={9} style={{ padding: '18px', textAlign: 'center', color: 'var(--text-muted)' }}>
                 No countries match these filters.
               </td>
             </tr>
