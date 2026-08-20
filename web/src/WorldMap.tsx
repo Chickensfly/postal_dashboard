@@ -42,7 +42,11 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
 
   useEffect(() => {
     let alive = true
-    fetch('/vendor/countries-110m.json')
+    // import.meta.env.BASE_URL is Vite's configured `base` -- '/' locally, but
+    // '/<repo-name>/' on a GitHub Pages project page (see vite.config.ts). An
+    // absolute '/vendor/...' path 404s there since the site isn't served from
+    // the domain root.
+    fetch(`${import.meta.env.BASE_URL}vendor/countries-110m.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`${r.status} ${r.statusText}`)
         return r.json()
