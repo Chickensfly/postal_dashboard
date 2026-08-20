@@ -1,5 +1,9 @@
 export type Format = 'csv' | 'xlsx' | 'parquet'
 
+/** "all_rows" (the default everywhere) is never sent by the UI explicitly -- it's
+ *  what every country already behaves as. These two are the pilot toggle states. */
+export type View = 'postal_codes' | 'admin_areas'
+
 export type FileEntry = {
   bytes: number
   /** True when this is JD's original source file rather than pipeline output. */
@@ -45,6 +49,16 @@ export type Country = {
   /** Columns present in that source file (raw countries only). */
   source_columns?: string[]
   note?: string
+  /** Present only for the small pilot set of countries (see build_catalog.py's
+   *  PILOT_COUNTRIES) offering the postal-codes/admin-areas split. Its absence is
+   *  exactly the signal the UI uses to hide the view toggle for every other country. */
+  view_stats?: Record<View, { rows: number }>
+  view_files?: Record<View, Partial<Record<Format, FileEntry>>>
+  /** Populated by scripts/link_drive_files.py against a Drive folder you maintain
+   *  yourself -- absent until that's been run for this country. Always scoped to
+   *  all-rows (the postal-codes/admin-areas split stays parquet-only; see that
+   *  script's docstring), so these links don't change with the view toggle. */
+  drive_links?: Partial<Record<'csv' | 'xlsx', string>>
 }
 
 export type Catalog = {

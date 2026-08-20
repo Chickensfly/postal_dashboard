@@ -1,0 +1,68 @@
+name: Deploy to GitHub Pages
+
+# Builds web/ and publishes it as a static site -- no backend involved (see
+# server/main.py's docstring: that FastAPI app is local-dev-only and is never
+# deployed). Runs on every push to main; also triggerable by hand from the
+# Actions tab. One-time manual step this workflow can't do for you: Settings ->
+# Pages -> Source: "GitHub Actions" (needed once before the first run succeeds).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Compute base path
+        # A user/org page repo (<owner>.github.io) is served at the domain root;
+        # any other (project page) repo is served under /<repo-name>/. Computed
+        # here so vite.config.ts never needs the repo name hardcoded.
+        id: base
+        run: |
+          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+            echo "path=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Build
+        working-directory: web
+        env:
+          BASE_PATH: ${{ steps.base.outputs.path }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

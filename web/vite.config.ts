@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// GitHub Pages serves a project page at https://<user>.github.io/<repo>/, so every
+// asset path needs that /<repo>/ prefix -- but only for that one deployment
+// target. Locally (`npm run dev` / a hand-run `npm run build`) there's no such
+// prefix, so this defaults to '/' and only picks up BASE_PATH when the GitHub
+// Actions workflow sets it (see .github/workflows/deploy.yml, which computes the
+// right value for the repo it's actually running in -- nothing to hardcode here).
 export default defineConfig({
   plugins: [react()],
-  server: {
-    // The catalog, previews and downloads all come from the FastAPI server on :8000.
-    proxy: { '/api': 'http://127.0.0.1:8000' },
-  },
+  base: process.env.BASE_PATH || '/',
 })

@@ -1,10 +1,69 @@
 import { useEffect, useState } from 'react'
-import type { Country, Format, Preview } from './types'
-import { fetchPreview, downloadUrl } from './api'
-import { bytes, prettyDate, sizeOf } from './format'
+import type { Country, Format, Preview, View } from './types'
+import { parquetUrl, rawSourceUrl } from './api'
+import { queryParquet } from './duckdb'
+import { bytes, prettyDate } from './format'
 
-const FORMATS: Format[] = ['csv', 'xlsx', 'parquet']
-const FORMAT_LABEL: Record<Format, string> = { csv: 'CSV', xlsx: 'XLSX', parquet: 'Parquet' }
+const VIEWS: View[] = ['postal_codes', 'admin_areas']
+const VIEW_LABEL: Record<View, string> = { postal_codes: 'Postal Codes', admin_areas: 'Admin Areas' }
+
+// Same columns the old server-side search scanned -- postal code fields, place
+// name, and every region_N_en/lc pair. Ordered widest-value-first for readability.
+const SEARCHABLE = [
+  'postal_code',
+  'postal_code_norm',
+  'place_name',
+  ...[1, 2, 3, 4, 5].flatMap((n) => [`region_${n}_en`, `region_${n}_lc`]),
+]
+
+// This runs directly against whichever file is on screen (all-rows or a dedup
+// view) -- unlike the old server, which joined back to the master parquet so a
+// search term could match a value a view's dedupe had blanked out. There's no
+// master file on a static site to join against, so that's a known, deliberate
+// simplification: a term only a blanked field contained won't surface a match in
+// that view (switching to the other view, or all rows if this country still
+// offers it another way, will still find it).
+async function searchCountry(
+  url: string,
+  q: string,
+  limit: number,
+): Promise<Preview> {
+  const needle = q.trim()
+  let whereSql = ''
+  let params: unknown[] = []
+  if (needle) {
+    const escaped = needle.replace(/[\\%_]/g, (c) => `\\${c}`)
+    // CAST to VARCHAR: a region_N column beyond a country's actual admin depth is
+    // entirely NULL, and DuckDB's parquet reader infers an all-null column as
+    // DOUBLE (there's no non-null value to infer a string type from) -- ILIKE has
+    // no DOUBLE overload, so querying it uncast throws a binder error rather than
+    // just finding no match. Casting makes every column searchable uniformly
+    // regardless of how an empty one happened to get typed.
+    whereSql = `WHERE ${SEARCHABLE.map((c) => `CAST(${c} AS VARCHAR) ILIKE ? ESCAPE '\\'`).join(' OR ')}`
+    params = SEARCHABLE.map(() => `%${escaped}%`)
+  }
+  const [rows, countRow] = await Promise.all([
+    queryParquet<Record<string, unknown>>(
+      url,
+      `SELECT * FROM read_parquet('$file') ${whereSql} LIMIT ${limit}`,
+      params,
+    ),
+    queryParquet<{ n: bigint | number }>(
+      url,
+      `SELECT count(*) AS n FROM read_parquet('$file') ${whereSql}`,
+      params,
+    ),
+  ])
+  const columns = rows.length > 0 ? Object.keys(rows[0]) : []
+  const matched = Number(countRow[0]?.n ?? 0)
+  return {
+    iso2: '',
+    columns,
+    rows: rows.map((r) => columns.map((c) => r[c] as string | number | null)),
+    matched,
+    truncated: matched > rows.length,
+  }
+}
 
 export default function CountryDrawer({
   country,
@@ -17,6 +76,11 @@ export default function CountryDrawer({
   const [preview, setPreview] = useState<Preview | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  // Only meaningful when country.view_stats exists (every covered country; the 9
+  // no-postal-code countries don't) -- the toggle is hidden otherwise and the
+  // all-rows file is queried directly.
+  const [view, setView] = useState<View>('postal_codes')
+  const supportsViews = !!country.view_stats
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
@@ -24,28 +88,36 @@ export default function CountryDrawer({
     return () => window.removeEventListener('keydown', onKey)
   }, [onClose])
 
-  // Reset the query when switching countries, so a stale search doesn't hide rows.
-  useEffect(() => setQuery(''), [country.iso2])
+  // Reset the query (and view, back to its default) when switching countries, so a
+  // stale search or a toggle chosen for one country doesn't silently carry to the next.
+  useEffect(() => {
+    setQuery('')
+    setView('postal_codes')
+  }, [country.iso2])
 
   useEffect(() => {
     if (country.status !== 'covered') {
       setPreview(null)
       return
     }
-    const controller = new AbortController()
+    let cancelled = false
+    const url = parquetUrl(country.iso2, supportsViews ? view : undefined)
     const timer = setTimeout(() => {
       setLoading(true)
       setError(null)
-      fetchPreview(country.iso2, query, 100, controller.signal)
-        .then(setPreview)
-        .catch((e: Error) => e.name !== 'AbortError' && setError(e.message))
-        .finally(() => setLoading(false))
+      searchCountry(url, query, 100)
+        .then((p) => !cancelled && setPreview(p))
+        .catch((e: Error) => !cancelled && setError(e.message))
+        .finally(() => !cancelled && setLoading(false))
     }, query ? 220 : 0)
     return () => {
-      controller.abort()
+      cancelled = true
       clearTimeout(timer)
     }
-  }, [country.iso2, country.status, query])
+  }, [country.iso2, country.status, query, view, supportsViews])
+
+  const activeParquet = (supportsViews ? country.view_files?.[view] : country.files)?.parquet
+  const activeRows = supportsViews ? country.view_stats![view].rows : country.rows
 
   return (
     <div
@@ -65,22 +137,53 @@ export default function CountryDrawer({
             </div>
           </div>
           <span className="dl-buttons">
-            {FORMATS.filter((fmt) => country.files[fmt]).map((fmt) => (
-              <a
-                key={fmt}
-                href={downloadUrl(country.iso2, fmt)}
-                className={fmt === 'csv' ? 'warn' : undefined}
-                title={
-                  fmt === 'csv'
-                    ? 'Excel strips leading zeros from CSVs — use XLSX for Excel'
-                    : undefined
-                }
-                download
-              >
-                {FORMAT_LABEL[fmt]} {bytes(sizeOf(country, fmt))}
-                {country.files_are_source && <span className="raw-tag">raw</span>}
-              </a>
-            ))}
+            {country.files_are_source ? (
+              (['xlsx', 'csv'] as Format[])
+                .filter((fmt) => country.files[fmt])
+                .map((fmt) => (
+                  <a
+                    key={fmt}
+                    href={rawSourceUrl(country.files[fmt]!.name!)}
+                    className={fmt === 'csv' ? 'warn' : undefined}
+                    title={
+                      fmt === 'csv'
+                        ? 'Excel strips leading zeros from CSVs — use XLSX for Excel'
+                        : undefined
+                    }
+                    download
+                  >
+                    {fmt.toUpperCase()} {bytes(country.files[fmt]?.bytes ?? 0)}
+                    <span className="raw-tag">raw</span>
+                  </a>
+                ))
+            ) : (
+              <>
+                {activeParquet && (
+                  <a href={parquetUrl(country.iso2, supportsViews ? view : undefined)} download>
+                    Parquet {bytes(activeParquet.bytes)}
+                  </a>
+                )}
+                {(['xlsx', 'csv'] as const).map(
+                  (fmt) =>
+                    country.drive_links?.[fmt] && (
+                      <a
+                        key={fmt}
+                        href={country.drive_links[fmt]}
+                        className={fmt === 'csv' ? 'warn' : undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={
+                          (fmt === 'csv'
+                            ? 'Excel strips leading zeros from CSVs — use XLSX for Excel. '
+                            : '') + 'Opens in Google Drive — always all rows, regardless of the view below.'
+                        }
+                      >
+                        {fmt.toUpperCase()} ↗
+                      </a>
+                    ),
+                )}
+              </>
+            )}
           </span>
           <button type="button" className="close" onClick={onClose} aria-label="Close">
             ✕
@@ -89,9 +192,15 @@ export default function CountryDrawer({
 
         <div className="drawer-meta">
           <div>
-            <div className="k">{country.files_are_source ? 'Source rows' : 'Postal codes'}</div>
+            <div className="k">
+              {country.files_are_source
+                ? 'Source rows'
+                : supportsViews
+                  ? VIEW_LABEL[view]
+                  : 'Postal codes'}
+            </div>
             <div className="v">
-              {(country.files_are_source ? country.source_rows : country.rows).toLocaleString(
+              {(country.files_are_source ? country.source_rows : activeRows).toLocaleString(
                 'en-US',
               )}
               {country.files_are_source && (
@@ -148,6 +257,25 @@ export default function CountryDrawer({
             </div>
 
             <div className="preview-controls">
+              {supportsViews && (
+                <span className="fmt-group" role="group" aria-label="View">
+                  {VIEWS.map((v) => (
+                    <button
+                      key={v}
+                      type="button"
+                      aria-pressed={view === v}
+                      onClick={() => setView(v)}
+                      title={
+                        v === 'postal_codes'
+                          ? 'One row per postal code; admin fields blank where they vary'
+                          : 'One row per admin area; postal code blank where it varies'
+                      }
+                    >
+                      {VIEW_LABEL[v]}
+                    </button>
+                  ))}
+                </span>
+              )}
               <input
                 type="search"
                 value={query}
@@ -163,7 +291,6 @@ export default function CountryDrawer({
                       }`
                     : ''}
               </span>
-              
             </div>
 
             <div className="preview-scroll">

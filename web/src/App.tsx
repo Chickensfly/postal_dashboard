@@ -4,12 +4,9 @@ import CountryTable from './CountryTable'
 import { compare, type Sort, type SortKey } from './sorting'
 import { BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
-import { downloadBundle, fetchCatalog } from './api'
-import { bytes, compactRows, prettyDate, sizeOf } from './format'
-import type { Catalog, Country, Format } from './types'
-
-const FORMATS: Format[] = ['csv', 'xlsx', 'parquet']
-const FORMAT_LABEL: Record<Format, string> = { csv: 'CSV', xlsx: 'XLSX', parquet: 'Parquet' }
+import { fetchCatalog } from './api'
+import { compactRows, prettyDate } from './format'
+import type { Catalog } from './types'
 
 type Theme = 'light' | 'dark' | null
 
@@ -21,10 +18,7 @@ export default function App() {
   const [region, setRegion] = useState('all')
   const [status, setStatus] = useState<'all' | 'covered' | 'delivered_no_data'>('all')
   const [sort, setSort] = useState<Sort>({ key: 'name_en', dir: 'asc' })
-  const [fmt, setFmt] = useState<Format>('xlsx')
-  const [checked, setChecked] = useState<Set<string>>(new Set())
   const [focused, setFocused] = useState<string | null>(null)
-  const [busy, setBusy] = useState(false)
   const [theme] = useState<Theme>('dark')
 
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
@@ -56,56 +50,9 @@ export default function App() {
       .sort((a, b) => compare(a, b, sort))
   }, [catalog, search, region, status, sort])
 
-  // Selectable = has a file in the format the footer is set to. That includes the
-  // no-postal-code countries, whose raw source files exist as csv (and mostly xlsx).
-  const selectable = useMemo(
-    () => visible.filter((c) => !!c.files[fmt]),
-    [visible, fmt],
-  )
-  const allSelected =
-    selectable.length > 0 && selectable.every((c) => checked.has(c.iso2))
-
-  const selectedCountries = useMemo(() => {
-    if (!catalog) return [] as Country[]
-    return catalog.countries.filter((c) => checked.has(c.iso2))
-  }, [catalog, checked])
-
-  // A country checked in one format may not exist in another (ML and TG have no
-  // xlsx), so the footer only ever counts and sends what the current format serves.
-  const sendable = selectedCountries.filter((c) => !!c.files[fmt])
-  const selectedRows = sendable.reduce((n, c) => n + c.rows, 0)
-  const selectedBytes = sendable.reduce((n, c) => n + sizeOf(c, fmt), 0)
-  const selectedRaw = sendable.filter((c) => c.files_are_source)
-
   const focusCountry = (iso2: string) => {
     setFocused(iso2)
     rowRefs.current[iso2]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
-  }
-
-  const toggleRow = (iso2: string) =>
-    setChecked((prev) => {
-      const next = new Set(prev)
-      if (!next.delete(iso2)) next.add(iso2)
-      return next
-    })
-
-  const toggleAll = () =>
-    setChecked((prev) => {
-      const next = new Set(prev)
-      if (allSelected) selectable.forEach((c) => next.delete(c.iso2))
-      else selectable.forEach((c) => next.add(c.iso2))
-      return next
-    })
-
-  const runBundle = async () => {
-    setBusy(true)
-    try {
-      await downloadBundle(sendable.map((c) => c.iso2), fmt)
-    } catch (e) {
-      setError((e as Error).message)
-    } finally {
-      setBusy(false)
-    }
   }
 
   if (error && !catalog) {
@@ -116,9 +63,6 @@ export default function App() {
             <strong>Could not load the catalog.</strong>
           </p>
           <p>{error}</p>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            Is the API running? <code>.venv/bin/uvicorn server.main:app --port 8000</code>
-          </p>
         </div>
       </div>
     )
@@ -213,25 +157,15 @@ export default function App() {
             </select>
           </div>
 
-
-
           <div className="result-line">
             <span>
               {visible.length} of {totals.countries_with_files} countries ·{' '}
               {compactRows(visible.reduce((n, c) => n + c.rows, 0))} codes listed
             </span>
-            {checked.size > 0 && (
-              <button type="button" onClick={() => setChecked(new Set())}>
-                clear selection
-              </button>
-            )}
           </div>
-
-
 
           <CountryTable
             rows={visible}
-            fmt={fmt}
             sort={sort}
             onSort={(key: SortKey) =>
               setSort((s) =>
@@ -240,69 +174,10 @@ export default function App() {
                   : { key, dir: key === 'rows' || key === 'last_updated' ? 'desc' : 'asc' },
               )
             }
-            selectedRows={checked}
-            onToggleRow={toggleRow}
-            onToggleAll={toggleAll}
-            allSelected={allSelected}
             focused={focused}
             onFocus={focusCountry}
             rowRefs={rowRefs}
           />
-
-          <div className="selection-bar">
-            <span className="summary">
-              {checked.size === 0 ? (
-                <>Select countries to download several at once.</>
-              ) : (
-                <>
-                  <b>{sendable.length}</b> selected · <b>{compactRows(selectedRows)}</b> codes ·{' '}
-                  <b>{bytes(selectedBytes)}</b> as {FORMAT_LABEL[fmt]}
-                  {selectedRaw.length > 0 && (
-                    <>
-                      {' '}
-                      · <b>{selectedRaw.length}</b> raw source
-                    </>
-                  )}
-                  {sendable.length < checked.size && (
-                    <>
-                      {' '}
-                      ·{' '}
-                      <span style={{ color: 'var(--status-warning)' }}>
-                        {checked.size - sendable.length} not available as {FORMAT_LABEL[fmt]}
-                      </span>
-                    </>
-                  )}
-                </>
-              )}
-            </span>
-            <span className="fmt-group">
-              {FORMATS.map((f) => (
-                <button
-                  key={f}
-                  type="button"
-                  aria-pressed={fmt === f}
-                  onClick={() => setFmt(f)}
-                >
-                  {FORMAT_LABEL[f]}
-                </button>
-              ))}
-            </span>
-            <button
-              type="button"
-              className="btn-primary"
-              disabled={sendable.length === 0 || busy}
-              onClick={runBundle}
-            >
-              {busy ? 'Zipping…' : `Download ${sendable.length || ''} as .zip`}
-            </button>
-            {fmt === 'csv' && (
-              <span className="csv-note">
-                <span className="dot">⚠</span> Excel re-strips leading zeros when a CSV is
-                double-clicked (01067 → 1067). Use XLSX for Excel, or import the CSV with{' '}
-                <em>Data ▸ Get Data ▸ From Text/CSV</em> and set <code>postal_code</code> to Text.
-              </span>
-            )}
-          </div>
         </section>
       </div>
 

@@ -1,17 +1,28 @@
 #!/usr/bin/env python3
 """
-Build the Postal Portal catalog.
+Build the Postal Portal catalog -- static-site edition.
 
 This is a DEV-MACHINE-ONLY script -- it needs the full `to JD/` tree (batches,
 pipeline reference data, the enrichment library) and is never run on the deploy
-host. Its two outputs are what actually ship there:
+host. Its outputs are written straight into `web/public/`, so `vite build` bundles
+them into the static site with no extra wiring:
 
-  app/catalog.json           everything the map + sidebar needs (~95 KB) -- commit
-                              this to git; it's the one thing that makes the deployed
-                              server's catalog match what `to JD/` currently holds.
-  app/raw_sources/*.csv,xlsx  the 9 no-postal-code countries' original JD files
-                              (~1.4 MB total) -- small enough to commit directly,
-                              so the deploy host never needs `to JD/` for these either.
+  web/public/catalog.json           everything the map + sidebar needs -- commit
+                                     this to git.
+  web/public/parquet/<ISO2>[.view].parquet
+                                     the ONLY per-country data format shipped to
+                                     the static site -- 79 countries x 3 views
+                                     (all_rows/postal_codes/admin_areas), measured
+                                     108 MB total, largest file 8.5 MB. csv/xlsx are
+                                     deliberately NOT generated here any more --
+                                     GitHub Pages can't host or generate them on
+                                     demand, so they're linked from Google Drive
+                                     instead (see scripts/link_drive_files.py, which
+                                     runs as a separate, later step and merges
+                                     `drive_links` into this same catalog.json).
+  web/public/raw_sources/*.csv,xlsx the 9 no-postal-code countries' original JD
+                                     files (~1.4 MB total) -- small enough to commit
+                                     directly, no Drive involvement needed for these.
 
 Reads, strictly read-only:
   <JD>/pipeline/data/interim/version_resolution.csv   one authoritative source file per country
@@ -23,15 +34,15 @@ Reads, strictly read-only:
   <JD>/pipeline/data/reference/countries.csv           iso3 / continent reference
   <JD>/pipeline/reports/countries_with_no_postal_codes.csv
 
-csv/xlsx are never pre-generated for the 79 canonical countries -- they're produced
-on demand (scripts/lib/formats.py), same code path the deployed server uses. This run
-still exercises that path once per country/format, purely to record accurate byte
-counts in catalog.json and warm the cache so the very first real download isn't the
-one paying the conversion cost.
-
 "last updated" is the filesystem mtime of the resolved source file under `to JD/`.
 
-Idempotent: re-run after a new batch lands. Nothing outside app/ is ever written.
+Idempotent: re-run after a new batch lands. Nothing outside web/public/ is written.
+
+Note: `server/main.py` (the FastAPI backend) is kept for local dev/testing -- it
+still does on-demand csv/xlsx generation via scripts/pp_lib/formats.py -- but this
+script no longer feeds it csv/xlsx byte counts, since the deployed static site
+never uses them. See app/on_demand_cache/ (server/main.py's own runtime cache,
+separate from web/public/parquet/'s pre-generated, committed files).
 """
 
 from __future__ import annotations
@@ -58,7 +69,7 @@ PIPELINE = JD_ROOT / "pipeline"
 # scripts/lib package gets imported right below, and Python caches only one
 # module under a given name in sys.modules.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from pp_lib.formats import materialize  # noqa: E402
+from pp_lib.formats import VIEW_KEYS, materialize  # noqa: E402
 
 # Reuse the pipeline's own offline pycountry-CLDR translation mechanism (one
 # implementation, not a second copy of it) to derive a local-language name for
@@ -76,10 +87,12 @@ VERSION_RESOLUTION = PIPELINE / "data" / "interim" / "version_resolution.csv"
 COUNTRIES_REF = PIPELINE / "data" / "reference" / "countries.csv"
 NO_POSTAL_REPORT = PIPELINE / "reports" / "countries_with_no_postal_codes.csv"
 
-OUT_DIR = APP_ROOT / "app"
-OUT_CATALOG = OUT_DIR / "catalog.json"
-OUT_CACHE_DIR = OUT_DIR / "on_demand_cache"
-OUT_RAW_SOURCES_DIR = OUT_DIR / "raw_sources"
+# Written straight into web/public/ -- vite build bundles these into the static
+# site automatically, no separate copy/sync step needed.
+WEB_PUBLIC = APP_ROOT / "web" / "public"
+OUT_CATALOG = WEB_PUBLIC / "catalog.json"
+OUT_PARQUET_DIR = WEB_PUBLIC / "parquet"
+OUT_RAW_SOURCES_DIR = WEB_PUBLIC / "raw_sources"
 
 REGION_LEVELS = range(1, 6)
 
@@ -194,6 +207,22 @@ def country_stats(sub: pd.DataFrame) -> dict:
     }
 
 
+def view_row_counts(sub: pd.DataFrame) -> dict:
+    """Distinct-group counts for the two dedup views, computed directly from the
+    country's own rows -- cheap (just drop_duplicates on a handful of columns), and
+    gives the frontend an accurate count to display without a live query.
+
+    Unlike groupby(), drop_duplicates() does NOT drop rows with a NaN key column
+    (confirmed: DE/AU tuple counts using this exact method matched the live
+    dedupe() output during design) -- region_4/5 being entirely NaN for most
+    countries is not a trap here the way it is for groupby's default.
+    """
+    return {
+        "postal_codes": {"rows": int(sub[VIEW_KEYS["postal_codes"]].drop_duplicates().shape[0])},
+        "admin_areas": {"rows": int(sub[VIEW_KEYS["admin_areas"]].drop_duplicates().shape[0])},
+    }
+
+
 REGION_HEADER = re.compile(r"^region_?(\d)_?(lc|en)?$")
 # Suriname's file uses GeoNames-style `order1_name` / `order8_name` instead of
 # `region<N>`. The numbers are GeoNames admin ranks, not our level indices, so
@@ -278,7 +307,7 @@ def source_stats(csv_path: Path, encoding: str, delimiter: str) -> dict:
 
 def main() -> None:
     check_inputs()
-    OUT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_PARQUET_DIR.mkdir(parents=True, exist_ok=True)
     OUT_RAW_SOURCES_DIR.mkdir(parents=True, exist_ok=True)
 
     version_resolution = read_csv_str(VERSION_RESOLUTION)
@@ -333,19 +362,24 @@ def main() -> None:
 
         if covered:
             entry.update(country_stats(sub))
-            # Generated on demand, not pre-shipped: this is the same code path the
-            # deployed server uses at request time (scripts/lib/formats.py), run here
-            # once per format purely to record a real byte count in catalog.json and
-            # warm the cache. No 706 MB of CSV / 325 MB of XLSX needs to exist on disk
-            # for this to work -- only the ~80 MB master parquet does.
-            entry["files"] = {}
-            for fmt in ("parquet", "csv", "xlsx"):
-                path = materialize(duck, MASTER_PARQUET, OUT_CACHE_DIR, iso2, fmt)
-                if path is not None:
-                    entry["files"][fmt] = {"bytes": path.stat().st_size}
-            missing = {"csv", "xlsx", "parquet"} - set(entry["files"])
-            if missing:
-                die(f"{iso2}: covered but failed to materialize format(s): {sorted(missing)}")
+            # Parquet only -- the ONE format the static site ships directly. Still
+            # the same materialize() the local-dev server uses, just never asked
+            # for csv/xlsx here any more (those are Drive-linked, not generated).
+            path = materialize(duck, MASTER_PARQUET, OUT_PARQUET_DIR, iso2, "parquet")
+            if path is None:
+                die(f"{iso2}: covered but failed to materialize parquet")
+            entry["files"] = {"parquet": {"bytes": path.stat().st_size}}
+
+            # No longer gated to a pilot set -- every covered country gets both
+            # split views. The mechanism was always generic; AU was just where it
+            # was proven out first (see the README section on this feature).
+            entry["view_stats"] = view_row_counts(sub)
+            entry["view_files"] = {}
+            for view in ("postal_codes", "admin_areas"):
+                view_path = materialize(duck, MASTER_PARQUET, OUT_PARQUET_DIR, iso2, "parquet", view)
+                if view_path is None:
+                    die(f"{iso2}: view {view!r} failed to materialize parquet")
+                entry["view_files"][view] = {"parquet": {"bytes": view_path.stat().st_size}}
         else:
             # A file was delivered but its postal_code column is absent or 100% blank,
             # so the pipeline dropped the country and there is no canonical output.
@@ -391,8 +425,7 @@ def main() -> None:
                 max(c["last_updated"] for c in countries),
             ],
             "download_bytes": {
-                fmt: sum(c["files"].get(fmt, {}).get("bytes", 0) for c in covered_entries)
-                for fmt in ("csv", "xlsx", "parquet")
+                "parquet": sum(c["files"].get("parquet", {}).get("bytes", 0) for c in covered_entries)
             },
         },
         "countries": sorted(countries, key=lambda c: c["name_en"]),

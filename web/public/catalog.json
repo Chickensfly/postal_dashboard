@@ -1,0 +1,5959 @@
+{
+ "generated_at": "2026-08-20T12:11:06+08:00",
+ "totals": {
+  "countries": 79,
+  "countries_with_files": 88,
+  "delivered_no_data": 9,
+  "rows": 3664362,
+  "continents": [
+   "Africa",
+   "Asia",
+   "Europe",
+   "North America",
+   "Oceania",
+   "South America"
+  ],
+  "last_updated_range": [
+   "2025-01-22",
+   "2026-08-13"
+  ],
+  "download_bytes": {
+   "parquet": 51274139
+  }
+ },
+ "countries": [
+  {
+   "iso2": "AR",
+   "iso3": "ARG",
+   "iso_numeric": "032",
+   "name_en": "Argentina",
+   "name_lc": "Argentina",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-05-28",
+   "source_file": "JD_AR.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 1731,
+   "rows": 1731,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "B1557",
+   "region_1_iso_coverage_pct": 82.3,
+   "files": {
+    "parquet": {
+     "bytes": 67307
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1731
+    },
+    "admin_areas": {
+     "rows": 320
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 67307
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 23079
+     }
+    }
+   }
+  },
+  {
+   "iso2": "AU",
+   "iso3": "AUS",
+   "iso_numeric": "036",
+   "name_en": "Australia",
+   "name_lc": "Australia",
+   "continent_code": "OC",
+   "continent_name": "Oceania",
+   "status": "covered",
+   "last_updated": "2026-08-13",
+   "source_file": "JD_AU_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 18559,
+   "rows": 18559,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.3,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "0200",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 430760
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3175
+    },
+    "admin_areas": {
+     "rows": 17788
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 92488
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 420245
+     }
+    }
+   }
+  },
+  {
+   "iso2": "AT",
+   "iso3": "AUT",
+   "iso_numeric": "040",
+   "name_en": "Austria",
+   "name_lc": "Österreich",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-08",
+   "source_file": "JD_AT_v4.csv",
+   "source_batch": "數據更新",
+   "source_rows": 18958,
+   "rows": 18957,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "7000",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 427432
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2233
+    },
+    "admin_areas": {
+     "rows": 17231
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 68826
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 414736
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BD",
+   "iso3": "BGD",
+   "iso_numeric": "050",
+   "name_en": "Bangladesh",
+   "name_lc": "বাংলাদেশ",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-02-09",
+   "source_file": "JD_BD_孟加拉国.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 1349,
+   "rows": 1349,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "7800",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 47248
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1349
+    },
+    "admin_areas": {
+     "rows": 1345
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 47248
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 47318
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BY",
+   "iso3": "BLR",
+   "iso_numeric": "112",
+   "name_en": "Belarus",
+   "name_lc": "Беларусь",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_BY.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 3133,
+   "rows": 3133,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "225110",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 70864
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3123
+    },
+    "admin_areas": {
+     "rows": 129
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 70827
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 14978
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BE",
+   "iso3": "BEL",
+   "iso_numeric": "056",
+   "name_en": "Belgium",
+   "name_lc": "België",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-02-09",
+   "source_file": "JD_BE_比利时.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 2781,
+   "rows": 2781,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1000",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 58272
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1146
+    },
+    "admin_areas": {
+     "rows": 43
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 31566
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 13951
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BO",
+   "iso3": "BOL",
+   "iso_numeric": "068",
+   "name_en": "Bolivia, Plurinational State of",
+   "name_lc": "Bolivia, Estado plurinacional de",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-29",
+   "source_file": "JD_BO.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 376,
+   "rows": 0,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 52111,
+     "raw": true,
+     "name": "JD_BO.csv"
+    },
+    "xlsx": {
+     "bytes": 31853,
+     "raw": true,
+     "name": "JD_BO.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "BR",
+   "iso3": "BRA",
+   "iso_numeric": "076",
+   "name_en": "Brazil",
+   "name_lc": "Brasil",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-04-21",
+   "source_file": "JD_BR.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 5525,
+   "rows": 5525,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.5,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "69945-000",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 181825
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 5525
+    },
+    "admin_areas": {
+     "rows": 5502
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 181825
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 181851
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BN",
+   "iso3": "BRN",
+   "iso_numeric": "096",
+   "name_en": "Brunei",
+   "name_lc": "Brunei Darussalam",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-06-17",
+   "source_file": "JD_BN.csv",
+   "source_batch": "batch 6",
+   "source_rows": 421,
+   "rows": 421,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "BA1111",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 27522
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 421
+    },
+    "admin_areas": {
+     "rows": 394
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 27522
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 26589
+     }
+    }
+   }
+  },
+  {
+   "iso2": "BG",
+   "iso3": "BGR",
+   "iso_numeric": "100",
+   "name_en": "Bulgaria",
+   "name_lc": "България ",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-10",
+   "source_file": "JD_BG_v4.csv",
+   "source_batch": "數據更新",
+   "source_rows": 5304,
+   "rows": 5304,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "8500",
+   "region_1_iso_coverage_pct": 57.7,
+   "files": {
+    "parquet": {
+     "bytes": 146401
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 4359
+    },
+    "admin_areas": {
+     "rows": 5292
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 125172
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 146403
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CM",
+   "iso3": "CMR",
+   "iso_numeric": "120",
+   "name_en": "Cameroon",
+   "name_lc": "Cameroun",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-29",
+   "source_file": "JD_CM.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 369,
+   "rows": 0,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 49185,
+     "raw": true,
+     "name": "JD_CM.csv"
+    },
+    "xlsx": {
+     "bytes": 31205,
+     "raw": true,
+     "name": "JD_CM.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "CA",
+   "iso3": "CAN",
+   "iso_numeric": "124",
+   "name_en": "Canada",
+   "name_lc": "Canada",
+   "continent_code": "NA",
+   "continent_name": "North America",
+   "status": "covered",
+   "last_updated": "2025-04-23",
+   "source_file": "JD_CA.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 892800,
+   "rows": 892800,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 53.3,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 36.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "T0A 0A0",
+   "region_1_iso_coverage_pct": 99.9,
+   "files": {
+    "parquet": {
+     "bytes": 6952800
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 891909
+    },
+    "admin_areas": {
+     "rows": 1664
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 6932673
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 45117
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CL",
+   "iso3": "CHL",
+   "iso_numeric": "152",
+   "name_en": "Chile",
+   "name_lc": "Chile",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-06-05",
+   "source_file": "JD_CL.csv",
+   "source_batch": "batch 6",
+   "source_rows": 346,
+   "rows": 346,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "2340000",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 27622
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 346
+    },
+    "admin_areas": {
+     "rows": 346
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 27622
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 27735
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CO",
+   "iso3": "COL",
+   "iso_numeric": "170",
+   "name_en": "Colombia",
+   "name_lc": "Colombia",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_CO.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 3681,
+   "rows": 3681,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "910001",
+   "region_1_iso_coverage_pct": 97.6,
+   "files": {
+    "parquet": {
+     "bytes": 73577
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3681
+    },
+    "admin_areas": {
+     "rows": 1122
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 73577
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 38004
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CG",
+   "iso3": "COG",
+   "iso_numeric": "178",
+   "name_en": "Congo",
+   "name_lc": "République du Congo",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-29",
+   "source_file": "JD_CG.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 50,
+   "rows": 0,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 7255,
+     "raw": true,
+     "name": "JD_CG.csv"
+    },
+    "xlsx": {
+     "bytes": 8540,
+     "raw": true,
+     "name": "JD_CG.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "CD",
+   "iso3": "COD",
+   "iso_numeric": "180",
+   "name_en": "Congo, The Democratic Republic of the",
+   "name_lc": "République démocratique du Congo",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-29",
+   "source_file": "JD_CD.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 248,
+   "rows": 0,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 42808,
+     "raw": true,
+     "name": "JD_CD.csv"
+    },
+    "xlsx": {
+     "bytes": 21330,
+     "raw": true,
+     "name": "JD_CD.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "HR",
+   "iso3": "HRV",
+   "iso_numeric": "191",
+   "name_en": "Croatia",
+   "name_lc": "Hrvatska",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_HR_克罗地亚.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 6774,
+   "rows": 6774,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "43000",
+   "region_1_iso_coverage_pct": 1.6,
+   "files": {
+    "parquet": {
+     "bytes": 122900
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 309
+    },
+    "admin_areas": {
+     "rows": 6774
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 19551
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 123006
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CY",
+   "iso3": "CYP",
+   "iso_numeric": "196",
+   "name_en": "Cyprus",
+   "name_lc": "Κύπρος",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-03-24",
+   "source_file": "JD_CY.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 1133,
+   "rows": 1133,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 33.1,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "5280",
+   "region_1_iso_coverage_pct": 5.0,
+   "files": {
+    "parquet": {
+     "bytes": 41824
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1125
+    },
+    "admin_areas": {
+     "rows": 593
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 41685
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 35513
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CZ",
+   "iso3": "CZE",
+   "iso_numeric": "203",
+   "name_en": "Czech Republic",
+   "name_lc": "Česko",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-02-09",
+   "source_file": "JD_CZ_捷克共和国.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 15507,
+   "rows": 15507,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "10000",
+   "region_1_iso_coverage_pct": 97.9,
+   "files": {
+    "parquet": {
+     "bytes": 286895
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2694
+    },
+    "admin_areas": {
+     "rows": 15181
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 63874
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 285937
+     }
+    }
+   }
+  },
+  {
+   "iso2": "DK",
+   "iso3": "DNK",
+   "iso_numeric": "208",
+   "name_en": "Denmark",
+   "name_lc": "Danmark",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-02-10",
+   "source_file": "JD_DK_丹麦.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 1159,
+   "rows": 1159,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1050",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 40381
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1159
+    },
+    "admin_areas": {
+     "rows": 620
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 40381
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 32577
+     }
+    }
+   }
+  },
+  {
+   "iso2": "EC",
+   "iso3": "ECU",
+   "iso_numeric": "218",
+   "name_en": "Ecuador",
+   "name_lc": "Ecuador",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_EC.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 1225,
+   "rows": 1225,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 99.7,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.7,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "200101",
+   "region_1_iso_coverage_pct": 99.7,
+   "files": {
+    "parquet": {
+     "bytes": 46923
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1225
+    },
+    "admin_areas": {
+     "rows": 768
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 46923
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 41742
+     }
+    }
+   }
+  },
+  {
+   "iso2": "EG",
+   "iso3": "EGY",
+   "iso_numeric": "818",
+   "name_en": "Egypt",
+   "name_lc": "مصر",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-06-23",
+   "source_file": "JD_EG.csv",
+   "source_batch": "batch 6",
+   "source_rows": 77,
+   "rows": 77,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 88.3,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "42111",
+   "region_1_iso_coverage_pct": 6.5,
+   "files": {
+    "parquet": {
+     "bytes": 18126
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 77
+    },
+    "admin_areas": {
+     "rows": 73
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 18126
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 18075
+     }
+    }
+   }
+  },
+  {
+   "iso2": "EE",
+   "iso3": "EST",
+   "iso_numeric": "233",
+   "name_en": "Estonia",
+   "name_lc": "Eesti",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_EE_爱沙尼亚.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 5398,
+   "rows": 5398,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "74305",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 167519
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 5293
+    },
+    "admin_areas": {
+     "rows": 4676
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 165021
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 153531
+     }
+    }
+   }
+  },
+  {
+   "iso2": "ET",
+   "iso3": "ETH",
+   "iso_numeric": "231",
+   "name_en": "Ethiopia",
+   "name_lc": "Ityopya ",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-09-28",
+   "source_file": "JD_ET.csv",
+   "source_batch": "數據更新",
+   "source_rows": 386,
+   "rows": 386,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 99.5,
+   "has_place_name": false,
+   "postal_code_example": "1000",
+   "region_1_iso_coverage_pct": 48.4,
+   "files": {
+    "parquet": {
+     "bytes": 27451
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 51
+    },
+    "admin_areas": {
+     "rows": 385
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 15006
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 27523
+     }
+    }
+   }
+  },
+  {
+   "iso2": "FI",
+   "iso3": "FIN",
+   "iso_numeric": "246",
+   "name_en": "Finland",
+   "name_lc": "Suomi",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-02-10",
+   "source_file": "JD_FI_芬兰.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 3576,
+   "rows": 3576,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "00100",
+   "region_1_iso_coverage_pct": 36.6,
+   "files": {
+    "parquet": {
+     "bytes": 87002
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3576
+    },
+    "admin_areas": {
+     "rows": 295
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 87002
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 17347
+     }
+    }
+   }
+  },
+  {
+   "iso2": "FR",
+   "iso3": "FRA",
+   "iso_numeric": "250",
+   "name_en": "France",
+   "name_lc": "France",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-13",
+   "source_file": "JD_FR_v4.csv",
+   "source_batch": "數據更新",
+   "source_rows": 35272,
+   "rows": 35272,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "01000",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 1039942
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 6048
+    },
+    "admin_areas": {
+     "rows": 34819
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 108455
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 1037647
+     }
+    }
+   }
+  },
+  {
+   "iso2": "DE",
+   "iso3": "DEU",
+   "iso_numeric": "276",
+   "name_en": "Germany",
+   "name_lc": "Deutschland",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-02-10",
+   "source_file": "JD_DE_德国.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 23296,
+   "rows": 23296,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 42.2,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "10875",
+   "region_1_iso_coverage_pct": 90.3,
+   "files": {
+    "parquet": {
+     "bytes": 356346
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 10812
+    },
+    "admin_areas": {
+     "rows": 652
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 209269
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 22279
+     }
+    }
+   }
+  },
+  {
+   "iso2": "GH",
+   "iso3": "GHA",
+   "iso_numeric": "288",
+   "name_en": "Ghana ",
+   "name_lc": "Ghana ",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-05-28",
+   "source_file": "JD_GH.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 18110,
+   "rows": 18110,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "A20013",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 379781
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 18110
+    },
+    "admin_areas": {
+     "rows": 6579
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 379781
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 157776
+     }
+    }
+   }
+  },
+  {
+   "iso2": "GR",
+   "iso3": "GRC",
+   "iso_numeric": "300",
+   "name_en": "Greece",
+   "name_lc": "Ελλάδα",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-07-02",
+   "source_file": "JD_GR_v2.csv",
+   "source_batch": "batch 6",
+   "source_rows": 1129,
+   "rows": 1129,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "663 00",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 55494
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1087
+    },
+    "admin_areas": {
+     "rows": 791
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 54675
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 45631
+     }
+    }
+   }
+  },
+  {
+   "iso2": "GT",
+   "iso3": "GTM",
+   "iso_numeric": "320",
+   "name_en": "Guatemala",
+   "name_lc": "Guatemala",
+   "continent_code": "NA",
+   "continent_name": "North America",
+   "status": "covered",
+   "last_updated": "2025-06-05",
+   "source_file": "JD_GT.csv",
+   "source_batch": "batch 6",
+   "source_rows": 548,
+   "rows": 548,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 81.8,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "16000",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 27597
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 548
+    },
+    "admin_areas": {
+     "rows": 243
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 27597
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 21327
+     }
+    }
+   }
+  },
+  {
+   "iso2": "HU",
+   "iso3": "HUN",
+   "iso_numeric": "348",
+   "name_en": "Hungary",
+   "name_lc": "Magyarország",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-11",
+   "source_file": "JD_HU_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 3572,
+   "rows": 3572,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 95.5,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "7188",
+   "region_1_iso_coverage_pct": 92.9,
+   "files": {
+    "parquet": {
+     "bytes": 96856
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3047
+    },
+    "admin_areas": {
+     "rows": 3132
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 80148
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 93042
+     }
+    }
+   }
+  },
+  {
+   "iso2": "IN",
+   "iso3": "IND",
+   "iso_numeric": "356",
+   "name_en": "India",
+   "name_lc": "भारत",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_IN.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 155570,
+   "rows": 155570,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "744301",
+   "region_1_iso_coverage_pct": 96.7,
+   "files": {
+    "parquet": {
+     "bytes": 1130938
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 19238
+    },
+    "admin_areas": {
+     "rows": 658
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 253424
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 20619
+     }
+    }
+   }
+  },
+  {
+   "iso2": "ID",
+   "iso3": "IDN",
+   "iso_numeric": "360",
+   "name_en": "Indonesia",
+   "name_lc": "Indonesia",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-09-26",
+   "source_file": "JD_ID.csv",
+   "source_batch": "數據更新",
+   "source_rows": 4200,
+   "rows": 4200,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 80.6,
+   "has_place_name": false,
+   "postal_code_example": "10110",
+   "region_1_iso_coverage_pct": 88.0,
+   "files": {
+    "parquet": {
+     "bytes": 183708
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 4200
+    },
+    "admin_areas": {
+     "rows": 4200
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 183708
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 183754
+     }
+    }
+   }
+  },
+  {
+   "iso2": "IL",
+   "iso3": "ISR",
+   "iso_numeric": "376",
+   "name_en": "Israel",
+   "name_lc": "מְדִינַת יִשְׂרָאֵל",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-09-29",
+   "source_file": "JD_IL.csv",
+   "source_batch": "數據更新",
+   "source_rows": 668957,
+   "rows": 579268,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 97.0,
+   "has_place_name": false,
+   "postal_code_example": "4481300",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 6054439
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 579266
+    },
+    "admin_areas": {
+     "rows": 485234
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 6054330
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 5507889
+     }
+    }
+   }
+  },
+  {
+   "iso2": "IT",
+   "iso3": "ITA",
+   "iso_numeric": "380",
+   "name_en": "Italy",
+   "name_lc": "Italia",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-01",
+   "source_file": "JD_IT_v3.csv",
+   "source_batch": "數據更新",
+   "source_rows": 33936,
+   "rows": 33936,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "67010",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 660649
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 4735
+    },
+    "admin_areas": {
+     "rows": 17756
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 96773
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 529922
+     }
+    }
+   }
+  },
+  {
+   "iso2": "JP",
+   "iso3": "JPN",
+   "iso_numeric": "392",
+   "name_en": "Japan",
+   "name_lc": "日本",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_JP.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 146883,
+   "rows": 146883,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "490-1401",
+   "region_1_iso_coverage_pct": 6.4,
+   "files": {
+    "parquet": {
+     "bytes": 2462671
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 142577
+    },
+    "admin_areas": {
+     "rows": 128315
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 2408220
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 2352936
+     }
+    }
+   }
+  },
+  {
+   "iso2": "JO",
+   "iso3": "JOR",
+   "iso_numeric": "400",
+   "name_en": "Jordan",
+   "name_lc": "الأردن",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-05-29",
+   "source_file": "JD_JO.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 462,
+   "rows": 462,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 0.0,
+     "has_en": false,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "11100",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 29087
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 359
+    },
+    "admin_areas": {
+     "rows": 461
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 25076
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 29193
+     }
+    }
+   }
+  },
+  {
+   "iso2": "KE",
+   "iso3": "KEN",
+   "iso_numeric": "404",
+   "name_en": "Kenya",
+   "name_lc": "Kenya",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_KE.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 986,
+   "rows": 986,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 99.8,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.8,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 99.7,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 83.9,
+   "has_place_name": false,
+   "postal_code_example": "20424",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 43248
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 931
+    },
+    "admin_areas": {
+     "rows": 986
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 41717
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 43336
+     }
+    }
+   }
+  },
+  {
+   "iso2": "LV",
+   "iso3": "LVA",
+   "iso_numeric": "428",
+   "name_en": "Latvia",
+   "name_lc": "Latvija",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_LV_拉脱维亚.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 6101,
+   "rows": 6101,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 95.4,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "4574",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 102924
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 697
+    },
+    "admin_areas": {
+     "rows": 5964
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 29685
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 102572
+     }
+    }
+   }
+  },
+  {
+   "iso2": "LT",
+   "iso3": "LTU",
+   "iso_numeric": "440",
+   "name_en": "Lithuania",
+   "name_lc": "Lietuva",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-13",
+   "source_file": "JD_LT_v3.csv",
+   "source_batch": "數據更新",
+   "source_rows": 43237,
+   "rows": 43237,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "00100",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 571765
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 14791
+    },
+    "admin_areas": {
+     "rows": 31539
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 188974
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 480644
+     }
+    }
+   }
+  },
+  {
+   "iso2": "LU",
+   "iso3": "LUX",
+   "iso_numeric": "442",
+   "name_en": "Luxembourg",
+   "name_lc": "Luxembourg",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_LU_卢森堡.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 4519,
+   "rows": 4519,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "6830",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 85635
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 4330
+    },
+    "admin_areas": {
+     "rows": 552
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 82523
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 26351
+     }
+    }
+   }
+  },
+  {
+   "iso2": "MY",
+   "iso3": "MYS",
+   "iso_numeric": "458",
+   "name_en": "Malaysia",
+   "name_lc": "Malaysia",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-01-29",
+   "source_file": "JD_MY_马来西亚.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 2818,
+   "rows": 2818,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "79000",
+   "region_1_iso_coverage_pct": 86.8,
+   "files": {
+    "parquet": {
+     "bytes": 54657
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2757
+    },
+    "admin_areas": {
+     "rows": 465
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 53537
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 23732
+     }
+    }
+   }
+  },
+  {
+   "iso2": "ML",
+   "iso3": "MLI",
+   "iso_numeric": "466",
+   "name_en": "Mali",
+   "name_lc": "Mali",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_ML.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 706,
+   "rows": 0,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "region4_lc",
+    "region4_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 77628,
+     "raw": true,
+     "name": "JD_ML.csv"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "MX",
+   "iso3": "MEX",
+   "iso_numeric": "484",
+   "name_en": "Mexico",
+   "name_lc": "México",
+   "continent_code": "NA",
+   "continent_name": "North America",
+   "status": "covered",
+   "last_updated": "2025-05-02",
+   "source_file": "JD_MX.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 144655,
+   "rows": 144655,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "60224",
+   "region_1_iso_coverage_pct": 98.6,
+   "files": {
+    "parquet": {
+     "bytes": 2088349
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 32448
+    },
+    "admin_areas": {
+     "rows": 2457
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 569106
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 46740
+     }
+    }
+   }
+  },
+  {
+   "iso2": "MN",
+   "iso3": "MNG",
+   "iso_numeric": "496",
+   "name_en": "Mongolia",
+   "name_lc": "Монгол улс",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-09-29",
+   "source_file": "JD_MN.csv",
+   "source_batch": "數據更新",
+   "source_rows": 2635,
+   "rows": 2629,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "632853",
+   "region_1_iso_coverage_pct": 12.7,
+   "files": {
+    "parquet": {
+     "bytes": 52682
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1172
+    },
+    "admin_areas": {
+     "rows": 1331
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 31430
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 39253
+     }
+    }
+   }
+  },
+  {
+   "iso2": "MA",
+   "iso3": "MAR",
+   "iso_numeric": "504",
+   "name_en": "Morocco",
+   "name_lc": "المغرب",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-06-24",
+   "source_file": "JD_MA.csv",
+   "source_batch": "batch 6",
+   "source_rows": 1325,
+   "rows": 1325,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "32000",
+   "region_1_iso_coverage_pct": 2.9,
+   "files": {
+    "parquet": {
+     "bytes": 47698
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1325
+    },
+    "admin_areas": {
+     "rows": 1325
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 47698
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 47804
+     }
+    }
+   }
+  },
+  {
+   "iso2": "NP",
+   "iso3": "NPL",
+   "iso_numeric": "524",
+   "name_en": "Nepal",
+   "name_lc": "नेपाल",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-06-24",
+   "source_file": "JD_NP.csv",
+   "source_batch": "batch 6",
+   "source_rows": 917,
+   "rows": 917,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "57000",
+   "region_1_iso_coverage_pct": 79.5,
+   "files": {
+    "parquet": {
+     "bytes": 33921
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 917
+    },
+    "admin_areas": {
+     "rows": 161
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 33921
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 17794
+     }
+    }
+   }
+  },
+  {
+   "iso2": "NL",
+   "iso3": "NLD",
+   "iso_numeric": "528",
+   "name_en": "Netherlands",
+   "name_lc": "Nederland",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-19",
+   "source_file": "JD_NL_v3.csv",
+   "source_batch": "數據更新",
+   "source_rows": 463936,
+   "rows": 463936,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1011 AB",
+   "region_1_iso_coverage_pct": 95.3,
+   "files": {
+    "parquet": {
+     "bytes": 8878303
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 463936
+    },
+    "admin_areas": {
+     "rows": 2499
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 8878303
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 62880
+     }
+    }
+   }
+  },
+  {
+   "iso2": "NZ",
+   "iso3": "NZL",
+   "iso_numeric": "554",
+   "name_en": "New Zealand",
+   "name_lc": "New Zealand",
+   "continent_code": "OC",
+   "continent_name": "Oceania",
+   "status": "covered",
+   "last_updated": "2025-04-19",
+   "source_file": "JD_NZ.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 1738,
+   "rows": 1738,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 98.4,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "0600",
+   "region_1_iso_coverage_pct": 0.3,
+   "files": {
+    "parquet": {
+     "bytes": 46352
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1737
+    },
+    "admin_areas": {
+     "rows": 1224
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 46320
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 39707
+     }
+    }
+   }
+  },
+  {
+   "iso2": "NG",
+   "iso3": "NGA",
+   "iso_numeric": "566",
+   "name_en": "Nigeria",
+   "name_lc": "Nigeria",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-06-24",
+   "source_file": "JD_NG.csv",
+   "source_batch": "batch 6",
+   "source_rows": 1936,
+   "rows": 1936,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "440001",
+   "region_1_iso_coverage_pct": 99.4,
+   "files": {
+    "parquet": {
+     "bytes": 31198
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1936
+    },
+    "admin_areas": {
+     "rows": 774
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 31198
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 19538
+     }
+    }
+   }
+  },
+  {
+   "iso2": "NO",
+   "iso3": "NOR",
+   "iso_numeric": "578",
+   "name_en": "Norway",
+   "name_lc": "Norge",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_NO.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 5132,
+   "rows": 5132,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1300",
+   "region_1_iso_coverage_pct": 57.9,
+   "files": {
+    "parquet": {
+     "bytes": 85049
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 5132
+    },
+    "admin_areas": {
+     "rows": 357
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 85049
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 17529
+     }
+    }
+   }
+  },
+  {
+   "iso2": "OM",
+   "iso3": "OMN",
+   "iso_numeric": "512",
+   "name_en": "Oman",
+   "name_lc": "عُمان",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_OM.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 12359,
+   "rows": 12359,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 97.2,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 97.2,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "30469",
+   "region_1_iso_coverage_pct": 18.1,
+   "files": {
+    "parquet": {
+     "bytes": 306491
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 12359
+    },
+    "admin_areas": {
+     "rows": 60
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 306491
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 14749
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PK",
+   "iso3": "PAK",
+   "iso_numeric": "586",
+   "name_en": "Pakistan",
+   "name_lc": "پاکستان",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-09-25",
+   "source_file": "JD_PK.csv",
+   "source_batch": "數據更新",
+   "source_rows": 2520,
+   "rows": 2520,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "24550",
+   "region_1_iso_coverage_pct": 92.8,
+   "files": {
+    "parquet": {
+     "bytes": 68031
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2516
+    },
+    "admin_areas": {
+     "rows": 2502
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 67739
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 67804
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PA",
+   "iso3": "PAN",
+   "iso_numeric": "591",
+   "name_en": "Panama",
+   "name_lc": "Panamá",
+   "continent_code": "NA",
+   "continent_name": "North America",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_PA.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 729,
+   "rows": 729,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.3,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 93.8,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "1001",
+   "region_1_iso_coverage_pct": 58.0,
+   "files": {
+    "parquet": {
+     "bytes": 23737
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 729
+    },
+    "admin_areas": {
+     "rows": 724
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 23737
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 23801
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PE",
+   "iso3": "PER",
+   "iso_numeric": "604",
+   "name_en": "Peru",
+   "name_lc": "Perú",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-01-30",
+   "source_file": "JD_PE_秘鲁.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 96943,
+   "rows": 96943,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "03100",
+   "region_1_iso_coverage_pct": 90.1,
+   "files": {
+    "parquet": {
+     "bytes": 1104721
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2669
+    },
+    "admin_areas": {
+     "rows": 1833
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 65977
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 41575
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PH",
+   "iso3": "PHL",
+   "iso_numeric": "608",
+   "name_en": "Philippines",
+   "name_lc": "Pilipinas",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-04-18",
+   "source_file": "JD_PH.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 2317,
+   "rows": 2317,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 98.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 98.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 97.6,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "2900",
+   "region_1_iso_coverage_pct": 25.1,
+   "files": {
+    "parquet": {
+     "bytes": 58769
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2190
+    },
+    "admin_areas": {
+     "rows": 1320
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 57618
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 46447
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PL",
+   "iso3": "POL",
+   "iso_numeric": "616",
+   "name_en": "Poland",
+   "name_lc": "Polska ",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-07-15",
+   "source_file": "JD_PL_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 144910,
+   "rows": 144910,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "00-011",
+   "region_1_iso_coverage_pct": 10.1,
+   "files": {
+    "parquet": {
+     "bytes": 2002892
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 20299
+    },
+    "admin_areas": {
+     "rows": 52325
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 308690
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 990156
+     }
+    }
+   }
+  },
+  {
+   "iso2": "PT",
+   "iso3": "PRT",
+   "iso_numeric": "620",
+   "name_en": "Portugal",
+   "name_lc": "Portuguesa",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-07-16",
+   "source_file": "JD_PT_v2.xlsx",
+   "source_batch": "數據更新",
+   "source_rows": 206942,
+   "rows": 206942,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "3750-000",
+   "region_1_iso_coverage_pct": 95.7,
+   "files": {
+    "parquet": {
+     "bytes": 1819982
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 197772
+    },
+    "admin_areas": {
+     "rows": 36212
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 1665914
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 935145
+     }
+    }
+   }
+  },
+  {
+   "iso2": "QA",
+   "iso3": "QAT",
+   "iso_numeric": "634",
+   "name_en": "Qatar",
+   "name_lc": "قطر",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_QA.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 7,
+   "rows": 0,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "place_name",
+    "latitude",
+    "longitude",
+    "region_1",
+    "region_1_en",
+    "region_2",
+    "region_2_en",
+    "region_3",
+    "region_en",
+    "country_name",
+    "country_code",
+    "timezone",
+    "utc"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 849,
+     "raw": true,
+     "name": "JD_QA.csv"
+    },
+    "xlsx": {
+     "bytes": 5926,
+     "raw": true,
+     "name": "JD_QA.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "IE",
+   "iso3": "IRL",
+   "iso_numeric": "372",
+   "name_en": "Republic of Ireland",
+   "name_lc": "Éire",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-05",
+   "source_file": "JD_IE.csv",
+   "source_batch": "batch 6",
+   "source_rows": 139,
+   "rows": 139,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "F12",
+   "region_1_iso_coverage_pct": 87.1,
+   "files": {
+    "parquet": {
+     "bytes": 18534
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 139
+    },
+    "admin_areas": {
+     "rows": 29
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 18534
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 14489
+     }
+    }
+   }
+  },
+  {
+   "iso2": "RO",
+   "iso3": "ROU",
+   "iso_numeric": "642",
+   "name_en": "Romania",
+   "name_lc": "România",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-12",
+   "source_file": "JD_RO_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 37915,
+   "rows": 37915,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "510001",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 444847
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 37914
+    },
+    "admin_areas": {
+     "rows": 3135
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 444984
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 46996
+     }
+    }
+   }
+  },
+  {
+   "iso2": "RU",
+   "iso3": "RUS",
+   "iso_numeric": "643",
+   "name_en": "Russia",
+   "name_lc": "Российская Федерация",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-24",
+   "source_file": "JD_RU.csv",
+   "source_batch": "batch 6",
+   "source_rows": 43538,
+   "rows": 43538,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 99.7,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 75.2,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "369345",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 1218111
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 43538
+    },
+    "admin_areas": {
+     "rows": 43255
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 1218111
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 1214979
+     }
+    }
+   }
+  },
+  {
+   "iso2": "SA",
+   "iso3": "SAU",
+   "iso_numeric": "682",
+   "name_en": "Saudi Arabia  ",
+   "name_lc": "العربية السعودية",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_SA_沙特阿拉伯.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 36442,
+   "rows": 36442,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 78.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 12.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "22231",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 1214744
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 36442
+    },
+    "admin_areas": {
+     "rows": 5111
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 1214744
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 142442
+     }
+    }
+   }
+  },
+  {
+   "iso2": "RS",
+   "iso3": "SRB",
+   "iso_numeric": "688",
+   "name_en": "Serbia",
+   "name_lc": "Србија",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-03-24",
+   "source_file": "JD_RS.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 1155,
+   "rows": 1155,
+   "admin_depth": 5,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 3.5,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 5,
+     "label": "Level 5",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "11000",
+   "region_1_iso_coverage_pct": 34.1,
+   "files": {
+    "parquet": {
+     "bytes": 60156
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1149
+    },
+    "admin_areas": {
+     "rows": 1153
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 59979
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 60130
+     }
+    }
+   }
+  },
+  {
+   "iso2": "SG",
+   "iso3": "SGP",
+   "iso_numeric": "702",
+   "name_en": "Singapore",
+   "name_lc": "Singapura",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-07-24",
+   "source_file": "JD_SG.csv",
+   "source_batch": "batch 6",
+   "source_rows": 127395,
+   "rows": 127395,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "018895",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 2932567
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 127395
+    },
+    "admin_areas": {
+     "rows": 55
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 2932567
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 14684
+     }
+    }
+   }
+  },
+  {
+   "iso2": "SK",
+   "iso3": "SVK",
+   "iso_numeric": "703",
+   "name_en": "Slovakia",
+   "name_lc": "Slovensko",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-02",
+   "source_file": "JD_SK.csv",
+   "source_batch": "batch 6",
+   "source_rows": 10466,
+   "rows": 10466,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 60.5,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "974 01",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 110432
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3480
+    },
+    "admin_areas": {
+     "rows": 3291
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 59229
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 90853
+     }
+    }
+   }
+  },
+  {
+   "iso2": "SI",
+   "iso3": "SVN",
+   "iso_numeric": "705",
+   "name_en": "Slovenia",
+   "name_lc": "Slovenija",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-08-08",
+   "source_file": "JD_SI_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 552,
+   "rows": 552,
+   "admin_depth": 1,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1000",
+   "region_1_iso_coverage_pct": 99.3,
+   "files": {
+    "parquet": {
+     "bytes": 31232
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 552
+    },
+    "admin_areas": {
+     "rows": 212
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 31232
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 20633
+     }
+    }
+   }
+  },
+  {
+   "iso2": "ZA",
+   "iso3": "ZAF",
+   "iso_numeric": "710",
+   "name_en": "South Africa",
+   "name_lc": "IRiphabliki yaseNingizimu Afrika",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-09-29",
+   "source_file": "JD_ZA.csv",
+   "source_batch": "數據更新",
+   "source_rows": 11797,
+   "rows": 11797,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "0560",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 210105
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1242
+    },
+    "admin_areas": {
+     "rows": 11792
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 37178
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 210016
+     }
+    }
+   }
+  },
+  {
+   "iso2": "KR",
+   "iso3": "KOR",
+   "iso_numeric": "410",
+   "name_en": "South Korea",
+   "name_lc": "대한민국",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-03-20",
+   "source_file": "JD_KR.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 35583,
+   "rows": 35583,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 99.6,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "63000",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 475664
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 34249
+    },
+    "admin_areas": {
+     "rows": 1574
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 454975
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 25085
+     }
+    }
+   }
+  },
+  {
+   "iso2": "ES",
+   "iso3": "ESP",
+   "iso_numeric": "724",
+   "name_en": "Spain",
+   "name_lc": "España",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-07-30",
+   "source_file": "JD_ES_v3.csv",
+   "source_batch": "數據更新",
+   "source_rows": 37867,
+   "rows": 37867,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "01001",
+   "region_1_iso_coverage_pct": 52.0,
+   "files": {
+    "parquet": {
+     "bytes": 1062450
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 11150
+    },
+    "admin_areas": {
+     "rows": 36740
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 306803
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 1049112
+     }
+    }
+   }
+  },
+  {
+   "iso2": "LK",
+   "iso3": "LKA",
+   "iso_numeric": "144",
+   "name_en": "Sri Lanka",
+   "name_lc": "ශ්‍රී ලංකාව",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_LK.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 1837,
+   "rows": 1837,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 35.1,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "20000",
+   "region_1_iso_coverage_pct": 89.7,
+   "files": {
+    "parquet": {
+     "bytes": 62183
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1833
+    },
+    "admin_areas": {
+     "rows": 160
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 62084
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 17351
+     }
+    }
+   }
+  },
+  {
+   "iso2": "SR",
+   "iso3": "SUR",
+   "iso_numeric": "740",
+   "name_en": "Suriname",
+   "name_lc": "Suriname",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_SR.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 62,
+   "rows": 0,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "place_name",
+    "order1_name",
+    "order8_name",
+    "latitude",
+    "longitude",
+    "country_name",
+    "country_code",
+    "timezone",
+    "utc"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 5392,
+     "raw": true,
+     "name": "JD_SR.csv"
+    },
+    "xlsx": {
+     "bytes": 8260,
+     "raw": true,
+     "name": "JD_SR.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "SE",
+   "iso3": "SWE",
+   "iso_numeric": "752",
+   "name_en": "Sweden",
+   "name_lc": "Sverige",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-03-23",
+   "source_file": "JD_SE.csv",
+   "source_batch": "batch 3 (22-3-2025)",
+   "source_rows": 18831,
+   "rows": 18831,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "624 66",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 209708
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 18831
+    },
+    "admin_areas": {
+     "rows": 1804
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 209708
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 51008
+     }
+    }
+   }
+  },
+  {
+   "iso2": "CH",
+   "iso3": "CHE",
+   "iso_numeric": "756",
+   "name_en": "Switzerland",
+   "name_lc": "Schweiz",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_CH_瑞士.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 4520,
+   "rows": 4520,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "5000",
+   "region_1_iso_coverage_pct": 14.3,
+   "files": {
+    "parquet": {
+     "bytes": 124917
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 3362
+    },
+    "admin_areas": {
+     "rows": 4240
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 93006
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 121107
+     }
+    }
+   }
+  },
+  {
+   "iso2": "TZ",
+   "iso3": "TZA",
+   "iso_numeric": "834",
+   "name_en": "Tanzania",
+   "name_lc": "Tanzania, United Republic of",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_TZ.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 2637,
+   "rows": 2637,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "21726",
+   "region_1_iso_coverage_pct": 96.2,
+   "files": {
+    "parquet": {
+     "bytes": 96804
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2637
+    },
+    "admin_areas": {
+     "rows": 116
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 96804
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 16675
+     }
+    }
+   }
+  },
+  {
+   "iso2": "TH",
+   "iso3": "THA",
+   "iso_numeric": "764",
+   "name_en": "Thailand",
+   "name_lc": "ประเทศไทย",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-08-07",
+   "source_file": "JD_TH_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 972,
+   "rows": 972,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "10010",
+   "region_1_iso_coverage_pct": 96.9,
+   "files": {
+    "parquet": {
+     "bytes": 51847
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 972
+    },
+    "admin_areas": {
+     "rows": 812
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 51847
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 46338
+     }
+    }
+   }
+  },
+  {
+   "iso2": "TG",
+   "iso3": "TGO",
+   "iso_numeric": "768",
+   "name_en": "Togo",
+   "name_lc": "Togo",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_TG.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 381,
+   "rows": 0,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 36642,
+     "raw": true,
+     "name": "JD_TG.csv"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "TR",
+   "iso3": "TUR",
+   "iso_numeric": "792",
+   "name_en": "Turkey",
+   "name_lc": "Türkiye",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-02-10",
+   "source_file": "JD_TR_土耳其.csv",
+   "source_batch": "Batch 2 (5-2-2025)",
+   "source_rows": 36307,
+   "rows": 36307,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "49800",
+   "region_1_iso_coverage_pct": 97.8,
+   "files": {
+    "parquet": {
+     "bytes": 663100
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2953
+    },
+    "admin_areas": {
+     "rows": 36119
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 88310
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 661309
+     }
+    }
+   }
+  },
+  {
+   "iso2": "UG",
+   "iso3": "UGA",
+   "iso_numeric": "800",
+   "name_en": "Uganda",
+   "name_lc": "Uganda",
+   "continent_code": "AF",
+   "continent_name": "Africa",
+   "status": "delivered_no_data",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_UG.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 5669,
+   "rows": 0,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": null,
+   "region_1_iso_coverage_pct": 0.0,
+   "source_columns": [
+    "country_lc",
+    "country_en",
+    "country_code",
+    "postal_code",
+    "region1_lc",
+    "region1_en",
+    "region2_lc",
+    "region2_en",
+    "region3_lc",
+    "region3_en",
+    "region4_lc",
+    "region4_en",
+    "timezone",
+    "utc",
+    "latitude",
+    "longitude"
+   ],
+   "files": {
+    "csv": {
+     "bytes": 649641,
+     "raw": true,
+     "name": "JD_UG.csv"
+    },
+    "xlsx": {
+     "bytes": 354309,
+     "raw": true,
+     "name": "JD_UG.xlsx"
+    }
+   },
+   "files_are_source": true,
+   "note": "No usable postal codes in the delivered file, so this country is not in the canonical dataset. The download is JD's original source file, un-normalized, kept for its administrative levels and coordinates."
+  },
+  {
+   "iso2": "UA",
+   "iso3": "UKR",
+   "iso_numeric": "804",
+   "name_en": "Ukraine",
+   "name_lc": "Україна",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-04-18",
+   "source_file": "JD_UA.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 29571,
+   "rows": 29571,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "18000",
+   "region_1_iso_coverage_pct": 0.6,
+   "files": {
+    "parquet": {
+     "bytes": 468164
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 26579
+    },
+    "admin_areas": {
+     "rows": 1297
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 430117
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 36817
+     }
+    }
+   }
+  },
+  {
+   "iso2": "AE",
+   "iso3": "ARE",
+   "iso_numeric": "784",
+   "name_en": "United Arab Emirates",
+   "name_lc": "الإمارات العربية المتحدة ",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-01-22",
+   "source_file": "JD_AE_阿联酋.csv",
+   "source_batch": "Batch 1 (23-1-2025)",
+   "source_rows": 2960,
+   "rows": 2960,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 99.9,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "22618",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 106080
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 2960
+    },
+    "admin_areas": {
+     "rows": 351
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 106080
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 23457
+     }
+    }
+   }
+  },
+  {
+   "iso2": "GB",
+   "iso3": "GBR",
+   "iso_numeric": "826",
+   "name_en": "United Kingdom",
+   "name_lc": "United Kingdom",
+   "continent_code": "EU",
+   "continent_name": "Europe",
+   "status": "covered",
+   "last_updated": "2025-06-04",
+   "source_file": "JD_GB_v2.csv",
+   "source_batch": "數據更新",
+   "source_rows": 11116,
+   "rows": 11116,
+   "admin_depth": 4,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 4,
+     "label": "Level 4",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "AB10 1",
+   "region_1_iso_coverage_pct": 94.7,
+   "files": {
+    "parquet": {
+     "bytes": 478228
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 11116
+    },
+    "admin_areas": {
+     "rows": 6241
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 478228
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 256136
+     }
+    }
+   }
+  },
+  {
+   "iso2": "US",
+   "iso3": "USA",
+   "iso_numeric": "840",
+   "name_en": "United States of America",
+   "name_lc": "United States of America",
+   "continent_code": "NA",
+   "continent_name": "North America",
+   "status": "covered",
+   "last_updated": "2025-04-28",
+   "source_file": "US-merged.csv",
+   "source_batch": "batch 4 (1-5-2025)",
+   "source_rows": 40976,
+   "rows": 40976,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": false
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 49.7,
+     "has_en": true,
+     "has_lc": false
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "36003",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 1195181
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 40976
+    },
+    "admin_areas": {
+     "rows": 11351
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 1195181
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 277495
+     }
+    }
+   }
+  },
+  {
+   "iso2": "UY",
+   "iso3": "URY",
+   "iso_numeric": "858",
+   "name_en": "Uruguay",
+   "name_lc": "Uruguay",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-06-02",
+   "source_file": "JD_UY.csv",
+   "source_batch": "batch 6",
+   "source_rows": 2061,
+   "rows": 2061,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 0.1,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 60.4,
+   "has_place_name": false,
+   "postal_code_example": "55000",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 62302
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 121
+    },
+    "admin_areas": {
+     "rows": 2003
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 15681
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 61733
+     }
+    }
+   }
+  },
+  {
+   "iso2": "UZ",
+   "iso3": "UZB",
+   "iso_numeric": "860",
+   "name_en": "Uzbekistan ",
+   "name_lc": "Oʻzbekiston ",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-09-26",
+   "source_file": "JD_UZ.csv",
+   "source_batch": "數據更新",
+   "source_rows": 1622,
+   "rows": 1622,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 92.9,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": true,
+   "postal_code_example": "170905",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 76353
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 1621
+    },
+    "admin_areas": {
+     "rows": 1340
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 76348
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 68760
+     }
+    }
+   }
+  },
+  {
+   "iso2": "VE",
+   "iso3": "VEN",
+   "iso_numeric": "862",
+   "name_en": "Venezuela",
+   "name_lc": "Venezuela, República Bolivariana de",
+   "continent_code": "SA",
+   "continent_name": "South America",
+   "status": "covered",
+   "last_updated": "2025-09-12",
+   "source_file": "JD_VE.csv",
+   "source_batch": "數據更新",
+   "source_rows": 943,
+   "rows": 943,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": false,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "1000",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 38470
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 427
+    },
+    "admin_areas": {
+     "rows": 897
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 23613
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 38272
+     }
+    }
+   }
+  },
+  {
+   "iso2": "VN",
+   "iso3": "VNM",
+   "iso_numeric": "704",
+   "name_en": "Vietnam",
+   "name_lc": "Việt Nam",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-08-01",
+   "source_file": "JD_VN_v3.csv",
+   "source_batch": "數據更新",
+   "source_rows": 11112,
+   "rows": 11112,
+   "admin_depth": 3,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Subdivision (ISO 3166-2)",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 3,
+     "label": "Level 3",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 100.0,
+   "has_place_name": false,
+   "postal_code_example": "01106",
+   "region_1_iso_coverage_pct": 100.0,
+   "files": {
+    "parquet": {
+     "bytes": 398554
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 11112
+    },
+    "admin_areas": {
+     "rows": 10536
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 398554
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 379997
+     }
+    }
+   }
+  },
+  {
+   "iso2": "MM",
+   "iso3": "MMR",
+   "iso_numeric": "104",
+   "name_en": "myanmar",
+   "name_lc": "မြန်မာနိုင်ငံ",
+   "continent_code": "AS",
+   "continent_name": "Asia",
+   "status": "covered",
+   "last_updated": "2025-05-30",
+   "source_file": "JD_MM.csv",
+   "source_batch": "Batch 5",
+   "source_rows": 17332,
+   "rows": 17331,
+   "admin_depth": 2,
+   "admin_levels": [
+    {
+     "level": 1,
+     "label": "Level 1",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    },
+    {
+     "level": 2,
+     "label": "Level 2",
+     "filled_pct": 100.0,
+     "has_en": true,
+     "has_lc": true
+    }
+   ],
+   "coord_coverage_pct": 0.0,
+   "has_place_name": false,
+   "postal_code_example": "1501001",
+   "region_1_iso_coverage_pct": 0.0,
+   "files": {
+    "parquet": {
+     "bytes": 128843
+    }
+   },
+   "view_stats": {
+    "postal_codes": {
+     "rows": 17298
+    },
+    "admin_areas": {
+     "rows": 508
+    }
+   },
+   "view_files": {
+    "postal_codes": {
+     "parquet": {
+      "bytes": 128045
+     }
+    },
+    "admin_areas": {
+     "parquet": {
+      "bytes": 24668
+     }
+    }
+   }
+  }
+ ]
+}

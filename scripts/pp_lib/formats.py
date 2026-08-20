@@ -46,6 +46,72 @@ EXCEL_ROW_LIMIT = 1_048_575
 
 TEXT_FORMAT = "@"  # Excel's "Text" number format
 
+# Every country's data is inherently many-to-many: one postal code can cover many
+# admin areas and vice versa (e.g. DE's 23,296 rows collapse to 652 distinct
+# 3-level region tuples -- confirmed generic, proven out first on Australia, now
+# applied to every covered country). These are the two alternate groupings a
+# country can be deduped by.
+POSTAL_CODE_KEY = ["postal_code"]
+ADMIN_AREA_KEY = [
+    "region_1_lc", "region_1_en", "region_2_lc", "region_2_en",
+    "region_3_lc", "region_3_en", "region_4_lc", "region_4_en",
+    "region_5_lc", "region_5_en",
+]
+VIEW_KEYS = {"postal_codes": POSTAL_CODE_KEY, "admin_areas": ADMIN_AREA_KEY}
+
+
+def dedupe(df: pd.DataFrame, key_cols: list[str]) -> pd.DataFrame:
+    """One row per distinct key_cols combination (e.g. one row per postal_code, or
+    one row per admin-area tuple). Every other column keeps its value only if every
+    row in the group agrees; otherwise it's blanked -- a postal code spanning 111
+    localities (a real AU example: postcode 0822) should not silently show just one
+    of them as if it were the only one.
+
+    Blank (NaN for numeric, "" for text) is treated as "no opinion", not as a vote
+    for blank -- a postal code with 110 rows naming a locality and 1 row missing it
+    should still show that locality, not blank it out because of the 1 hole. This
+    matches how the rest of this dataset already treats missing data (see
+    build_catalog.py's nonblank()): honest and consistent, not a new convention.
+
+    Built from two vectorized (C-level) groupby methods -- first() for a
+    representative value per column, nunique() to detect disagreement -- rather
+    than a custom Python callable passed to .agg(). That earlier version was
+    correct but never finished on CA: a callable-per-group-per-column doesn't
+    vectorize, so its cost scales with group count x column count in Python-level
+    function calls. AU's ~3-18K groups hid this completely (seconds); CA's
+    ~892K postal-code groups didn't finish in 48+ minutes before being killed and
+    rewritten to this. Confirmed both versions agree on AU's known cases (postcode
+    0822, the cross-border 0872, the central-Sydney admin tuple) before switching.
+
+    dropna=False is required, not optional: region_4/region_5 are entirely NaN for
+    most countries (confirmed: AU's region_4_lc is 100% NaN, not empty string), and
+    pandas' groupby silently DROPS every row when any key column is NaN unless told
+    not to -- with the default, an admin-areas dedupe would return zero rows for
+    exactly the countries this feature is built for.
+    """
+    value_cols = [c for c in df.columns if c not in key_cols]
+
+    # "" and NaN both mean "no opinion" for a text column -- normalize once up
+    # front so first()/nunique() below (both dropna=True) treat them identically,
+    # without re-deriving this per column inside a slow per-group callable.
+    blanked = df.copy()
+    for c in value_cols:
+        if not pd.api.types.is_numeric_dtype(df[c]):
+            blanked[c] = df[c].where(df[c].astype(str).str.strip() != "")
+
+    g = blanked.groupby(key_cols, dropna=False, sort=False)
+    # Independently per column: that column's first non-null value in the group --
+    # "assume this until disagreement is found" (skipna=True is first()'s default).
+    result = g[value_cols].first()
+    disagreement = g[value_cols].nunique(dropna=True)
+
+    for c in value_cols:
+        blank = pd.NA if pd.api.types.is_numeric_dtype(df[c]) else ""
+        result.loc[disagreement[c] > 1, c] = blank
+
+    result = result.reset_index()
+    return result[list(df.columns)]  # restore canonical column order
+
 
 def query_country(duck: duckdb.DuckDBPyConnection, master_parquet: Path, iso2: str) -> pd.DataFrame:
     """One country's full row set, straight off the master parquet.
@@ -98,22 +164,39 @@ def materialize(
     cache_dir: Path,
     iso2: str,
     fmt: str,
+    view: str = "all_rows",
 ) -> Path | None:
-    """Return the cached file for (iso2, fmt), generating it first if needed.
+    """Return the cached file for (iso2, view, fmt), generating it first if needed.
+
+    view "all_rows" (the default) is every row, unchanged from before this
+    parameter existed -- every existing caller keeps working with no code changes.
+    "postal_codes"/"admin_areas" additionally dedupe via dedupe() before writing.
 
     Returns None if the country has no rows, or (xlsx only) exceeds Excel's row
     limit -- callers should treat that the same as "format not available".
     """
     if fmt not in ("csv", "xlsx", "parquet"):
         raise ValueError(f"unknown format: {fmt}")
+    if view != "all_rows" and view not in VIEW_KEYS:
+        raise ValueError(f"unknown view: {view}")
 
-    out_path = cache_dir / f"{iso2}.{fmt}"
-    if out_path.exists():
+    # Cache filename only grows a `.view` segment for the two new views, so every
+    # existing cache entry (every country, every format, from before this feature)
+    # stays exactly where it was -- nothing is invalidated by adding this parameter.
+    out_path = cache_dir / (f"{iso2}.{fmt}" if view == "all_rows" else f"{iso2}.{view}.{fmt}")
+    # Staleness, not just existence: a country's canonical data can change (a new
+    # 數據更新 revision lands) without app/on_demand_cache/ being cleared. Without
+    # this mtime check, materialize() would happily keep serving a country's *old*
+    # csv/xlsx/parquet forever after such an update -- exactly what would have
+    # happened silently to AU's cache after its 2026-08-13 source swap.
+    if out_path.exists() and out_path.stat().st_mtime >= master_parquet.stat().st_mtime:
         return out_path
 
     df = query_country(duck, master_parquet, iso2)
     if df.empty:
         return None
+    if view != "all_rows":
+        df = dedupe(df, VIEW_KEYS[view])
 
     cache_dir.mkdir(parents=True, exist_ok=True)
     tmp_path = out_path.with_suffix(out_path.suffix + ".tmp")

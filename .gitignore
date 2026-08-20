@@ -11,14 +11,19 @@ web/dist/
 # reads from app/data/ + app/raw_sources/ instead), and far too large for git.
 data/
 
-# Generated at build/runtime, not source -- regenerate with
-# scripts/build_catalog.py, or on first request (on_demand_cache/):
+# server/main.py's own on-demand csv/xlsx/parquet cache (local-dev mode only --
+# deliberately separate from web/public/parquet/ below, so it never collides with
+# or overwrites the static site's own pre-generated files). Regenerated on first
+# request; never commit.
 app/on_demand_cache/
 
 # The synced master parquet (~80 MB, from Google Drive -- see
-# scripts/sync_from_drive.py). Never commit; each environment fetches its own copy.
+# scripts/sync_from_drive.py), used only by server/main.py's local-dev mode.
+# Never commit; each environment fetches its own copy.
 app/data/
 
-# catalog.json and app/raw_sources/ are NOT ignored -- they're small, generated on a
-# machine with full `to JD/` access, and committing them is what lets a deploy host
-# run without that tree at all. See README.md "Adding new data".
+# web/public/catalog.json, web/public/parquet/, and web/public/raw_sources/ are NOT
+# ignored -- they're exactly what the deployed static site ships (see
+# scripts/build_catalog.py's docstring), generated on a machine with full `to JD/`
+# access. Committing them is what lets GitHub Pages -- or any other static host --
+# run without that tree, or a backend, at all. See README.md "Adding new data".

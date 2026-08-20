@@ -1,4 +1,10 @@
-import type { Catalog, Format, Preview } from './types'
+import type { Catalog, View } from './types'
+
+// import.meta.env.BASE_URL is Vite's configured `base` (see vite.config.ts) --
+// '/' locally, '/<repo-name>/' once deployed to a GitHub Pages project page. Every
+// static asset path in this app goes through it so the site works unmodified at
+// either location.
+const BASE = import.meta.env.BASE_URL
 
 async function json<T>(url: string, init?: RequestInit): Promise<T> {
   const res = await fetch(url, init)
@@ -9,37 +15,15 @@ async function json<T>(url: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>
 }
 
-export const fetchCatalog = () => json<Catalog>('/api/catalog')
+export const fetchCatalog = () => json<Catalog>(`${BASE}catalog.json`)
 
-export const fetchPreview = (iso2: string, q: string, limit = 100, signal?: AbortSignal) =>
-  json<Preview>(
-    `/api/country/${iso2}/preview?limit=${limit}&q=${encodeURIComponent(q)}`,
-    { signal },
-  )
+/** A country's static parquet file -- all-rows by default, or one of the
+ *  postal_codes/admin_areas dedup views. Matches build_catalog.py's own naming
+ *  (`<ISO2>.parquet`, `<ISO2>.<view>.parquet`) exactly -- it's what generates
+ *  these files in the first place. */
+export const parquetUrl = (iso2: string, view?: View) =>
+  `${BASE}parquet/${iso2}${view ? `.${view}` : ''}.parquet`
 
-export const downloadUrl = (iso2: string, fmt: Format) =>
-  `/api/download/${iso2}?fmt=${fmt}`
-
-/** POSTs the selection and hands the resulting zip to the browser.
- *  A form-less POST can't trigger a native download, so the blob is materialized
- *  here — acceptable because the user picked the size and saw it beforehand. */
-export async function downloadBundle(iso2: string[], fmt: Format): Promise<void> {
-  const res = await fetch('/api/bundle', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ iso2, fmt }),
-  })
-  if (!res.ok) throw new Error(`bundle failed: ${res.status} ${await res.text()}`)
-
-  const blob = await res.blob()
-  const disposition = res.headers.get('content-disposition') ?? ''
-  const named = /filename="([^"]+)"/.exec(disposition)
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = named?.[1] ?? `postal-portal-${fmt}.zip`
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
+/** A no-postal-code country's original JD source file, bundled directly in git
+ *  (small enough not to need Drive -- see build_catalog.py's docstring). */
+export const rawSourceUrl = (filename: string) => `${BASE}raw_sources/${filename}`

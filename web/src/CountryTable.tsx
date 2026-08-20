@@ -1,18 +1,22 @@
 import type { Country, Format } from './types'
-import { bytes, prettyDate, shortDate, sizeOf } from './format'
-import { downloadUrl } from './api'
+import { bytes, prettyDate, shortDate } from './format'
+import { parquetUrl, rawSourceUrl } from './api'
 import type { Sort, SortKey } from './sorting'
 
-const COLUMNS: { key: SortKey; label: string; numeric?: boolean }[] = [
+const COLUMNS: { key: SortKey; label: string; title?: string; numeric?: boolean }[] = [
   { key: 'name_en', label: 'Country' },
   { key: 'iso2', label: 'ISO2' },
   { key: 'continent_name', label: 'Region' },
   { key: 'admin_depth', label: 'Admin' },
-  { key: 'rows', label: 'Codes', numeric: true },
+  { key: 'rows', label: 'Codes', title: 'Postal-code rows in the canonical dataset', numeric: true },
+  {
+    key: 'admin_area_rows',
+    label: 'Areas',
+    title: 'Distinct admin-area combinations (region_1..5) -- see the Admin Areas download view',
+    numeric: true,
+  },
   { key: 'last_updated', label: 'Updated', numeric: true },
 ]
-
-const FORMAT_LABEL: Record<Format, string> = { csv: 'CSV', xlsx: 'XLSX', parquet: 'PQ' }
 
 /** Abbreviated so the region column stays one line in the sidebar. */
 const SHORT_REGION: Record<string, string> = {
@@ -37,49 +41,37 @@ function DepthBars({ depth }: { depth: number }) {
   )
 }
 
+/** The one quick download this table offers per row -- all-rows parquet for a
+ *  covered country, or the best available JD original for a no-postal-code one.
+ *  Every other format/view combination is a click away in the detail drawer,
+ *  which is also where CSV/XLSX (Drive-linked for covered countries) live. */
+function quickDownload(c: Country): { fmt: Format; href: string; bytes: number } | null {
+  if (c.files_are_source) {
+    const fmt = (['xlsx', 'csv'] as Format[]).find((f) => c.files[f])
+    if (!fmt) return null
+    return { fmt, href: rawSourceUrl(c.files[fmt]!.name!), bytes: c.files[fmt]!.bytes }
+  }
+  if (!c.files.parquet) return null
+  return { fmt: 'parquet', href: parquetUrl(c.iso2), bytes: c.files.parquet.bytes }
+}
+
 type Props = {
   rows: Country[]
-  /** Format the per-row download button uses — shared with the bulk footer. */
-  fmt: Format
   sort: Sort
   onSort: (key: SortKey) => void
-  selectedRows: Set<string>
-  onToggleRow: (iso2: string) => void
-  onToggleAll: () => void
-  allSelected: boolean
   focused: string | null
   onFocus: (iso2: string) => void
   rowRefs: React.RefObject<Record<string, HTMLTableRowElement | null>>
 }
 
-export default function CountryTable({
-  rows,
-  fmt,
-  sort,
-  onSort,
-  selectedRows,
-  onToggleRow,
-  onToggleAll,
-  allSelected,
-  focused,
-  onFocus,
-  rowRefs,
-}: Props) {
+export default function CountryTable({ rows, sort, onSort, focused, onFocus, rowRefs }: Props) {
   return (
     <div className="table-scroll">
       <table className="countries">
         <thead>
           <tr>
-            <th className="col-check">
-              <input
-                type="checkbox"
-                checked={allSelected}
-                onChange={onToggleAll}
-                aria-label="Select all listed countries with data"
-              />
-            </th>
             {COLUMNS.map((col) => (
-              <th key={col.key} className={col.numeric ? 'col-num' : undefined}>
+              <th key={col.key} className={col.numeric ? 'col-num' : undefined} title={col.title}>
                 <button type="button" onClick={() => onSort(col.key)}>
                   {col.label}
                   {sort.key === col.key && (
@@ -94,7 +86,7 @@ export default function CountryTable({
         <tbody>
           {rows.map((c) => {
             const covered = c.status === 'covered'
-            const available = !!c.files[fmt]
+            const dl = quickDownload(c)
             return (
               <tr
                 key={c.iso2}
@@ -108,15 +100,6 @@ export default function CountryTable({
                   .filter(Boolean)
                   .join(' ')}
               >
-                <td className="col-check">
-                  <input
-                    type="checkbox"
-                    checked={selectedRows.has(c.iso2)}
-                    disabled={!available}
-                    onChange={() => onToggleRow(c.iso2)}
-                    aria-label={`Select ${c.name_en}`}
-                  />
-                </td>
                 <td>
                   <button
                     type="button"
@@ -142,39 +125,33 @@ export default function CountryTable({
                 <td className="col-num" title={covered ? undefined : `${c.source_rows.toLocaleString('en-US')} source rows, none with a postal code`}>
                   {covered ? c.rows.toLocaleString('en-US') : '—'}
                 </td>
+                <td className="col-num">
+                  {c.view_stats ? c.view_stats.admin_areas.rows.toLocaleString('en-US') : '—'}
+                </td>
                 <td className="col-num" title={`${prettyDate(c.last_updated)} — ${c.source_file}`}>
                   {shortDate(c.last_updated)}
                 </td>
                 <td>
-                  {available ? (
+                  {dl ? (
                     <span className="dl-buttons">
-                      {/* One button, in whichever format the footer toggle selects, so
-                          single and bulk downloads never disagree. All three formats
-                          with their sizes are in the detail drawer. */}
                       <a
-                        href={downloadUrl(c.iso2, fmt)}
-                        className={fmt === 'csv' ? 'warn' : undefined}
+                        href={dl.href}
                         title={[
-                          `Download ${c.files[fmt]?.name ?? `${c.iso2}.${fmt}`} (${bytes(sizeOf(c, fmt))})`,
+                          `Download ${c.iso2}.${dl.fmt} (${bytes(dl.bytes)})`,
                           c.files_are_source
                             ? 'JD source file, un-normalized: admin levels and coordinates, no postal codes'
-                            : '',
-                          fmt === 'csv'
-                            ? 'Excel strips leading zeros from CSVs; use XLSX for Excel'
-                            : '',
-                        ]
-                          .filter(Boolean)
-                          .join(' — ')}
+                            : 'All rows, Parquet — open the detail view for CSV/XLSX and the postal-codes/admin-areas split',
+                        ].join(' — ')}
                         download
                       >
-                        ⤓ {FORMAT_LABEL[fmt]}
+                        ⤓ {dl.fmt === 'parquet' ? 'PQ' : dl.fmt.toUpperCase()}
                         {c.files_are_source && <span className="raw-tag">raw</span>}
                       </a>
                     </span>
                   ) : (
-                    <span className="nodata-tag" title={`Not available as ${FORMAT_LABEL[fmt]}`}>
+                    <span className="nodata-tag" title="No download available">
                       <span className="dot" aria-hidden="true" />
-                      no {FORMAT_LABEL[fmt]}
+                      none
                     </span>
                   )}
                 </td>

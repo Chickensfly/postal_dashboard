@@ -4,16 +4,20 @@ Postal Portal API.
 
 Needs only two things to run, neither of which is the 1.8 GB `to JD/pipeline/data/
 clean/` tree:
-  app/catalog.json                 the whole catalog (~95 KB, ships in git)
+  web/public/catalog.json          the whole catalog (~110 KB, ships in git)
   app/data/postal_codes_final.parquet   the master data (~80 MB, synced from Google
                                     Drive by scripts/sync_from_drive.py -- see
                                     $POSTAL_PORTAL_MASTER_PARQUET below)
 
-csv/xlsx are never read from disk pre-generated -- they're produced on first request
-from the master parquet (scripts/pp_lib/formats.py, the same code build_catalog.py
-uses to record sizes) and cached under app/on_demand_cache/. The 9 no-postal-code
-countries are the one exception: their original JD source files are small enough
-(~1.4 MB total) to ship directly in git, under app/raw_sources/.
+This is local-dev-only mode: the deployed site is static (parquet + duckdb-wasm,
+see scripts/build_catalog.py's docstring) and never runs this server. Here, csv/xlsx
+are never read from disk pre-generated -- they're produced on first request from the
+master parquet (scripts/pp_lib/formats.py, the same code build_catalog.py uses to
+record sizes) and cached under app/on_demand_cache/ -- deliberately NOT
+web/public/parquet/, so this server's on-demand csv/xlsx/parquet never collide with
+or overwrite the static-site build's own pre-generated parquet files. The 9
+no-postal-code countries are the one exception: their original JD source files are
+small enough (~1.4 MB total) to ship directly in git, under web/public/raw_sources/.
 
 Local dev with the full `to JD/` tree present needs nothing extra -- the default
 master-parquet path still points there. Set $POSTAL_PORTAL_MASTER_PARQUET to point
@@ -43,10 +47,10 @@ APP_ROOT = Path(__file__).resolve().parent.parent
 JD_ROOT = APP_ROOT.parent / "to JD"  # optional -- only used as the default data source
 
 sys.path.insert(0, str(APP_ROOT / "scripts"))
-from pp_lib.formats import materialize  # noqa: E402
+from pp_lib.formats import VIEW_KEYS, materialize  # noqa: E402
 
-CATALOG_PATH = APP_ROOT / "app" / "catalog.json"
-RAW_SOURCE_DIR = APP_ROOT / "app" / "raw_sources"
+CATALOG_PATH = APP_ROOT / "web" / "public" / "catalog.json"
+RAW_SOURCE_DIR = APP_ROOT / "web" / "public" / "raw_sources"
 CACHE_DIR = APP_ROOT / "app" / "on_demand_cache"
 WEB_DIST = APP_ROOT / "web" / "dist"
 
@@ -58,6 +62,14 @@ MASTER_PARQUET = Path(
 )
 
 Format = Literal["csv", "xlsx", "parquet"]
+
+# "all_rows" (default) is every row, unchanged from before this feature existed --
+# a caller that never passes `view` sees identical behavior to before it existed.
+# "postal_codes"/"admin_areas" dedupe via scripts/pp_lib/formats.py, available for
+# every covered country (the 9 no-postal-code countries have no view_stats/
+# view_files in their catalog entry -- there's nothing to dedupe -- so `view` is
+# accepted but ignored for those, same as always).
+View = Literal["all_rows", "postal_codes", "admin_areas"]
 
 MEDIA_TYPES = {
     "csv": "text/csv",
@@ -114,17 +126,19 @@ RAW_DOWNLOADS: dict[str, dict[str, Path]] = {
 if RAW_DOWNLOADS and not RAW_SOURCE_DIR.exists():
     print(f"warning: {RAW_SOURCE_DIR} missing -- the no-postal-code countries' "
           f"downloads will 404 until scripts/build_catalog.py has been run and "
-          f"app/raw_sources/ committed")
+          f"web/public/raw_sources/ committed")
 
 # One connection, read-only queries only. DuckDB handles concurrent reads on it.
 DUCK = duckdb.connect(database=":memory:")
 DUCK.execute("SET enable_progress_bar = false")
 
 
-def resolve_download(iso2: str, fmt: str) -> Path:
+def resolve_download(iso2: str, fmt: str, view: str = "all_rows") -> Path:
     """Covered countries: generate-on-demand-and-cache from the master parquet.
-    Raw-source countries: look up their bundled original file. Either way, request
-    input selects a row in a table or a query parameter -- never a filesystem path."""
+    Raw-source countries: look up their bundled original file (view is meaningless
+    for these -- there are no postal codes to dedupe -- so it's accepted but
+    ignored, always serving the one JD original). Either way, request input selects
+    a row in a table or a query parameter -- never a filesystem path."""
     iso2 = iso2.upper()
     if iso2 not in COUNTRIES:
         raise HTTPException(404, f"unknown country: {iso2}")
@@ -145,10 +159,12 @@ def resolve_download(iso2: str, fmt: str) -> Path:
 
     if country["rows"] == 0:
         raise HTTPException(409, f"{iso2} has no rows to export")
+    if view != "all_rows" and not country.get("view_stats", {}).get(view):
+        raise HTTPException(409, f"{iso2} does not offer the {view} view")
 
-    path = materialize(DUCK, MASTER_PARQUET, CACHE_DIR, iso2, fmt)
+    path = materialize(DUCK, MASTER_PARQUET, CACHE_DIR, iso2, fmt, view)
     if path is None:
-        raise HTTPException(409, f"{iso2} could not be generated as {fmt}")
+        raise HTTPException(409, f"{iso2} could not be generated as {fmt} ({view})")
     return path
 
 
@@ -162,38 +178,93 @@ def preview(
     iso2: str,
     limit: int = Query(100, ge=1, le=1000),
     q: str = Query("", max_length=100),
+    view: View = "all_rows",
 ) -> dict:
-    """Sample rows for one country, straight off the master parquet.
+    """Sample rows for one country.
 
-    The country_iso2 filter is pushed down into the parquet scan, so this reads
-    only that country's row groups -- not the full 3.66M rows.
+    view="all_rows" (default): queries the master parquet directly, country_iso2
+    pushed into the scan -- reads only that country's row groups, not the full
+    3.66M rows, exactly as before this parameter existed.
+
+    view="postal_codes"/"admin_areas": first ensures the deduped parquet cache
+    exists (materialize(), the same call downloads use), then queries *that*
+    smaller, already-scoped file instead -- so preview and download are always
+    consistent (same generation path) and search runs against fewer rows. `q`
+    filters the underlying rows before deduping, not the already-blanked result --
+    "sydney" should match on what the source rows actually said, not a value a
+    varying group already blanked out.
     """
     iso2 = iso2.upper()
     if iso2 not in COUNTRIES:
         raise HTTPException(404, f"unknown country: {iso2}")
     if COUNTRIES[iso2]["rows"] == 0:
-        # Not in the canonical dataset, so the parquet holds nothing to preview.
+        # Not in the canonical dataset, so there's nothing to preview in any view.
         return {"iso2": iso2, "columns": [], "rows": [], "matched": 0, "truncated": False}
 
-    params: dict[str, object] = {"master": str(MASTER_PARQUET), "iso2": iso2, "limit": limit}
-    where = "country_iso2 = $iso2"
-    if q.strip():
-        # Parameterized LIKE across the searchable text columns; % is escaped so a
-        # user typing '%' searches for a literal percent sign.
-        needle = q.strip().replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
-        params["needle"] = f"%{needle}%"
-        ors = " OR ".join(
-            f"{col} ILIKE $needle ESCAPE '\\'" for col in SEARCHABLE
+    def searchable_clause(needle_param: str) -> str:
+        # CAST to VARCHAR: a region_N column beyond a country's actual admin depth
+        # is entirely NULL, and DuckDB's parquet reader infers an all-null column
+        # as DOUBLE -- ILIKE has no DOUBLE overload, so querying it uncast throws a
+        # binder error instead of just finding no match (caught via the frontend's
+        # duckdb-wasm port of this same clause; fixed here too for consistency).
+        return " OR ".join(
+            f"CAST({col} AS VARCHAR) ILIKE {needle_param} ESCAPE '\\'" for col in SEARCHABLE
         )
-        where += f" AND ({ors})"
 
-    sql = f"SELECT * FROM read_parquet($master) WHERE {where} LIMIT $limit"
-    rel = DUCK.execute(sql, params)
+    if view == "all_rows":
+        params: dict[str, object] = {"master": str(MASTER_PARQUET), "iso2": iso2, "limit": limit}
+        where = "country_iso2 = $iso2"
+        if q.strip():
+            needle = q.strip().replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+            params["needle"] = f"%{needle}%"
+            where += f" AND ({searchable_clause('$needle')})"
+        select_sql = f"SELECT * FROM read_parquet($master) WHERE {where} LIMIT $limit"
+        count_sql = f"SELECT count(*) FROM read_parquet($master) WHERE {where}"
+        count_params = {k: v for k, v in params.items() if k != "limit"}
+    else:
+        if not COUNTRIES[iso2].get("view_stats", {}).get(view):
+            return {"iso2": iso2, "columns": [], "rows": [], "matched": 0, "truncated": False}
+        view_path = materialize(DUCK, MASTER_PARQUET, CACHE_DIR, iso2, "parquet", view)
+        if view_path is None:
+            return {"iso2": iso2, "columns": [], "rows": [], "matched": 0, "truncated": False}
+
+        if q.strip():
+            # Search decides WHICH groups qualify by scanning the raw (pre-dedupe)
+            # rows -- a term in a field a group's dedupe blanked out should still
+            # surface that group. But the returned row always comes from view_path
+            # (the properly blank-if-varies'd file), never a raw row picked
+            # arbitrarily -- that would silently reintroduce exactly the "pick one
+            # value out of several disagreeing ones" problem dedupe() exists to
+            # avoid, just conditionally, only when searching.
+            needle = q.strip().replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+            key_cols = VIEW_KEYS[view]
+            # IS NOT DISTINCT FROM, not `=`: key columns can be NULL (region_4/5 are
+            # entirely NULL for most countries -- see dedupe()'s own dropna=False
+            # note), and NULL = NULL matches nothing in standard SQL join semantics.
+            join_cond = " AND ".join(f"v.{c} IS NOT DISTINCT FROM m.{c}" for c in key_cols)
+            matches_sql = (
+                f"SELECT DISTINCT {', '.join(key_cols)} FROM read_parquet($master) "
+                "WHERE country_iso2 = $iso2 AND (" + searchable_clause("$needle") + ")"
+            )
+            select_sql = (
+                f"SELECT v.* FROM read_parquet($source) v JOIN ({matches_sql}) m "
+                f"ON {join_cond} LIMIT $limit"
+            )
+            count_sql = f"SELECT count(*) FROM ({matches_sql})"
+            params = {
+                "master": str(MASTER_PARQUET), "source": str(view_path),
+                "iso2": iso2, "needle": f"%{needle}%", "limit": limit,
+            }
+            count_params = {"master": params["master"], "iso2": iso2, "needle": params["needle"]}
+        else:
+            select_sql = "SELECT * FROM read_parquet($source) LIMIT $limit"
+            count_sql = "SELECT count(*) FROM read_parquet($source)"
+            params = {"source": str(view_path), "limit": limit}
+            count_params = {"source": str(view_path)}
+
+    rel = DUCK.execute(select_sql, params)
     columns = [d[0] for d in rel.description]
     rows = rel.fetchall()
-
-    count_sql = f"SELECT count(*) FROM read_parquet($master) WHERE {where}"
-    count_params = {k: v for k, v in params.items() if k != "limit"}
     matched = DUCK.execute(count_sql, count_params).fetchone()[0]
 
     return {
@@ -206,21 +277,27 @@ def preview(
     }
 
 
-def row_count(country: dict) -> int:
-    """Canonical postal-code rows, or source rows for the raw source files."""
-    return country["source_rows"] if country.get("files_are_source") else country["rows"]
+def row_count(country: dict, view: str = "all_rows") -> int:
+    """Row count for what's actually being served: source rows for the raw-source
+    files, the view's own deduped count for postal_codes/admin_areas, otherwise the
+    canonical all-rows count."""
+    if country.get("files_are_source"):
+        return country["source_rows"]
+    if view != "all_rows":
+        return country.get("view_stats", {}).get(view, {}).get("rows", country["rows"])
+    return country["rows"]
 
 
 @app.get("/api/download/{iso2}")
-def download(iso2: str, fmt: Format = "xlsx") -> FileResponse:
-    path = resolve_download(iso2, fmt)
+def download(iso2: str, fmt: Format = "xlsx", view: View = "all_rows") -> FileResponse:
+    path = resolve_download(iso2, fmt, view)
     country = COUNTRIES[iso2.upper()]
     return FileResponse(
         path,
         media_type=MEDIA_TYPES[fmt],
         filename=path.name,
         headers={
-            "X-Postal-Portal-Rows": str(row_count(country)),
+            "X-Postal-Portal-Rows": str(row_count(country, view)),
             "X-Postal-Portal-Raw-Source": "1" if country.get("files_are_source") else "0",
         },
     )
@@ -229,6 +306,7 @@ def download(iso2: str, fmt: Format = "xlsx") -> FileResponse:
 class BundleRequest(BaseModel):
     iso2: list[str] = Field(min_length=1, max_length=200)
     fmt: Format = "xlsx"
+    view: View = "all_rows"
 
 
 @app.post("/api/bundle")
@@ -245,15 +323,15 @@ def bundle(req: BundleRequest) -> StreamingResponse:
         code = raw.upper()
         if code not in seen:
             seen.append(code)
-    paths = [(code, resolve_download(code, req.fmt)) for code in seen]
+    paths = [(code, resolve_download(code, req.fmt, req.view)) for code in seen]
 
-    total_rows = sum(row_count(COUNTRIES[code]) for code, _ in paths)
+    total_rows = sum(row_count(COUNTRIES[code], req.view) for code, _ in paths)
     total_bytes = sum(p.stat().st_size for _, p in paths)
     raw = [code for code, _ in paths if COUNTRIES[code].get("files_are_source")]
 
     manifest_lines = [
         "Postal Portal bundle",
-        f"format: {req.fmt}",
+        f"format: {req.fmt}" + (f" ({req.view})" if req.view != "all_rows" else ""),
         f"countries: {len(paths)}",
         f"rows: {total_rows:,}",
         f"catalog generated: {CATALOG['generated_at']}",
@@ -263,7 +341,7 @@ def bundle(req: BundleRequest) -> StreamingResponse:
     for code, path in paths:
         c = COUNTRIES[code]
         manifest_lines.append(
-            f"{code:6}{path.name[:26]:28}{row_count(c):>10,}  "
+            f"{code:6}{path.name[:26]:28}{row_count(c, req.view):>10,}  "
             f"{c['last_updated']:13}{c['source_file']}"
             f"{'   [RAW SOURCE]' if c.get('files_are_source') else ''}"
         )
@@ -290,7 +368,8 @@ def bundle(req: BundleRequest) -> StreamingResponse:
     for _, path in paths:
         zs.add_path(path, path.name)
 
-    name = f"postal-portal-{len(paths)}-countries-{req.fmt}.zip"
+    view_suffix = f"-{req.view}" if req.view != "all_rows" else ""
+    name = f"postal-portal-{len(paths)}-countries-{req.fmt}{view_suffix}.zip"
     headers = {
         "Content-Disposition": f'attachment; filename="{name}"',
         "X-Postal-Portal-Uncompressed-Bytes": str(total_bytes),
