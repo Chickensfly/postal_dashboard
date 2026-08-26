@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { Country, Format, Preview, View } from './types'
 import { parquetUrl, rawSourceUrl, sampleCsvUrl } from './api'
 import { queryParquet } from './duckdb'
-import { bytes, prettyDate } from './format'
+import { bytes, yearOnly } from './format'
 
 const VIEWS: View[] = ['postal_codes', 'admin_areas']
 const VIEW_LABEL: Record<View, string> = { postal_codes: 'Postal Codes', admin_areas: 'Admin Areas' }
@@ -116,7 +116,6 @@ export default function CountryDrawer({
     }
   }, [country.iso2, country.status, query, view, supportsViews])
 
-  const activeParquet = (supportsViews ? country.view_files?.[view] : country.files)?.parquet
   const activeRows = supportsViews ? country.view_stats![view].rows : country.rows
 
   return (
@@ -158,11 +157,6 @@ export default function CountryDrawer({
                 ))
             ) : (
               <>
-                {activeParquet && (
-                  <a href={parquetUrl(country.iso2, supportsViews ? view : undefined)} download>
-                    Parquet {bytes(activeParquet.bytes)}
-                  </a>
-                )}
                 {country.sample_csv && (
                   <a
                     href={sampleCsvUrl(country.iso2)}
@@ -219,7 +213,7 @@ export default function CountryDrawer({
           </div>
           <div>
             <div className="k">Last updated</div>
-            <div className="v">{prettyDate(country.last_updated)}</div>
+            <div className="v">{yearOnly(country.last_updated)}</div>
           </div>
           <div>
             <div className="k">Source file</div>

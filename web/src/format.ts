@@ -40,6 +40,20 @@ export function shortDate(iso: string): string {
   })
 }
 
+/** "2025-09-29" -> "2025". The only date precision shown anywhere in the UI --
+ *  a plain slice, not a Date parse, since the source is already an ISO string. */
+export function yearOnly(iso: string): string {
+  return iso.slice(0, 4)
+}
+
+/** A last-updated range collapsed to year(s): "2025" when both ends fall in the
+ *  same year, "2025 – 2026" otherwise. */
+export function yearRange(start: string, end: string): string {
+  const a = yearOnly(start)
+  const b = yearOnly(end)
+  return a === b ? a : `${a} – ${b}`
+}
+
 export function monthsAgo(iso: string, now = new Date()): number {
   const d = new Date(`${iso}T00:00:00Z`)
   return (now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24 * 30.44)

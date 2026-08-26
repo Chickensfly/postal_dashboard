@@ -6,7 +6,7 @@ import { BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
 import { fetchCatalog, sampleCsvUrl } from './api'
 import { downloadSelectionZip } from './zip'
-import { bytes, compactRows, prettyDate } from './format'
+import { bytes, compactRows, yearRange } from './format'
 import type { Catalog, Country } from './types'
 
 type Theme = 'light' | 'dark' | null
@@ -128,10 +128,7 @@ export default function App() {
           <span>
             <b>{totals.rows.toLocaleString('en-US')}</b> postal codes
           </span>
-          <span>
-            {prettyDate(totals.last_updated_range[0])} –{' '}
-            {prettyDate(totals.last_updated_range[1])}
-          </span>
+          <span>{yearRange(totals.last_updated_range[0], totals.last_updated_range[1])}</span>
         </div>
         <span className="spacer" />
       </header>

@@ -1,6 +1,6 @@
 import type { Country, Format } from './types'
-import { bytes, prettyDate, shortDate } from './format'
-import { parquetUrl, rawSourceUrl } from './api'
+import { bytes, yearOnly } from './format'
+import { rawSourceUrl, sampleCsvUrl } from './api'
 import type { Sort, SortKey } from './sorting'
 
 const COLUMNS: { key: SortKey; label: string; title?: string; numeric?: boolean }[] = [
@@ -41,18 +41,19 @@ function DepthBars({ depth }: { depth: number }) {
   )
 }
 
-/** The one quick download this table offers per row -- all-rows parquet for a
- *  covered country, or the best available JD original for a no-postal-code one.
- *  Every other format/view combination is a click away in the detail drawer,
- *  which is also where CSV/XLSX (Drive-linked for covered countries) live. */
-function quickDownload(c: Country): { fmt: Format; href: string; bytes: number } | null {
+/** The one quick download this table offers per row -- the 100-row sample CSV for
+ *  a covered country (the full Parquet is never offered as a download; it's kept
+ *  purely as the file duckdb-wasm searches in the drawer), or the best available
+ *  JD original for a no-postal-code one. Full CSV/XLSX (Drive-linked for covered
+ *  countries) live in the detail drawer. */
+function quickDownload(c: Country): { fmt: Format; href: string; bytes: number; sample?: boolean } | null {
   if (c.files_are_source) {
     const fmt = (['xlsx', 'csv'] as Format[]).find((f) => c.files[f])
     if (!fmt) return null
     return { fmt, href: rawSourceUrl(c.files[fmt]!.name!), bytes: c.files[fmt]!.bytes }
   }
-  if (!c.files.parquet) return null
-  return { fmt: 'parquet', href: parquetUrl(c.iso2), bytes: c.files.parquet.bytes }
+  if (!c.sample_csv) return null
+  return { fmt: 'csv', href: sampleCsvUrl(c.iso2), bytes: c.sample_csv.bytes, sample: true }
 }
 
 type Props = {
@@ -160,8 +161,8 @@ export default function CountryTable({
                 <td className="col-num">
                   {c.view_stats ? c.view_stats.admin_areas.rows.toLocaleString('en-US') : '—'}
                 </td>
-                <td className="col-num" title={`${prettyDate(c.last_updated)} — ${c.source_file}`}>
-                  {shortDate(c.last_updated)}
+                <td className="col-num" title={`${yearOnly(c.last_updated)} — ${c.source_file}`}>
+                  {yearOnly(c.last_updated)}
                 </td>
                 <td>
                   {dl ? (
@@ -172,12 +173,13 @@ export default function CountryTable({
                           `Download ${c.iso2}.${dl.fmt} (${bytes(dl.bytes)})`,
                           c.files_are_source
                             ? 'JD source file, un-normalized: admin levels and coordinates, no postal codes'
-                            : 'All rows, Parquet — open the detail view for CSV/XLSX and the postal-codes/admin-areas split',
+                            : 'First 100 rows only — open the detail view for the full CSV/XLSX and the postal-codes/admin-areas split',
                         ].join(' — ')}
                         download
                       >
-                        ⤓ {dl.fmt === 'parquet' ? 'PQ' : dl.fmt.toUpperCase()}
+                        ⤓ {dl.fmt.toUpperCase()}
                         {c.files_are_source && <span className="raw-tag">raw</span>}
+                        {dl.sample && <span className="raw-tag">100</span>}
                       </a>
                     </span>
                   ) : (

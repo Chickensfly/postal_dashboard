@@ -6,7 +6,7 @@ import { zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import 'd3-transition'
 import { feature } from 'topojson-client'
 import type { Country } from './types'
-import { compactRows, prettyDate } from './format'
+import { compactRows, yearOnly } from './format'
 import { RAMP_VARS, binOf } from './mapScale'
 
 const WIDTH = 960
@@ -248,7 +248,7 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
               <dt>Admin levels</dt>
               <dd>{hoveredCountry.admin_depth}</dd>
               <dt>Updated</dt>
-              <dd>{prettyDate(hoveredCountry.last_updated)}</dd>
+              <dd>{yearOnly(hoveredCountry.last_updated)}</dd>
               <dt>Region</dt>
               <dd>{hoveredCountry.continent_name ?? '—'}</dd>
             </dl>
@@ -261,7 +261,7 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
               <dt>Admin levels</dt>
               <dd>{hoveredCountry.admin_depth}</dd>
               <dt>Updated</dt>
-              <dd>{prettyDate(hoveredCountry.last_updated)}</dd>
+              <dd>{yearOnly(hoveredCountry.last_updated)}</dd>
             </dl>
           )}
         </div>
