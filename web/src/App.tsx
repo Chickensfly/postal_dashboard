@@ -15,7 +15,7 @@ import { ADMIN_BOUNDARY_BIN_LABELS, BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
 import { fetchAdminBoundaryCatalog, fetchCatalog, sampleCsvUrl } from './api'
 import { downloadSelectionZip } from './zip'
-import { bytes, compactRows, updatedRange, type DatePrecision } from './format'
+import { bytes, compactRows, yearRange } from './format'
 import type { AdminBoundaryCatalog, Catalog, Country } from './types'
 
 type Theme = 'light' | 'dark' | null
@@ -45,13 +45,6 @@ export default function App() {
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
 
   const [tab, setTab] = useState<Tab>('postal')
-
-  // App-wide "last updated" precision preference -- one toggle in the masthead
-  // controls the postal-codes masthead stat, CountryTable's Updated column,
-  // CountryDrawer's Updated stat, WorldMap's tooltip, and the admin-boundaries
-  // equivalents of all four (see format.ts's DatePrecision doc comment).
-  // Defaults to 'year' so today's behavior is unchanged until someone toggles it.
-  const [precision, setPrecision] = useState<DatePrecision>('year')
 
   // Admin Boundaries -- a wholly separate dataset and catalog fetch from the
   // one above (see types.ts's AdminBoundaryCountry doc comment). Fetched
@@ -205,9 +198,7 @@ export default function App() {
             <span>
               <b>{totals.rows.toLocaleString('en-US')}</b> postal codes
             </span>
-            <span>
-              {updatedRange(totals.last_updated_range[0], totals.last_updated_range[1], precision)}
-            </span>
+            <span>{yearRange(totals.last_updated_range[0], totals.last_updated_range[1])}</span>
           </div>
         ) : (
           adminCatalog && (
@@ -220,29 +211,15 @@ export default function App() {
               </span>
               <span>up to tier {adminCatalog.totals.max_tier_reached}</span>
               <span>
-                {updatedRange(
+                {yearRange(
                   adminCatalog.totals.last_updated_range[0],
                   adminCatalog.totals.last_updated_range[1],
-                  precision,
                 )}
               </span>
             </div>
           )
         )}
-        {/*
-        <span className="fmt-group" role="group" aria-label="Date precision">
-          <button type="button" aria-pressed={precision === 'year'} onClick={() => setPrecision('year')}>
-            Year
-          </button>
-          <button
-            type="button"
-            aria-pressed={precision === 'month'}
-            onClick={() => setPrecision('month')}
-          >
-            Month
-          </button>
-        </span>
-        */}
+
         <span className="spacer" />
       </header>
 
@@ -250,12 +227,7 @@ export default function App() {
         {tab === 'postal' ? (
         <>
         <section className="map-pane">
-          <WorldMap
-            countries={catalog.countries}
-            selected={focused}
-            onSelect={focusCountry}
-            precision={precision}
-          />
+          <WorldMap countries={catalog.countries} selected={focused} onSelect={focusCountry} />
           <div className="legend">
             <span className="ramp">
               <span>Postal codes</span>
@@ -347,7 +319,6 @@ export default function App() {
             focused={focused}
             onFocus={focusCountry}
             rowRefs={rowRefs}
-            precision={precision}
           />
 
           <div className="selection-bar">
@@ -402,7 +373,6 @@ export default function App() {
                 countries={adminCatalog.countries}
                 selected={adminFocused}
                 onSelect={adminFocusCountry}
-                precision={precision}
               />
               <div className="legend">
                 <span className="ramp">
@@ -468,7 +438,6 @@ export default function App() {
             focused={adminFocused}
             onFocus={adminFocusCountry}
             rowRefs={adminRowRefs}
-            precision={precision}
           />
 
           <div className="selection-bar">
@@ -491,11 +460,7 @@ export default function App() {
       </div>
 
       {focusedCountry && (
-        <CountryDrawer
-          country={focusedCountry}
-          onClose={() => setFocused(null)}
-          precision={precision}
-        />
+        <CountryDrawer country={focusedCountry} onClose={() => setFocused(null)} />
       )}
     </div>
   )

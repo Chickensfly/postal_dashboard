@@ -1,6 +1,6 @@
 import type { AdminBoundaryCountry } from './types'
 import type { AdminBoundarySort, AdminBoundarySortKey } from './sorting'
-import { prettyDate, updatedAt, type DatePrecision } from './format'
+import { prettyDate, yearOnly } from './format'
 
 // A sibling of CountryTable.tsx, not an extension of it -- CountryTable is
 // typed against the postal-codes `Country` shape, and this dataset's rows
@@ -55,7 +55,6 @@ type Props = {
   focused: string | null
   onFocus: (code: string) => void
   rowRefs: React.RefObject<Record<string, HTMLTableRowElement | null>>
-  precision: DatePrecision
 }
 
 export default function AdminBoundaryTable({
@@ -65,7 +64,6 @@ export default function AdminBoundaryTable({
   focused,
   onFocus,
   rowRefs,
-  precision,
 }: Props) {
   return (
     <div className="table-scroll">
@@ -115,7 +113,7 @@ export default function AdminBoundaryTable({
               </td>
               <td className="col-num">{c.total_rows.toLocaleString('en-US')}</td>
               <td className="col-num" title={prettyDate(c.last_updated)}>
-                {updatedAt(c.last_updated, precision)}
+                {yearOnly(c.last_updated)}
               </td>
               <td title={`Tier 1 through tier ${c.max_tier}`}>{levelCountsLabel(c)}</td>
             </tr>
