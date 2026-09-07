@@ -194,7 +194,7 @@ export default function App() {
             aria-pressed={tab === 'admin_boundaries'}
             onClick={() => setTab('admin_boundaries')}
           >
-            Admin Boundaries
+            Admin Levels
           </button>
         </span>
         {tab === 'postal' ? (
@@ -229,6 +229,7 @@ export default function App() {
             </div>
           )
         )}
+        {/*
         <span className="fmt-group" role="group" aria-label="Date precision">
           <button type="button" aria-pressed={precision === 'year'} onClick={() => setPrecision('year')}>
             Year
@@ -241,6 +242,7 @@ export default function App() {
             Month
           </button>
         </span>
+        */}
         <span className="spacer" />
       </header>
 
@@ -471,9 +473,8 @@ export default function App() {
 
           <div className="selection-bar">
             <span className="summary">
-              Full administrative-boundary dataset -- all {adminCatalog?.totals.countries ?? 91}{' '}
-              countries, CSV and Parquet -- via Google Drive (no per-country download here; see
-              README).
+              Full administrative-levels dataset, all {adminCatalog?.totals.countries ?? 91}{' '}
+              countries, CSVs, available via Google Drive
             </span>
             <a
               className="btn-primary"
