@@ -87,3 +87,37 @@ export type Preview = {
   matched: number
   truncated: boolean
 }
+
+/** Admin Boundaries -- a wholly separate, standalone dataset: administrative-
+ *  boundary reference data (country -> region1 -> region2 -> ... -> region6,
+ *  e.g. states/provinces/districts/villages) for 91 countries, with no postal
+ *  codes involved. Not to be confused with `View`/'admin_areas' above, which is
+ *  a completely different, pre-existing feature (a per-country dedup toggle on
+ *  the postal-codes data, inside CountryDrawer.tsx) -- these types, and every
+ *  component that uses them, are named distinctly on purpose. Produced by
+ *  scripts/build_admin_boundaries_catalog.py; keep this in sync with whatever
+ *  that script actually emits. */
+export type AdminBoundaryLevel = { level: number; unit_count: number }
+
+export type AdminBoundaryCountry = {
+  code: string
+  /** ISO 3166-1 numeric -- the join key AdminBoundaryMap.tsx uses against the
+   *  same world-atlas TopoJSON WorldMap.tsx already loads. */
+  iso_numeric: string | null
+  name_en: string
+  name_lc: string | null
+  /** Deepest region level (1-6) with at least one non-blank value. */
+  max_tier: number
+  /** One entry per level from 1 to max_tier: the count of distinct admin units
+   *  at that level, counted by unique parent chain (the tuple of
+   *  region1..regionN), not a naive distinct-value count on that column alone. */
+  level_counts: AdminBoundaryLevel[]
+  /** Leaf-level record count in this country's source file. */
+  total_rows: number
+}
+
+export type AdminBoundaryCatalog = {
+  generated_at: string
+  totals: { countries: number; total_leaf_records: number; max_tier_reached: number }
+  countries: AdminBoundaryCountry[]
+}

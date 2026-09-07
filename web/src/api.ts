@@ -1,4 +1,4 @@
-import type { Catalog, View } from './types'
+import type { AdminBoundaryCatalog, Catalog, View } from './types'
 
 // import.meta.env.BASE_URL is Vite's configured `base` (see vite.config.ts) --
 // '/' locally, '/<repo-name>/' once deployed to a GitHub Pages project page. Every
@@ -16,6 +16,13 @@ async function json<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 export const fetchCatalog = () => json<Catalog>(`${BASE}catalog.json`)
+
+/** The Admin Boundaries dataset's own catalog -- a separate file from the one
+ *  above, written by scripts/build_admin_boundaries_catalog.py, not
+ *  build_catalog.py. See types.ts's AdminBoundaryCatalog doc comment for why
+ *  this is a distinct dataset from postal codes. */
+export const fetchAdminBoundaryCatalog = () =>
+  json<AdminBoundaryCatalog>(`${BASE}admin-boundaries/catalog.json`)
 
 /** A country's static parquet file -- all-rows by default, or one of the
  *  postal_codes/admin_areas dedup views. Matches build_catalog.py's own naming

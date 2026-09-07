@@ -1,0 +1,1976 @@
+{
+ "generated_at": "2026-09-07T11:19:04+08:00",
+ "totals": {
+  "countries": 91,
+  "total_leaf_records": 548318,
+  "max_tier_reached": 6
+ },
+ "countries": [
+  {
+   "code": "AR",
+   "iso_numeric": "032",
+   "name_en": "Argentina",
+   "name_lc": "Argentina",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 24
+    },
+    {
+     "level": 2,
+     "unit_count": 513
+    },
+    {
+     "level": 3,
+     "unit_count": 2362
+    },
+    {
+     "level": 4,
+     "unit_count": 5831
+    }
+   ],
+   "total_rows": 5831
+  },
+  {
+   "code": "AU",
+   "iso_numeric": "036",
+   "name_en": "Australia",
+   "name_lc": "Australia",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 9
+    },
+    {
+     "level": 2,
+     "unit_count": 136
+    },
+    {
+     "level": 3,
+     "unit_count": 10752
+    },
+    {
+     "level": 4,
+     "unit_count": 15944
+    }
+   ],
+   "total_rows": 15946
+  },
+  {
+   "code": "AT",
+   "iso_numeric": "040",
+   "name_en": "Austria",
+   "name_lc": "Österreich",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 9
+    },
+    {
+     "level": 2,
+     "unit_count": 94
+    },
+    {
+     "level": 3,
+     "unit_count": 1919
+    },
+    {
+     "level": 4,
+     "unit_count": 1941
+    }
+   ],
+   "total_rows": 1941
+  },
+  {
+   "code": "BD",
+   "iso_numeric": "050",
+   "name_en": "Bangladesh",
+   "name_lc": null,
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 8
+    },
+    {
+     "level": 2,
+     "unit_count": 64
+    },
+    {
+     "level": 3,
+     "unit_count": 545
+    },
+    {
+     "level": 4,
+     "unit_count": 5158
+    }
+   ],
+   "total_rows": 5158
+  },
+  {
+   "code": "BY",
+   "iso_numeric": "112",
+   "name_en": "Belarus",
+   "name_lc": "Belarus",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 7
+    },
+    {
+     "level": 2,
+     "unit_count": 119
+    }
+   ],
+   "total_rows": 119
+  },
+  {
+   "code": "BE",
+   "iso_numeric": "056",
+   "name_en": "Belgium",
+   "name_lc": "België",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 3
+    },
+    {
+     "level": 2,
+     "unit_count": 11
+    },
+    {
+     "level": 3,
+     "unit_count": 43
+    },
+    {
+     "level": 4,
+     "unit_count": 565
+    }
+   ],
+   "total_rows": 565
+  },
+  {
+   "code": "BO",
+   "iso_numeric": "068",
+   "name_en": "Bolivia",
+   "name_lc": "Bolivia",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 9
+    },
+    {
+     "level": 2,
+     "unit_count": 112
+    },
+    {
+     "level": 3,
+     "unit_count": 344
+    }
+   ],
+   "total_rows": 344
+  },
+  {
+   "code": "BR",
+   "iso_numeric": "076",
+   "name_en": "Brazil",
+   "name_lc": "Brasil",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 27
+    },
+    {
+     "level": 2,
+     "unit_count": 5570
+    },
+    {
+     "level": 3,
+     "unit_count": 26220
+    }
+   ],
+   "total_rows": 26220
+  },
+  {
+   "code": "BN",
+   "iso_numeric": "096",
+   "name_en": "Brunei",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 4
+    },
+    {
+     "level": 2,
+     "unit_count": 39
+    },
+    {
+     "level": 3,
+     "unit_count": 394
+    }
+   ],
+   "total_rows": 394
+  },
+  {
+   "code": "BG",
+   "iso_numeric": "100",
+   "name_en": "Bulgaria",
+   "name_lc": "България",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 28
+    },
+    {
+     "level": 2,
+     "unit_count": 264
+    },
+    {
+     "level": 3,
+     "unit_count": 5292
+    }
+   ],
+   "total_rows": 5292
+  },
+  {
+   "code": "CM",
+   "iso_numeric": "120",
+   "name_en": "Cameroon",
+   "name_lc": "Cameroon",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 10
+    },
+    {
+     "level": 2,
+     "unit_count": 58
+    },
+    {
+     "level": 3,
+     "unit_count": 360
+    }
+   ],
+   "total_rows": 360
+  },
+  {
+   "code": "CA",
+   "iso_numeric": "124",
+   "name_en": "Canada",
+   "name_lc": "Canada",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 13
+    },
+    {
+     "level": 2,
+     "unit_count": 293
+    },
+    {
+     "level": 3,
+     "unit_count": 5581
+    }
+   ],
+   "total_rows": 5581
+  },
+  {
+   "code": "CL",
+   "iso_numeric": "152",
+   "name_en": "Chile",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 15
+    },
+    {
+     "level": 2,
+     "unit_count": 54
+    },
+    {
+     "level": 3,
+     "unit_count": 346
+    }
+   ],
+   "total_rows": 346
+  },
+  {
+   "code": "CO",
+   "iso_numeric": "170",
+   "name_en": "Colombia",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 33
+    },
+    {
+     "level": 2,
+     "unit_count": 1122
+    }
+   ],
+   "total_rows": 1122
+  },
+  {
+   "code": "CY",
+   "iso_numeric": "196",
+   "name_en": "Cyprus",
+   "name_lc": "Κύπρος",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 6
+    },
+    {
+     "level": 2,
+     "unit_count": 571
+    },
+    {
+     "level": 3,
+     "unit_count": 592
+    }
+   ],
+   "total_rows": 598
+  },
+  {
+   "code": "CZ",
+   "iso_numeric": "203",
+   "name_en": "Czech Republic",
+   "name_lc": "Czech Republic",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 14
+    },
+    {
+     "level": 2,
+     "unit_count": 77
+    },
+    {
+     "level": 3,
+     "unit_count": 15181
+    }
+   ],
+   "total_rows": 15181
+  },
+  {
+   "code": "CD",
+   "iso_numeric": "180",
+   "name_en": "Democratic Republic of the Congo",
+   "name_lc": "Democratic Republic of the Congo",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 26
+    },
+    {
+     "level": 2,
+     "unit_count": 240
+    }
+   ],
+   "total_rows": 244
+  },
+  {
+   "code": "DK",
+   "iso_numeric": "208",
+   "name_en": "Denmark",
+   "name_lc": "Danmark",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 5
+    },
+    {
+     "level": 2,
+     "unit_count": 99
+    }
+   ],
+   "total_rows": 99
+  },
+  {
+   "code": "EC",
+   "iso_numeric": "218",
+   "name_en": "Ecuador",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 25
+    },
+    {
+     "level": 2,
+     "unit_count": 222
+    },
+    {
+     "level": 3,
+     "unit_count": 768
+    }
+   ],
+   "total_rows": 768
+  },
+  {
+   "code": "EG",
+   "iso_numeric": "818",
+   "name_en": "Egypt",
+   "name_lc": "مِصر",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 27
+    },
+    {
+     "level": 2,
+     "unit_count": 343
+    }
+   ],
+   "total_rows": 343
+  },
+  {
+   "code": "EE",
+   "iso_numeric": "233",
+   "name_en": "Estonia",
+   "name_lc": "Eesti",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 16
+    },
+    {
+     "level": 2,
+     "unit_count": 80
+    },
+    {
+     "level": 3,
+     "unit_count": 4702
+    }
+   ],
+   "total_rows": 4702
+  },
+  {
+   "code": "ET",
+   "iso_numeric": "231",
+   "name_en": "Ethiopia",
+   "name_lc": "Ityopya",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 15
+    },
+    {
+     "level": 2,
+     "unit_count": 107
+    },
+    {
+     "level": 3,
+     "unit_count": 1148
+    }
+   ],
+   "total_rows": 1148
+  },
+  {
+   "code": "FI",
+   "iso_numeric": "246",
+   "name_en": "Finland",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 18
+    },
+    {
+     "level": 2,
+     "unit_count": 67
+    },
+    {
+     "level": 3,
+     "unit_count": 295
+    }
+   ],
+   "total_rows": 295
+  },
+  {
+   "code": "FR",
+   "iso_numeric": "250",
+   "name_en": "France",
+   "name_lc": "France",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 13
+    },
+    {
+     "level": 2,
+     "unit_count": 96
+    },
+    {
+     "level": 3,
+     "unit_count": 334
+    },
+    {
+     "level": 4,
+     "unit_count": 34819
+    }
+   ],
+   "total_rows": 34819
+  },
+  {
+   "code": "DE",
+   "iso_numeric": "276",
+   "name_en": "Germany",
+   "name_lc": "Deutschland",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 16
+    },
+    {
+     "level": 2,
+     "unit_count": 378
+    },
+    {
+     "level": 3,
+     "unit_count": 10945
+    },
+    {
+     "level": 4,
+     "unit_count": 12408
+    }
+   ],
+   "total_rows": 12408
+  },
+  {
+   "code": "GH",
+   "iso_numeric": "288",
+   "name_en": "Ghana",
+   "name_lc": "Ghana",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 16
+    },
+    {
+     "level": 2,
+     "unit_count": 261
+    },
+    {
+     "level": 3,
+     "unit_count": 6577
+    }
+   ],
+   "total_rows": 6577
+  },
+  {
+   "code": "GR",
+   "iso_numeric": "300",
+   "name_en": "Greece",
+   "name_lc": "Ελλάδα",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 13
+    },
+    {
+     "level": 2,
+     "unit_count": 54
+    },
+    {
+     "level": 3,
+     "unit_count": 790
+    }
+   ],
+   "total_rows": 791
+  },
+  {
+   "code": "GT",
+   "iso_numeric": "320",
+   "name_en": "Guatemala",
+   "name_lc": "Guatemala",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 22
+    },
+    {
+     "level": 2,
+     "unit_count": 342
+    }
+   ],
+   "total_rows": 342
+  },
+  {
+   "code": "HK",
+   "iso_numeric": "344",
+   "name_en": "Hong Kong",
+   "name_lc": "香港",
+   "max_tier": 1,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 18
+    }
+   ],
+   "total_rows": 18
+  },
+  {
+   "code": "HU",
+   "iso_numeric": "348",
+   "name_en": "Hungary",
+   "name_lc": "Magyarország",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 20
+    },
+    {
+     "level": 2,
+     "unit_count": 175
+    },
+    {
+     "level": 3,
+     "unit_count": 3155
+    },
+    {
+     "level": 4,
+     "unit_count": 3178
+    }
+   ],
+   "total_rows": 3178
+  },
+  {
+   "code": "IN",
+   "iso_numeric": "356",
+   "name_en": "India",
+   "name_lc": "भारत",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 36
+    },
+    {
+     "level": 2,
+     "unit_count": 666
+    },
+    {
+     "level": 3,
+     "unit_count": 2336
+    }
+   ],
+   "total_rows": 2336
+  },
+  {
+   "code": "ID",
+   "iso_numeric": "360",
+   "name_en": "Indonesia",
+   "name_lc": null,
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 38
+    },
+    {
+     "level": 2,
+     "unit_count": 522
+    },
+    {
+     "level": 3,
+     "unit_count": 7069
+    },
+    {
+     "level": 4,
+     "unit_count": 81911
+    }
+   ],
+   "total_rows": 81911
+  },
+  {
+   "code": "IQ",
+   "iso_numeric": "368",
+   "name_en": "Iraq",
+   "name_lc": "العراق",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 19
+    },
+    {
+     "level": 2,
+     "unit_count": 104
+    },
+    {
+     "level": 3,
+     "unit_count": 294
+    }
+   ],
+   "total_rows": 294
+  },
+  {
+   "code": "IE",
+   "iso_numeric": "372",
+   "name_en": "Ireland",
+   "name_lc": "Ireland",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 26
+    },
+    {
+     "level": 2,
+     "unit_count": 29
+    }
+   ],
+   "total_rows": 29
+  },
+  {
+   "code": "IL",
+   "iso_numeric": "376",
+   "name_en": "Israel",
+   "name_lc": "ישראל",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 9
+    },
+    {
+     "level": 2,
+     "unit_count": 1828
+    },
+    {
+     "level": 3,
+     "unit_count": 2829
+    }
+   ],
+   "total_rows": 2829
+  },
+  {
+   "code": "IT",
+   "iso_numeric": "380",
+   "name_en": "Italy",
+   "name_lc": "Italia",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 20
+    },
+    {
+     "level": 2,
+     "unit_count": 110
+    },
+    {
+     "level": 3,
+     "unit_count": 7896
+    }
+   ],
+   "total_rows": 7896
+  },
+  {
+   "code": "JP",
+   "iso_numeric": "392",
+   "name_en": "Japan",
+   "name_lc": "日本",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 47
+    },
+    {
+     "level": 2,
+     "unit_count": 1892
+    }
+   ],
+   "total_rows": 1892
+  },
+  {
+   "code": "JO",
+   "iso_numeric": "400",
+   "name_en": "Jordan",
+   "name_lc": "توقيت الأردن",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 456
+    }
+   ],
+   "total_rows": 461
+  },
+  {
+   "code": "KZ",
+   "iso_numeric": "398",
+   "name_en": "Kazakhstan",
+   "name_lc": "Qazaqstan",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 24
+    },
+    {
+     "level": 2,
+     "unit_count": 186
+    }
+   ],
+   "total_rows": 218
+  },
+  {
+   "code": "KE",
+   "iso_numeric": "404",
+   "name_en": "Kenya",
+   "name_lc": "Kenya",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 47
+    },
+    {
+     "level": 2,
+     "unit_count": 299
+    },
+    {
+     "level": 3,
+     "unit_count": 1442
+    }
+   ],
+   "total_rows": 1442
+  },
+  {
+   "code": "KW",
+   "iso_numeric": "414",
+   "name_en": "Kuwait",
+   "name_lc": "الكويت",
+   "max_tier": 1,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 6
+    }
+   ],
+   "total_rows": 6
+  },
+  {
+   "code": "LV",
+   "iso_numeric": "428",
+   "name_en": "Latvia",
+   "name_lc": "Latvija",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 42
+    },
+    {
+     "level": 2,
+     "unit_count": 518
+    },
+    {
+     "level": 3,
+     "unit_count": 5964
+    }
+   ],
+   "total_rows": 5964
+  },
+  {
+   "code": "LT",
+   "iso_numeric": "440",
+   "name_en": "Lithuania",
+   "name_lc": "Lietuva",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 10
+    },
+    {
+     "level": 2,
+     "unit_count": 60
+    },
+    {
+     "level": 3,
+     "unit_count": 796
+    },
+    {
+     "level": 4,
+     "unit_count": 31539
+    }
+   ],
+   "total_rows": 31539
+  },
+  {
+   "code": "LU",
+   "iso_numeric": "442",
+   "name_en": "Luxembourg",
+   "name_lc": "Luxembourg",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 100
+    },
+    {
+     "level": 3,
+     "unit_count": 526
+    }
+   ],
+   "total_rows": 526
+  },
+  {
+   "code": "MY",
+   "iso_numeric": "458",
+   "name_en": "Malaysia",
+   "name_lc": "Malaysia",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 16
+    },
+    {
+     "level": 2,
+     "unit_count": 103
+    },
+    {
+     "level": 3,
+     "unit_count": 552
+    },
+    {
+     "level": 4,
+     "unit_count": 886
+    }
+   ],
+   "total_rows": 886
+  },
+  {
+   "code": "ML",
+   "iso_numeric": "466",
+   "name_en": "Mali",
+   "name_lc": "Mali (le)",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 10
+    },
+    {
+     "level": 2,
+     "unit_count": 53
+    },
+    {
+     "level": 3,
+     "unit_count": 701
+    }
+   ],
+   "total_rows": 701
+  },
+  {
+   "code": "MX",
+   "iso_numeric": "484",
+   "name_en": "Mexico",
+   "name_lc": "México",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 32
+    },
+    {
+     "level": 2,
+     "unit_count": 2457
+    }
+   ],
+   "total_rows": 2457
+  },
+  {
+   "code": "MN",
+   "iso_numeric": "496",
+   "name_en": "Mongolia",
+   "name_lc": "монгол",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 4
+    },
+    {
+     "level": 2,
+     "unit_count": 22
+    },
+    {
+     "level": 3,
+     "unit_count": 339
+    }
+   ],
+   "total_rows": 339
+  },
+  {
+   "code": "MA",
+   "iso_numeric": "504",
+   "name_en": "Morocco",
+   "name_lc": "المغرب",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 10
+    },
+    {
+     "level": 2,
+     "unit_count": 69
+    },
+    {
+     "level": 3,
+     "unit_count": 1507
+    }
+   ],
+   "total_rows": 1507
+  },
+  {
+   "code": "MM",
+   "iso_numeric": "104",
+   "name_en": "Myanmar",
+   "name_lc": "မြန်မာ",
+   "max_tier": 5,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 17
+    },
+    {
+     "level": 2,
+     "unit_count": 80
+    },
+    {
+     "level": 3,
+     "unit_count": 330
+    },
+    {
+     "level": 4,
+     "unit_count": 14145
+    },
+    {
+     "level": 5,
+     "unit_count": 15856
+    }
+   ],
+   "total_rows": 15883
+  },
+  {
+   "code": "NP",
+   "iso_numeric": "524",
+   "name_en": "Nepal",
+   "name_lc": "नेपाल",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 7
+    },
+    {
+     "level": 2,
+     "unit_count": 77
+    },
+    {
+     "level": 3,
+     "unit_count": 771
+    }
+   ],
+   "total_rows": 771
+  },
+  {
+   "code": "NL",
+   "iso_numeric": "528",
+   "name_en": "Netherlands",
+   "name_lc": "Nederland",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 352
+    },
+    {
+     "level": 3,
+     "unit_count": 2499
+    }
+   ],
+   "total_rows": 2499
+  },
+  {
+   "code": "NZ",
+   "iso_numeric": "554",
+   "name_en": "NewZealand",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 19
+    },
+    {
+     "level": 2,
+     "unit_count": 75
+    }
+   ],
+   "total_rows": 75
+  },
+  {
+   "code": "NG",
+   "iso_numeric": "566",
+   "name_en": "Nigeria",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 37
+    },
+    {
+     "level": 2,
+     "unit_count": 774
+    }
+   ],
+   "total_rows": 774
+  },
+  {
+   "code": "NO",
+   "iso_numeric": "578",
+   "name_en": "Norway",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 15
+    },
+    {
+     "level": 2,
+     "unit_count": 357
+    }
+   ],
+   "total_rows": 357
+  },
+  {
+   "code": "OM",
+   "iso_numeric": "512",
+   "name_en": "Oman",
+   "name_lc": "عُمان",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 60
+    }
+   ],
+   "total_rows": 60
+  },
+  {
+   "code": "PK",
+   "iso_numeric": "586",
+   "name_en": "Pakistan",
+   "name_lc": "پاکستان",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 8
+    },
+    {
+     "level": 2,
+     "unit_count": 32
+    },
+    {
+     "level": 3,
+     "unit_count": 141
+    }
+   ],
+   "total_rows": 141
+  },
+  {
+   "code": "PA",
+   "iso_numeric": "591",
+   "name_en": "Panama",
+   "name_lc": "Panama",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 79
+    },
+    {
+     "level": 3,
+     "unit_count": 724
+    }
+   ],
+   "total_rows": 724
+  },
+  {
+   "code": "PE",
+   "iso_numeric": "604",
+   "name_en": "Peru",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 26
+    },
+    {
+     "level": 2,
+     "unit_count": 195
+    },
+    {
+     "level": 3,
+     "unit_count": 1815
+    }
+   ],
+   "total_rows": 1815
+  },
+  {
+   "code": "PH",
+   "iso_numeric": "608",
+   "name_en": "Philippines",
+   "name_lc": "Philippines",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 81
+    },
+    {
+     "level": 2,
+     "unit_count": 1647
+    },
+    {
+     "level": 3,
+     "unit_count": 39784
+    }
+   ],
+   "total_rows": 41947
+  },
+  {
+   "code": "PL",
+   "iso_numeric": "616",
+   "name_en": "Poland",
+   "name_lc": "Polska",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 16
+    },
+    {
+     "level": 2,
+     "unit_count": 381
+    },
+    {
+     "level": 3,
+     "unit_count": 2335
+    },
+    {
+     "level": 4,
+     "unit_count": 52325
+    }
+   ],
+   "total_rows": 52325
+  },
+  {
+   "code": "PT",
+   "iso_numeric": "620",
+   "name_en": "Portugal",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 20
+    },
+    {
+     "level": 2,
+     "unit_count": 308
+    },
+    {
+     "level": 3,
+     "unit_count": 33713
+    }
+   ],
+   "total_rows": 33713
+  },
+  {
+   "code": "QA",
+   "iso_numeric": "634",
+   "name_en": "Qatar",
+   "name_lc": "قطر",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 8
+    },
+    {
+     "level": 2,
+     "unit_count": 75
+    }
+   ],
+   "total_rows": 75
+  },
+  {
+   "code": "UZ",
+   "iso_numeric": "860",
+   "name_en": "Republic of Uzbekistan",
+   "name_lc": "O'zbekiston Respublikasi",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 14
+    },
+    {
+     "level": 2,
+     "unit_count": 199
+    }
+   ],
+   "total_rows": 199
+  },
+  {
+   "code": "CG",
+   "iso_numeric": "178",
+   "name_en": "Republic of the Congo",
+   "name_lc": "République du Congo",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 15
+    },
+    {
+     "level": 2,
+     "unit_count": 89
+    }
+   ],
+   "total_rows": 89
+  },
+  {
+   "code": "RO",
+   "iso_numeric": "642",
+   "name_en": "Romania",
+   "name_lc": "România",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 43
+    },
+    {
+     "level": 2,
+     "unit_count": 3135
+    }
+   ],
+   "total_rows": 3135
+  },
+  {
+   "code": "RU",
+   "iso_numeric": "643",
+   "name_en": "Russia",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 83
+    },
+    {
+     "level": 2,
+     "unit_count": 2417
+    }
+   ],
+   "total_rows": 2445
+  },
+  {
+   "code": "SA",
+   "iso_numeric": "682",
+   "name_en": "Saudi Arabia",
+   "name_lc": "العربية السعودية",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 13
+    },
+    {
+     "level": 2,
+     "unit_count": 2998
+    },
+    {
+     "level": 3,
+     "unit_count": 5110
+    }
+   ],
+   "total_rows": 5111
+  },
+  {
+   "code": "RS",
+   "iso_numeric": "688",
+   "name_en": "Serbia",
+   "name_lc": "Србија",
+   "max_tier": 5,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 2
+    },
+    {
+     "level": 2,
+     "unit_count": 25
+    },
+    {
+     "level": 3,
+     "unit_count": 156
+    },
+    {
+     "level": 4,
+     "unit_count": 163
+    },
+    {
+     "level": 5,
+     "unit_count": 1153
+    }
+   ],
+   "total_rows": 1153
+  },
+  {
+   "code": "SG",
+   "iso_numeric": "702",
+   "name_en": "Singapore",
+   "name_lc": "Singapore",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 5
+    },
+    {
+     "level": 2,
+     "unit_count": 58
+    },
+    {
+     "level": 3,
+     "unit_count": 332
+    }
+   ],
+   "total_rows": 332
+  },
+  {
+   "code": "SK",
+   "iso_numeric": "703",
+   "name_en": "Slovakia",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 8
+    },
+    {
+     "level": 2,
+     "unit_count": 87
+    },
+    {
+     "level": 3,
+     "unit_count": 3291
+    }
+   ],
+   "total_rows": 3291
+  },
+  {
+   "code": "SI",
+   "iso_numeric": "705",
+   "name_en": "Slovenia",
+   "name_lc": "Slovenija",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 12
+    },
+    {
+     "level": 2,
+     "unit_count": 192
+    }
+   ],
+   "total_rows": 192
+  },
+  {
+   "code": "ZA",
+   "iso_numeric": "710",
+   "name_en": "South Africa",
+   "name_lc": null,
+   "max_tier": 6,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 9
+    },
+    {
+     "level": 2,
+     "unit_count": 52
+    },
+    {
+     "level": 3,
+     "unit_count": 234
+    },
+    {
+     "level": 4,
+     "unit_count": 236
+    },
+    {
+     "level": 5,
+     "unit_count": 4233
+    },
+    {
+     "level": 6,
+     "unit_count": 4277
+    }
+   ],
+   "total_rows": 4277
+  },
+  {
+   "code": "KR",
+   "iso_numeric": "410",
+   "name_en": "South Korea",
+   "name_lc": "한국",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 17
+    },
+    {
+     "level": 2,
+     "unit_count": 250
+    },
+    {
+     "level": 3,
+     "unit_count": 1574
+    }
+   ],
+   "total_rows": 3932
+  },
+  {
+   "code": "ES",
+   "iso_numeric": "724",
+   "name_en": "Spain",
+   "name_lc": "España",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 20
+    },
+    {
+     "level": 2,
+     "unit_count": 53
+    },
+    {
+     "level": 3,
+     "unit_count": 8132
+    },
+    {
+     "level": 4,
+     "unit_count": 12401
+    }
+   ],
+   "total_rows": 12402
+  },
+  {
+   "code": "SR",
+   "iso_numeric": "740",
+   "name_en": "Suriname",
+   "name_lc": null,
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 10
+    },
+    {
+     "level": 2,
+     "unit_count": 60
+    }
+   ],
+   "total_rows": 60
+  },
+  {
+   "code": "SE",
+   "iso_numeric": "752",
+   "name_en": "Sweden",
+   "name_lc": "Sverige",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 22
+    },
+    {
+     "level": 2,
+     "unit_count": 290
+    },
+    {
+     "level": 3,
+     "unit_count": 1794
+    }
+   ],
+   "total_rows": 1804
+  },
+  {
+   "code": "CH",
+   "iso_numeric": "756",
+   "name_en": "Switzerland",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 26
+    },
+    {
+     "level": 2,
+     "unit_count": 149
+    },
+    {
+     "level": 3,
+     "unit_count": 4240
+    }
+   ],
+   "total_rows": 4240
+  },
+  {
+   "code": "TW",
+   "iso_numeric": "158",
+   "name_en": "Taiwan",
+   "name_lc": "台灣",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 21
+    },
+    {
+     "level": 2,
+     "unit_count": 337
+    }
+   ],
+   "total_rows": 337
+  },
+  {
+   "code": "TZ",
+   "iso_numeric": "834",
+   "name_en": "Tanzania",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 25
+    },
+    {
+     "level": 2,
+     "unit_count": 25
+    },
+    {
+     "level": 3,
+     "unit_count": 116
+    }
+   ],
+   "total_rows": 116
+  },
+  {
+   "code": "TH",
+   "iso_numeric": "764",
+   "name_en": "Thailand",
+   "name_lc": "ประเทศไทย",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 77
+    },
+    {
+     "level": 2,
+     "unit_count": 805
+    }
+   ],
+   "total_rows": 812
+  },
+  {
+   "code": "TG",
+   "iso_numeric": "768",
+   "name_en": "Togo",
+   "name_lc": "Togo",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 5
+    },
+    {
+     "level": 2,
+     "unit_count": 40
+    },
+    {
+     "level": 3,
+     "unit_count": 373
+    }
+   ],
+   "total_rows": 373
+  },
+  {
+   "code": "TR",
+   "iso_numeric": "792",
+   "name_en": "Turkey",
+   "name_lc": null,
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 82
+    },
+    {
+     "level": 2,
+     "unit_count": 975
+    },
+    {
+     "level": 3,
+     "unit_count": 36119
+    }
+   ],
+   "total_rows": 36119
+  },
+  {
+   "code": "UG",
+   "iso_numeric": "800",
+   "name_en": "Uganda",
+   "name_lc": "Uganda",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 58
+    },
+    {
+     "level": 2,
+     "unit_count": 166
+    },
+    {
+     "level": 3,
+     "unit_count": 965
+    },
+    {
+     "level": 4,
+     "unit_count": 5340
+    }
+   ],
+   "total_rows": 5340
+  },
+  {
+   "code": "UA",
+   "iso_numeric": "804",
+   "name_en": "Ukraine",
+   "name_lc": "Україна",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 27
+    },
+    {
+     "level": 2,
+     "unit_count": 133
+    },
+    {
+     "level": 3,
+     "unit_count": 1297
+    }
+   ],
+   "total_rows": 1297
+  },
+  {
+   "code": "AE",
+   "iso_numeric": "784",
+   "name_en": "United Arab Emirates",
+   "name_lc": "الإمارات العربية المتحدة",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 7
+    },
+    {
+     "level": 2,
+     "unit_count": 154
+    },
+    {
+     "level": 3,
+     "unit_count": 489
+    }
+   ],
+   "total_rows": 530
+  },
+  {
+   "code": "GB",
+   "iso_numeric": "826",
+   "name_en": "United Kingdom",
+   "name_lc": "United Kingdom",
+   "max_tier": 4,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 4
+    },
+    {
+     "level": 2,
+     "unit_count": 184
+    },
+    {
+     "level": 3,
+     "unit_count": 511
+    },
+    {
+     "level": 4,
+     "unit_count": 6241
+    }
+   ],
+   "total_rows": 6241
+  },
+  {
+   "code": "US",
+   "iso_numeric": "840",
+   "name_en": "United States",
+   "name_lc": "United States",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 51
+    },
+    {
+     "level": 2,
+     "unit_count": 3148
+    }
+   ],
+   "total_rows": 3148
+  },
+  {
+   "code": "UY",
+   "iso_numeric": "858",
+   "name_en": "Uruguay",
+   "name_lc": "Uruguay",
+   "max_tier": 3,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 19
+    },
+    {
+     "level": 2,
+     "unit_count": 2002
+    },
+    {
+     "level": 3,
+     "unit_count": 2003
+    }
+   ],
+   "total_rows": 2003
+  },
+  {
+   "code": "VE",
+   "iso_numeric": "862",
+   "name_en": "Venezuela",
+   "name_lc": "Venezuela",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 23
+    },
+    {
+     "level": 2,
+     "unit_count": 897
+    }
+   ],
+   "total_rows": 897
+  },
+  {
+   "code": "VN",
+   "iso_numeric": "704",
+   "name_en": "Vietnam",
+   "name_lc": "Việt Nam",
+   "max_tier": 2,
+   "level_counts": [
+    {
+     "level": 1,
+     "unit_count": 34
+    },
+    {
+     "level": 2,
+     "unit_count": 3321
+    }
+   ],
+   "total_rows": 3321
+  }
+ ]
+}

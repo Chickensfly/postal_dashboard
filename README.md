@@ -60,10 +60,11 @@ to git:
 | Raw sources — the 9 no-postal-code countries' original JD files | `web/public/raw_sources/` | ~1.4 MB |
 
 That's the **entire** data footprint of the deployed site: **~110 MB**, none of it the
-`to JD/` tree, no backend needed to serve any of it. Parquet and sample-CSV downloads
-are direct links to these files. Search runs **`duckdb-wasm` in the visitor's own
-browser** against whichever per-country parquet file is on screen — nothing
-round-trips to a server.
+`to JD/` tree, no backend needed to serve any of it. The sample CSV is the one
+direct download link offered per country — **the per-country parquet is never
+exposed as a download at all**; it exists purely as the file `duckdb-wasm` searches
+against, fetched only when a visitor opens a country's drawer and searches. Search
+runs **entirely in the visitor's own browser**, nothing round-trips to a server.
 
 **Full CSV/XLSX are the one thing that can't just be committed to git** — most
 countries' files are small enough, but CA's full CSV is 157 MB and IL's is 126 MB,
@@ -196,14 +197,17 @@ Hover for a tooltip, click to open a country. Scroll or use `+ − ⤾` to zoom.
 ## The sidebar
 
 One row per country: checkbox, name (with native-script name), ISO2, region, admin
-depth, postal-code count, admin-area count, last-updated date, and a quick download
-button (all-rows Parquet, or the best available JD original for a no-postal-code
-country). Every column sorts; filter by region, status, or free text over
-name/ISO2/ISO3.
+depth, postal-code count, admin-area count, last-updated year, and a quick download
+button (the 100-row sample CSV, or the best available JD original for a
+no-postal-code country). Every column sorts; filter by region, status, or free text
+over name/ISO2/ISO3. Last-updated is shown to the year only, everywhere in the UI —
+the map tooltip, this column, and the drawer alike.
 
 Click a row to open its detail drawer — search, the postal-codes/admin-areas view
-toggle, and every download (Parquet and the sample CSV directly, full CSV/XLSX via
-Drive) live there.
+toggle, and every download live there: the sample CSV directly, full CSV/XLSX via
+Drive. **The full Parquet file is never offered as a download** — it exists solely
+as what `duckdb-wasm` searches against in the browser (see "How the data is
+arranged"), fetched only when a visitor actually searches a country.
 
 Tick several countries and the footer zips their **sample CSVs** (100 rows each)
 client-side, right in the browser — no backend, no size limit to worry about, since

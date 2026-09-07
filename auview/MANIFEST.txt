@@ -1,0 +1,10 @@
+Postal Portal bundle
+format: csv (admin_areas)
+countries: 1
+rows: 17,788
+catalog generated: 2026-08-13T12:37:52+08:00
+
+ISO2  file                              rows  last updated from
+AU    AU.admin_areas.csv              17,788  2026-08-13   JD_AU_v2.csv
+
+WARNING about the CSV files: postal codes in these files are correct and zero-padded on disk, but Excel re-infers types when you double-click a CSV and will silently strip leading zeros (e.g. 01067 -> 1067). Either use the XLSX download instead, or import via Data > Get Data > From Text/CSV and set postal_code to Text. Never re-save a CSV from Excel.

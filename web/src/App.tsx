@@ -1,15 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import WorldMap from './WorldMap'
 import CountryTable from './CountryTable'
-import { compare, type Sort, type SortKey } from './sorting'
-import { BIN_LABELS, RAMP_VARS } from './mapScale'
+import AdminBoundaryMap from './AdminBoundaryMap'
+import AdminBoundaryTable from './AdminBoundaryTable'
+import {
+  compare,
+  compareAdminBoundary,
+  type AdminBoundarySort,
+  type AdminBoundarySortKey,
+  type Sort,
+  type SortKey,
+} from './sorting'
+import { ADMIN_BOUNDARY_BIN_LABELS, BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
-import { fetchCatalog, sampleCsvUrl } from './api'
+import { fetchAdminBoundaryCatalog, fetchCatalog, sampleCsvUrl } from './api'
 import { downloadSelectionZip } from './zip'
 import { bytes, compactRows, yearRange } from './format'
-import type { Catalog, Country } from './types'
+import type { AdminBoundaryCatalog, Catalog, Country } from './types'
 
 type Theme = 'light' | 'dark' | null
+
+// The dataset switcher's two panes. Deliberately not named after `View`
+// ('postal_codes' | 'admin_areas' in types.ts) -- that type belongs to the
+// unrelated, pre-existing per-country dedup toggle in CountryDrawer.tsx, and
+// this is a top-level tab between two entirely separate datasets.
+type Tab = 'postal' | 'admin_boundaries'
+
+const ADMIN_BOUNDARIES_DRIVE_URL =
+  'https://drive.google.com/drive/folders/1tnPFlp6gGrCYTkijdozqrbYpRyz9FFkS?usp=sharing'
 
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
@@ -26,8 +44,27 @@ export default function App() {
 
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
 
+  const [tab, setTab] = useState<Tab>('postal')
+
+  // Admin Boundaries -- a wholly separate dataset and catalog fetch from the
+  // one above (see types.ts's AdminBoundaryCountry doc comment). Fetched
+  // alongside the postal-codes catalog rather than lazily on first tab click:
+  // its catalog.json is ~30 KB, cheap enough not to bother deferring.
+  const [adminCatalog, setAdminCatalog] = useState<AdminBoundaryCatalog | null>(null)
+  const [adminError, setAdminError] = useState<string | null>(null)
+  const [adminSearch, setAdminSearch] = useState('')
+  const [adminSort, setAdminSort] = useState<AdminBoundarySort>({ key: 'name_en', dir: 'asc' })
+  const [adminFocused, setAdminFocused] = useState<string | null>(null)
+  const adminRowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
+
   useEffect(() => {
     fetchCatalog().then(setCatalog).catch((e: Error) => setError(e.message))
+  }, [])
+
+  useEffect(() => {
+    fetchAdminBoundaryCatalog()
+      .then(setAdminCatalog)
+      .catch((e: Error) => setAdminError(e.message))
   }, [])
 
   useEffect(() => {
@@ -68,6 +105,26 @@ export default function App() {
   const focusCountry = (iso2: string) => {
     setFocused(iso2)
     rowRefs.current[iso2]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }
+
+  const adminVisible = useMemo(() => {
+    if (!adminCatalog) return []
+    const needle = adminSearch.trim().toLowerCase()
+    return adminCatalog.countries
+      .filter((c) => {
+        if (!needle) return true
+        return (
+          c.name_en.toLowerCase().includes(needle) ||
+          c.code.toLowerCase().includes(needle) ||
+          (c.name_lc ?? '').toLowerCase().includes(needle)
+        )
+      })
+      .sort((a, b) => compareAdminBoundary(a, b, adminSort))
+  }, [adminCatalog, adminSearch, adminSort])
+
+  const adminFocusCountry = (code: string) => {
+    setAdminFocused(code)
+    adminRowRefs.current[code]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
   }
 
   const toggleRow = (iso2: string) =>
@@ -121,19 +178,47 @@ export default function App() {
     <div className="app">
       <header className="masthead">
         <h1>Postal Portal</h1>
-        <div className="totals">
-          <span>
-            <b>{totals.countries + totals.delivered_no_data}</b> countries
-          </span>
-          <span>
-            <b>{totals.rows.toLocaleString('en-US')}</b> postal codes
-          </span>
-          <span>{yearRange(totals.last_updated_range[0], totals.last_updated_range[1])}</span>
-        </div>
+        <span className="fmt-group" role="group" aria-label="Dataset">
+          <button type="button" aria-pressed={tab === 'postal'} onClick={() => setTab('postal')}>
+            Postal Codes
+          </button>
+          <button
+            type="button"
+            aria-pressed={tab === 'admin_boundaries'}
+            onClick={() => setTab('admin_boundaries')}
+          >
+            Admin Boundaries
+          </button>
+        </span>
+        {tab === 'postal' ? (
+          <div className="totals">
+            <span>
+              <b>{totals.countries + totals.delivered_no_data}</b> countries
+            </span>
+            <span>
+              <b>{totals.rows.toLocaleString('en-US')}</b> postal codes
+            </span>
+            <span>{yearRange(totals.last_updated_range[0], totals.last_updated_range[1])}</span>
+          </div>
+        ) : (
+          adminCatalog && (
+            <div className="totals">
+              <span>
+                <b>{adminCatalog.totals.countries}</b> countries
+              </span>
+              <span>
+                <b>{adminCatalog.totals.total_leaf_records.toLocaleString('en-US')}</b> leaf records
+              </span>
+              <span>up to tier {adminCatalog.totals.max_tier_reached}</span>
+            </div>
+          )
+        )}
         <span className="spacer" />
       </header>
 
       <div className="body">
+        {tab === 'postal' ? (
+        <>
         <section className="map-pane">
           <WorldMap countries={catalog.countries} selected={focused} onSelect={focusCountry} />
           <div className="legend">
@@ -260,6 +345,106 @@ export default function App() {
             </button>
           </div>
         </section>
+        </>
+        ) : (
+        <>
+        <section className="map-pane">
+          {adminError && !adminCatalog ? (
+            <div className="state error">
+              <div>
+                <p>
+                  <strong>Could not load the Admin Boundaries catalog.</strong>
+                </p>
+                <p>{adminError}</p>
+              </div>
+            </div>
+          ) : !adminCatalog ? (
+            <div className="state">Loading catalog…</div>
+          ) : (
+            <>
+              <AdminBoundaryMap
+                countries={adminCatalog.countries}
+                selected={adminFocused}
+                onSelect={adminFocusCountry}
+              />
+              <div className="legend">
+                <span className="ramp">
+                  <span>Leaf records</span>
+                  <span className="bins">
+                    {RAMP_VARS.map((v, i) => (
+                      <span
+                        key={v}
+                        className="swatch"
+                        style={{ background: `var(${v})` }}
+                        title={ADMIN_BOUNDARY_BIN_LABELS[i]}
+                      />
+                    ))}
+                  </span>
+                  <span>
+                    {ADMIN_BOUNDARY_BIN_LABELS[0]} →{' '}
+                    {ADMIN_BOUNDARY_BIN_LABELS[ADMIN_BOUNDARY_BIN_LABELS.length - 1]}
+                  </span>
+                </span>
+                <span className="cat">
+                  <span className="swatch" style={{ background: 'var(--map-absent)' }} />
+                  Not in the dataset
+                </span>
+              </div>
+            </>
+          )}
+        </section>
+
+        <section className="sidebar">
+          <div className="controls">
+            <input
+              type="search"
+              value={adminSearch}
+              placeholder="Search country or code…"
+              onChange={(e) => setAdminSearch(e.target.value)}
+              aria-label="Search countries"
+            />
+          </div>
+
+          <div className="result-line">
+            <span>
+              {adminVisible.length} of {adminCatalog?.totals.countries ?? 0} countries ·{' '}
+              {compactRows(adminVisible.reduce((n, c) => n + c.total_rows, 0))} leaf records listed
+            </span>
+          </div>
+
+          <AdminBoundaryTable
+            rows={adminVisible}
+            sort={adminSort}
+            onSort={(key: AdminBoundarySortKey) =>
+              setAdminSort((s) =>
+                s.key === key
+                  ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' }
+                  : { key, dir: key === 'total_rows' || key === 'max_tier' ? 'desc' : 'asc' },
+              )
+            }
+            focused={adminFocused}
+            onFocus={adminFocusCountry}
+            rowRefs={adminRowRefs}
+          />
+
+          <div className="selection-bar">
+            <span className="summary">
+              Full administrative-boundary dataset -- all {adminCatalog?.totals.countries ?? 91}{' '}
+              countries, CSV and Parquet -- via Google Drive (no per-country download here; see
+              README).
+            </span>
+            <a
+              className="btn-primary"
+              href={ADMIN_BOUNDARIES_DRIVE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Drive ↗
+            </a>
+          </div>
+        </section>
+        </>
+        )}
       </div>
 
       {focusedCountry && (
