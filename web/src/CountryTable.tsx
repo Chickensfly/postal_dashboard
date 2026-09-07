@@ -1,5 +1,5 @@
 import type { Country, Format } from './types'
-import { bytes, yearOnly } from './format'
+import { bytes, prettyDate, updatedAt, type DatePrecision } from './format'
 import { rawSourceUrl, sampleCsvUrl } from './api'
 import type { Sort, SortKey } from './sorting'
 
@@ -67,6 +67,7 @@ type Props = {
   focused: string | null
   onFocus: (iso2: string) => void
   rowRefs: React.RefObject<Record<string, HTMLTableRowElement | null>>
+  precision: DatePrecision
 }
 
 export default function CountryTable({
@@ -80,6 +81,7 @@ export default function CountryTable({
   focused,
   onFocus,
   rowRefs,
+  precision,
 }: Props) {
   return (
     <div className="table-scroll">
@@ -161,8 +163,8 @@ export default function CountryTable({
                 <td className="col-num">
                   {c.view_stats ? c.view_stats.admin_areas.rows.toLocaleString('en-US') : '—'}
                 </td>
-                <td className="col-num" title={`${yearOnly(c.last_updated)} — ${c.source_file}`}>
-                  {yearOnly(c.last_updated)}
+                <td className="col-num" title={`${prettyDate(c.last_updated)} — ${c.source_file}`}>
+                  {updatedAt(c.last_updated, precision)}
                 </td>
                 <td>
                   {dl ? (

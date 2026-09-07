@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { Country, Format, Preview, View } from './types'
 import { parquetUrl, rawSourceUrl, sampleCsvUrl } from './api'
 import { queryParquet } from './duckdb'
-import { bytes, yearOnly } from './format'
+import { bytes, updatedAt, type DatePrecision } from './format'
 
 const VIEWS: View[] = ['postal_codes', 'admin_areas']
 const VIEW_LABEL: Record<View, string> = { postal_codes: 'Postal Codes', admin_areas: 'Admin Areas' }
@@ -68,9 +68,11 @@ async function searchCountry(
 export default function CountryDrawer({
   country,
   onClose,
+  precision,
 }: {
   country: Country
   onClose: () => void
+  precision: DatePrecision
 }) {
   const [query, setQuery] = useState('')
   const [preview, setPreview] = useState<Preview | null>(null)
@@ -213,7 +215,7 @@ export default function CountryDrawer({
           </div>
           <div>
             <div className="k">Last updated</div>
-            <div className="v">{yearOnly(country.last_updated)}</div>
+            <div className="v">{updatedAt(country.last_updated, precision)}</div>
           </div>
           <div>
             <div className="k">Source file</div>

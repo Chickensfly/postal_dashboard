@@ -1,9 +1,13 @@
 {
- "generated_at": "2026-09-07T11:19:04+08:00",
+ "generated_at": "2026-09-07T11:41:39+08:00",
  "totals": {
   "countries": 91,
   "total_leaf_records": 548318,
-  "max_tier_reached": 6
+  "max_tier_reached": 6,
+  "last_updated_range": [
+   "2026-09-02",
+   "2026-09-04"
+  ]
  },
  "countries": [
   {
@@ -30,7 +34,8 @@
      "unit_count": 5831
     }
    ],
-   "total_rows": 5831
+   "total_rows": 5831,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "AU",
@@ -56,7 +61,8 @@
      "unit_count": 15944
     }
    ],
-   "total_rows": 15946
+   "total_rows": 15946,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "AT",
@@ -82,7 +88,8 @@
      "unit_count": 1941
     }
    ],
-   "total_rows": 1941
+   "total_rows": 1941,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "BD",
@@ -108,7 +115,8 @@
      "unit_count": 5158
     }
    ],
-   "total_rows": 5158
+   "total_rows": 5158,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "BY",
@@ -126,7 +134,8 @@
      "unit_count": 119
     }
    ],
-   "total_rows": 119
+   "total_rows": 119,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "BE",
@@ -152,7 +161,8 @@
      "unit_count": 565
     }
    ],
-   "total_rows": 565
+   "total_rows": 565,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "BO",
@@ -174,7 +184,8 @@
      "unit_count": 344
     }
    ],
-   "total_rows": 344
+   "total_rows": 344,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "BR",
@@ -196,7 +207,8 @@
      "unit_count": 26220
     }
    ],
-   "total_rows": 26220
+   "total_rows": 26220,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "BN",
@@ -218,7 +230,8 @@
      "unit_count": 394
     }
    ],
-   "total_rows": 394
+   "total_rows": 394,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "BG",
@@ -240,7 +253,8 @@
      "unit_count": 5292
     }
    ],
-   "total_rows": 5292
+   "total_rows": 5292,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CM",
@@ -262,7 +276,8 @@
      "unit_count": 360
     }
    ],
-   "total_rows": 360
+   "total_rows": 360,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CA",
@@ -284,7 +299,8 @@
      "unit_count": 5581
     }
    ],
-   "total_rows": 5581
+   "total_rows": 5581,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CL",
@@ -306,7 +322,8 @@
      "unit_count": 346
     }
    ],
-   "total_rows": 346
+   "total_rows": 346,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CO",
@@ -324,7 +341,8 @@
      "unit_count": 1122
     }
    ],
-   "total_rows": 1122
+   "total_rows": 1122,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CY",
@@ -346,7 +364,8 @@
      "unit_count": 592
     }
    ],
-   "total_rows": 598
+   "total_rows": 598,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "CZ",
@@ -368,7 +387,8 @@
      "unit_count": 15181
     }
    ],
-   "total_rows": 15181
+   "total_rows": 15181,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CD",
@@ -386,7 +406,8 @@
      "unit_count": 240
     }
    ],
-   "total_rows": 244
+   "total_rows": 244,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "DK",
@@ -404,7 +425,8 @@
      "unit_count": 99
     }
    ],
-   "total_rows": 99
+   "total_rows": 99,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "EC",
@@ -426,7 +448,8 @@
      "unit_count": 768
     }
    ],
-   "total_rows": 768
+   "total_rows": 768,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "EG",
@@ -444,7 +467,8 @@
      "unit_count": 343
     }
    ],
-   "total_rows": 343
+   "total_rows": 343,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "EE",
@@ -466,7 +490,8 @@
      "unit_count": 4702
     }
    ],
-   "total_rows": 4702
+   "total_rows": 4702,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "ET",
@@ -488,7 +513,8 @@
      "unit_count": 1148
     }
    ],
-   "total_rows": 1148
+   "total_rows": 1148,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "FI",
@@ -510,7 +536,8 @@
      "unit_count": 295
     }
    ],
-   "total_rows": 295
+   "total_rows": 295,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "FR",
@@ -536,7 +563,8 @@
      "unit_count": 34819
     }
    ],
-   "total_rows": 34819
+   "total_rows": 34819,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "DE",
@@ -562,7 +590,8 @@
      "unit_count": 12408
     }
    ],
-   "total_rows": 12408
+   "total_rows": 12408,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "GH",
@@ -584,7 +613,8 @@
      "unit_count": 6577
     }
    ],
-   "total_rows": 6577
+   "total_rows": 6577,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "GR",
@@ -606,7 +636,8 @@
      "unit_count": 790
     }
    ],
-   "total_rows": 791
+   "total_rows": 791,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "GT",
@@ -624,7 +655,8 @@
      "unit_count": 342
     }
    ],
-   "total_rows": 342
+   "total_rows": 342,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "HK",
@@ -638,7 +670,8 @@
      "unit_count": 18
     }
    ],
-   "total_rows": 18
+   "total_rows": 18,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "HU",
@@ -664,7 +697,8 @@
      "unit_count": 3178
     }
    ],
-   "total_rows": 3178
+   "total_rows": 3178,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "IN",
@@ -686,7 +720,8 @@
      "unit_count": 2336
     }
    ],
-   "total_rows": 2336
+   "total_rows": 2336,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "ID",
@@ -712,7 +747,8 @@
      "unit_count": 81911
     }
    ],
-   "total_rows": 81911
+   "total_rows": 81911,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "IQ",
@@ -734,7 +770,8 @@
      "unit_count": 294
     }
    ],
-   "total_rows": 294
+   "total_rows": 294,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "IE",
@@ -752,7 +789,8 @@
      "unit_count": 29
     }
    ],
-   "total_rows": 29
+   "total_rows": 29,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "IL",
@@ -774,7 +812,8 @@
      "unit_count": 2829
     }
    ],
-   "total_rows": 2829
+   "total_rows": 2829,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "IT",
@@ -796,7 +835,8 @@
      "unit_count": 7896
     }
    ],
-   "total_rows": 7896
+   "total_rows": 7896,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "JP",
@@ -814,7 +854,8 @@
      "unit_count": 1892
     }
    ],
-   "total_rows": 1892
+   "total_rows": 1892,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "JO",
@@ -832,7 +873,8 @@
      "unit_count": 456
     }
    ],
-   "total_rows": 461
+   "total_rows": 461,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "KZ",
@@ -850,7 +892,8 @@
      "unit_count": 186
     }
    ],
-   "total_rows": 218
+   "total_rows": 218,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "KE",
@@ -872,7 +915,8 @@
      "unit_count": 1442
     }
    ],
-   "total_rows": 1442
+   "total_rows": 1442,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "KW",
@@ -886,7 +930,8 @@
      "unit_count": 6
     }
    ],
-   "total_rows": 6
+   "total_rows": 6,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "LV",
@@ -908,7 +953,8 @@
      "unit_count": 5964
     }
    ],
-   "total_rows": 5964
+   "total_rows": 5964,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "LT",
@@ -934,7 +980,8 @@
      "unit_count": 31539
     }
    ],
-   "total_rows": 31539
+   "total_rows": 31539,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "LU",
@@ -956,7 +1003,8 @@
      "unit_count": 526
     }
    ],
-   "total_rows": 526
+   "total_rows": 526,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "MY",
@@ -982,7 +1030,8 @@
      "unit_count": 886
     }
    ],
-   "total_rows": 886
+   "total_rows": 886,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "ML",
@@ -1004,7 +1053,8 @@
      "unit_count": 701
     }
    ],
-   "total_rows": 701
+   "total_rows": 701,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "MX",
@@ -1022,7 +1072,8 @@
      "unit_count": 2457
     }
    ],
-   "total_rows": 2457
+   "total_rows": 2457,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "MN",
@@ -1044,7 +1095,8 @@
      "unit_count": 339
     }
    ],
-   "total_rows": 339
+   "total_rows": 339,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "MA",
@@ -1066,7 +1118,8 @@
      "unit_count": 1507
     }
    ],
-   "total_rows": 1507
+   "total_rows": 1507,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "MM",
@@ -1096,7 +1149,8 @@
      "unit_count": 15856
     }
    ],
-   "total_rows": 15883
+   "total_rows": 15883,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "NP",
@@ -1118,7 +1172,8 @@
      "unit_count": 771
     }
    ],
-   "total_rows": 771
+   "total_rows": 771,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "NL",
@@ -1140,7 +1195,8 @@
      "unit_count": 2499
     }
    ],
-   "total_rows": 2499
+   "total_rows": 2499,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "NZ",
@@ -1158,7 +1214,8 @@
      "unit_count": 75
     }
    ],
-   "total_rows": 75
+   "total_rows": 75,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "NG",
@@ -1176,7 +1233,8 @@
      "unit_count": 774
     }
    ],
-   "total_rows": 774
+   "total_rows": 774,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "NO",
@@ -1194,7 +1252,8 @@
      "unit_count": 357
     }
    ],
-   "total_rows": 357
+   "total_rows": 357,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "OM",
@@ -1212,7 +1271,8 @@
      "unit_count": 60
     }
    ],
-   "total_rows": 60
+   "total_rows": 60,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "PK",
@@ -1234,7 +1294,8 @@
      "unit_count": 141
     }
    ],
-   "total_rows": 141
+   "total_rows": 141,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "PA",
@@ -1256,7 +1317,8 @@
      "unit_count": 724
     }
    ],
-   "total_rows": 724
+   "total_rows": 724,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "PE",
@@ -1278,7 +1340,8 @@
      "unit_count": 1815
     }
    ],
-   "total_rows": 1815
+   "total_rows": 1815,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "PH",
@@ -1300,7 +1363,8 @@
      "unit_count": 39784
     }
    ],
-   "total_rows": 41947
+   "total_rows": 41947,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "PL",
@@ -1326,7 +1390,8 @@
      "unit_count": 52325
     }
    ],
-   "total_rows": 52325
+   "total_rows": 52325,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "PT",
@@ -1348,7 +1413,8 @@
      "unit_count": 33713
     }
    ],
-   "total_rows": 33713
+   "total_rows": 33713,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "QA",
@@ -1366,7 +1432,8 @@
      "unit_count": 75
     }
    ],
-   "total_rows": 75
+   "total_rows": 75,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "UZ",
@@ -1384,7 +1451,8 @@
      "unit_count": 199
     }
    ],
-   "total_rows": 199
+   "total_rows": 199,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CG",
@@ -1402,7 +1470,8 @@
      "unit_count": 89
     }
    ],
-   "total_rows": 89
+   "total_rows": 89,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "RO",
@@ -1420,7 +1489,8 @@
      "unit_count": 3135
     }
    ],
-   "total_rows": 3135
+   "total_rows": 3135,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "RU",
@@ -1438,7 +1508,8 @@
      "unit_count": 2417
     }
    ],
-   "total_rows": 2445
+   "total_rows": 2445,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "SA",
@@ -1460,7 +1531,8 @@
      "unit_count": 5110
     }
    ],
-   "total_rows": 5111
+   "total_rows": 5111,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "RS",
@@ -1490,7 +1562,8 @@
      "unit_count": 1153
     }
    ],
-   "total_rows": 1153
+   "total_rows": 1153,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "SG",
@@ -1512,7 +1585,8 @@
      "unit_count": 332
     }
    ],
-   "total_rows": 332
+   "total_rows": 332,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "SK",
@@ -1534,7 +1608,8 @@
      "unit_count": 3291
     }
    ],
-   "total_rows": 3291
+   "total_rows": 3291,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "SI",
@@ -1552,7 +1627,8 @@
      "unit_count": 192
     }
    ],
-   "total_rows": 192
+   "total_rows": 192,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "ZA",
@@ -1586,7 +1662,8 @@
      "unit_count": 4277
     }
    ],
-   "total_rows": 4277
+   "total_rows": 4277,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "KR",
@@ -1608,7 +1685,8 @@
      "unit_count": 1574
     }
    ],
-   "total_rows": 3932
+   "total_rows": 3932,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "ES",
@@ -1634,7 +1712,8 @@
      "unit_count": 12401
     }
    ],
-   "total_rows": 12402
+   "total_rows": 12402,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "SR",
@@ -1652,7 +1731,8 @@
      "unit_count": 60
     }
    ],
-   "total_rows": 60
+   "total_rows": 60,
+   "last_updated": "2026-09-04"
   },
   {
    "code": "SE",
@@ -1674,7 +1754,8 @@
      "unit_count": 1794
     }
    ],
-   "total_rows": 1804
+   "total_rows": 1804,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "CH",
@@ -1696,7 +1777,8 @@
      "unit_count": 4240
     }
    ],
-   "total_rows": 4240
+   "total_rows": 4240,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "TW",
@@ -1714,7 +1796,8 @@
      "unit_count": 337
     }
    ],
-   "total_rows": 337
+   "total_rows": 337,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "TZ",
@@ -1736,7 +1819,8 @@
      "unit_count": 116
     }
    ],
-   "total_rows": 116
+   "total_rows": 116,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "TH",
@@ -1754,7 +1838,8 @@
      "unit_count": 805
     }
    ],
-   "total_rows": 812
+   "total_rows": 812,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "TG",
@@ -1776,7 +1861,8 @@
      "unit_count": 373
     }
    ],
-   "total_rows": 373
+   "total_rows": 373,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "TR",
@@ -1798,7 +1884,8 @@
      "unit_count": 36119
     }
    ],
-   "total_rows": 36119
+   "total_rows": 36119,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "UG",
@@ -1824,7 +1911,8 @@
      "unit_count": 5340
     }
    ],
-   "total_rows": 5340
+   "total_rows": 5340,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "UA",
@@ -1846,7 +1934,8 @@
      "unit_count": 1297
     }
    ],
-   "total_rows": 1297
+   "total_rows": 1297,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "AE",
@@ -1868,7 +1957,8 @@
      "unit_count": 489
     }
    ],
-   "total_rows": 530
+   "total_rows": 530,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "GB",
@@ -1894,7 +1984,8 @@
      "unit_count": 6241
     }
    ],
-   "total_rows": 6241
+   "total_rows": 6241,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "US",
@@ -1912,7 +2003,8 @@
      "unit_count": 3148
     }
    ],
-   "total_rows": 3148
+   "total_rows": 3148,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "UY",
@@ -1934,7 +2026,8 @@
      "unit_count": 2003
     }
    ],
-   "total_rows": 2003
+   "total_rows": 2003,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "VE",
@@ -1952,7 +2045,8 @@
      "unit_count": 897
     }
    ],
-   "total_rows": 897
+   "total_rows": 897,
+   "last_updated": "2026-09-02"
   },
   {
    "code": "VN",
@@ -1970,7 +2064,8 @@
      "unit_count": 3321
     }
    ],
-   "total_rows": 3321
+   "total_rows": 3321,
+   "last_updated": "2026-09-02"
   }
  ]
 }

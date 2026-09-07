@@ -32,7 +32,7 @@ export function compare(a: Country, b: Country, sort: Sort): number {
 // compare above rather than folded in, since the two row shapes barely overlap
 // (no `rows`/`admin_depth`/`continent_name` here) and existing postal-code sort
 // keys must not change.
-export type AdminBoundarySortKey = 'name_en' | 'code' | 'max_tier' | 'total_rows'
+export type AdminBoundarySortKey = 'name_en' | 'code' | 'max_tier' | 'total_rows' | 'last_updated'
 
 export type AdminBoundarySort = { key: AdminBoundarySortKey; dir: 'asc' | 'desc' }
 

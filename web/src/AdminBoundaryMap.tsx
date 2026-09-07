@@ -7,6 +7,7 @@ import 'd3-transition'
 import { feature } from 'topojson-client'
 import type { AdminBoundaryCountry } from './types'
 import { RAMP_VARS, binOfAdminBoundary } from './mapScale'
+import { updatedAt, type DatePrecision } from './format'
 
 // A sibling of WorldMap.tsx, not a shared component -- see this feature's note
 // in types.ts. It reuses the same d3-geo/topojson-client setup and world
@@ -37,9 +38,10 @@ type Props = {
   countries: AdminBoundaryCountry[]
   selected: string | null
   onSelect: (code: string) => void
+  precision: DatePrecision
 }
 
-export default function AdminBoundaryMap({ countries, selected, onSelect }: Props) {
+export default function AdminBoundaryMap({ countries, selected, onSelect, precision }: Props) {
   const [features, setFeatures] = useState<GeoFeature[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [hovered, setHovered] = useState<{ code: string; x: number; y: number } | null>(null)
@@ -235,6 +237,8 @@ export default function AdminBoundaryMap({ countries, selected, onSelect }: Prop
             <dd>{hoveredCountry.max_tier}</dd>
             <dt>Top-level units</dt>
             <dd>{hoveredCountry.level_counts[0]?.unit_count.toLocaleString('en-US') ?? '—'}</dd>
+            <dt>Updated</dt>
+            <dd>{updatedAt(hoveredCountry.last_updated, precision)}</dd>
           </dl>
         </div>
       )}

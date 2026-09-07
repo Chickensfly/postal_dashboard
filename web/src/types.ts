@@ -114,10 +114,19 @@ export type AdminBoundaryCountry = {
   level_counts: AdminBoundaryLevel[]
   /** Leaf-level record count in this country's source file. */
   total_rows: number
+  /** Filesystem mtime of this country's source CSV, ISO date -- same convention
+   *  as Country['last_updated'] in build_catalog.py (see that script's doc
+   *  comment: "last updated" is the source file's mtime, not a fabricated date). */
+  last_updated: string
 }
 
 export type AdminBoundaryCatalog = {
   generated_at: string
-  totals: { countries: number; total_leaf_records: number; max_tier_reached: number }
+  totals: {
+    countries: number
+    total_leaf_records: number
+    max_tier_reached: number
+    last_updated_range: [string, string]
+  }
   countries: AdminBoundaryCountry[]
 }

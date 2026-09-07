@@ -6,7 +6,7 @@ import { zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import 'd3-transition'
 import { feature } from 'topojson-client'
 import type { Country } from './types'
-import { compactRows, yearOnly } from './format'
+import { compactRows, updatedAt, type DatePrecision } from './format'
 import { RAMP_VARS, binOf } from './mapScale'
 
 const WIDTH = 960
@@ -28,9 +28,10 @@ type Props = {
   countries: Country[]
   selected: string | null
   onSelect: (iso2: string) => void
+  precision: DatePrecision
 }
 
-export default function WorldMap({ countries, selected, onSelect }: Props) {
+export default function WorldMap({ countries, selected, onSelect, precision }: Props) {
   const [features, setFeatures] = useState<GeoFeature[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [hovered, setHovered] = useState<{ iso2: string; x: number; y: number } | null>(null)
@@ -248,7 +249,7 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
               <dt>Admin levels</dt>
               <dd>{hoveredCountry.admin_depth}</dd>
               <dt>Updated</dt>
-              <dd>{yearOnly(hoveredCountry.last_updated)}</dd>
+              <dd>{updatedAt(hoveredCountry.last_updated, precision)}</dd>
               <dt>Region</dt>
               <dd>{hoveredCountry.continent_name ?? '—'}</dd>
             </dl>
@@ -261,7 +262,7 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
               <dt>Admin levels</dt>
               <dd>{hoveredCountry.admin_depth}</dd>
               <dt>Updated</dt>
-              <dd>{yearOnly(hoveredCountry.last_updated)}</dd>
+              <dd>{updatedAt(hoveredCountry.last_updated, precision)}</dd>
             </dl>
           )}
         </div>

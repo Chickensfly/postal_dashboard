@@ -1,5 +1,6 @@
 import type { AdminBoundaryCountry } from './types'
 import type { AdminBoundarySort, AdminBoundarySortKey } from './sorting'
+import { prettyDate, updatedAt, type DatePrecision } from './format'
 
 // A sibling of CountryTable.tsx, not an extension of it -- CountryTable is
 // typed against the postal-codes `Country` shape, and this dataset's rows
@@ -20,6 +21,7 @@ const COLUMNS: { key: AdminBoundarySortKey; label: string; title?: string; numer
     title: 'Rows in the source file -- the deepest populated administrative unit',
     numeric: true,
   },
+  { key: 'last_updated', label: 'Updated', numeric: true },
 ]
 
 /** Generalized version of CountryTable.tsx's DepthBars for a 1-6 range instead
@@ -53,9 +55,18 @@ type Props = {
   focused: string | null
   onFocus: (code: string) => void
   rowRefs: React.RefObject<Record<string, HTMLTableRowElement | null>>
+  precision: DatePrecision
 }
 
-export default function AdminBoundaryTable({ rows, sort, onSort, focused, onFocus, rowRefs }: Props) {
+export default function AdminBoundaryTable({
+  rows,
+  sort,
+  onSort,
+  focused,
+  onFocus,
+  rowRefs,
+  precision,
+}: Props) {
   return (
     <div className="table-scroll">
       <table className="countries">
@@ -103,12 +114,15 @@ export default function AdminBoundaryTable({ rows, sort, onSort, focused, onFocu
                 <TierBars maxTier={c.max_tier} />
               </td>
               <td className="col-num">{c.total_rows.toLocaleString('en-US')}</td>
+              <td className="col-num" title={prettyDate(c.last_updated)}>
+                {updatedAt(c.last_updated, precision)}
+              </td>
               <td title={`Tier 1 through tier ${c.max_tier}`}>{levelCountsLabel(c)}</td>
             </tr>
           ))}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={5} style={{ padding: '18px', textAlign: 'center', color: 'var(--text-muted)' }}>
+              <td colSpan={6} style={{ padding: '18px', textAlign: 'center', color: 'var(--text-muted)' }}>
                 No countries match these filters.
               </td>
             </tr>

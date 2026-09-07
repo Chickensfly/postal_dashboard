@@ -105,7 +105,7 @@ def iso_numeric(code: str) -> str | None:
     return country.numeric if country else None
 
 
-def country_stats(code: str, df: pd.DataFrame) -> dict:
+def country_stats(code: str, df: pd.DataFrame, last_updated: str) -> dict:
     """Per-country coverage facts, computed from the country's own rows.
 
     level_counts[i] is NOT a naive distinct-value count on region_i alone --
@@ -139,6 +139,7 @@ def country_stats(code: str, df: pd.DataFrame) -> dict:
         "max_tier": max_tier,
         "level_counts": level_counts,
         "total_rows": int(len(df)),
+        "last_updated": last_updated,
     }
 
 
@@ -164,7 +165,10 @@ def main() -> None:
             if missing:
                 raise ValueError(f"missing expected columns: {missing}")
 
-            entry = country_stats(code, df)
+            # Same convention as build_catalog.py: "last updated" is the source
+            # file's own filesystem mtime, not a fabricated or hardcoded date.
+            last_updated = dt.date.fromtimestamp(csv_path.stat().st_mtime).isoformat()
+            entry = country_stats(code, df, last_updated)
             if entry["iso_numeric"] is None:
                 unmatched_numeric.append(code)
 
@@ -174,7 +178,8 @@ def main() -> None:
             countries.append(entry)
             print(
                 f"  {code}  rows={entry['total_rows']:>7}  max_tier={entry['max_tier']}  "
-                f"levels={[lc['unit_count'] for lc in entry['level_counts']]}",
+                f"levels={[lc['unit_count'] for lc in entry['level_counts']]}  "
+                f"updated={last_updated}",
                 flush=True,
             )
         except Exception as e:  # noqa: BLE001 -- report and keep going, one bad file shouldn't sink the other 90
@@ -189,6 +194,10 @@ def main() -> None:
             "countries": len(countries),
             "total_leaf_records": sum(c["total_rows"] for c in countries),
             "max_tier_reached": max((c["max_tier"] for c in countries), default=0),
+            "last_updated_range": [
+                min(c["last_updated"] for c in countries),
+                max(c["last_updated"] for c in countries),
+            ],
         },
         "countries": countries,
     }
