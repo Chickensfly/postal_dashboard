@@ -41,19 +41,27 @@ function DepthBars({ depth }: { depth: number }) {
   )
 }
 
-/** The one quick download this table offers per row -- the 100-row sample CSV for
- *  a covered country (the full Parquet is never offered as a download; it's kept
- *  purely as the file duckdb-wasm searches in the drawer), or the best available
- *  JD original for a no-postal-code one. Full CSV/XLSX (Drive-linked for covered
- *  countries) live in the detail drawer. */
-function quickDownload(c: Country): { fmt: Format; href: string; bytes: number; sample?: boolean } | null {
+/** The one quick download this table offers per row -- the 100-row sample CSV,
+ *  for a covered country and a no-postal-code one alike (build_catalog.py
+ *  generates one for both, same as the bulk zip already assumes -- see App.tsx's
+ *  runZip, which always uses sampleCsvUrl regardless of files_are_source). The
+ *  full Parquet is never offered as a download (it's kept purely as the file
+ *  duckdb-wasm searches in the drawer); the full raw JD original is the fallback
+ *  only for the handful of countries with no sample_csv at all. Full CSV/XLSX
+ *  (Drive-linked for covered countries, or the raw JD file for the rest) live in
+ *  the detail drawer regardless of which of these a given row gets. */
+function quickDownload(
+  c: Country,
+): { fmt: Format; href: string; bytes: number; sample?: boolean; raw?: boolean } | null {
+  if (c.sample_csv) {
+    return { fmt: 'csv', href: sampleCsvUrl(c.iso2), bytes: c.sample_csv.bytes, sample: true }
+  }
   if (c.files_are_source) {
     const fmt = (['xlsx', 'csv'] as Format[]).find((f) => c.files[f])
     if (!fmt) return null
-    return { fmt, href: rawSourceUrl(c.files[fmt]!.name!), bytes: c.files[fmt]!.bytes }
+    return { fmt, href: rawSourceUrl(c.files[fmt]!.name!), bytes: c.files[fmt]!.bytes, raw: true }
   }
-  if (!c.sample_csv) return null
-  return { fmt: 'csv', href: sampleCsvUrl(c.iso2), bytes: c.sample_csv.bytes, sample: true }
+  return null
 }
 
 type Props = {
@@ -171,14 +179,14 @@ export default function CountryTable({
                         href={dl.href}
                         title={[
                           `Download ${c.iso2}.${dl.fmt} (${bytes(dl.bytes)})`,
-                          c.files_are_source
+                          dl.raw
                             ? 'JD source file, un-normalized: admin levels and coordinates, no postal codes'
-                            : 'First 100 rows only — open the detail view for the full CSV/XLSX and the postal-codes/admin-areas split',
+                            : 'First 100 rows only — open the detail view for the postal-codes/admin-areas split',
                         ].join(' — ')}
                         download
                       >
                         ⤓ {dl.fmt.toUpperCase()}
-                        {c.files_are_source && <span className="raw-tag">raw</span>}
+                        {dl.raw && <span className="raw-tag">raw</span>}
                         {dl.sample && <span className="raw-tag">100</span>}
                       </a>
                     </span>

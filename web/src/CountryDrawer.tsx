@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import type { Country, Format, Preview } from './types'
-import { parquetUrl, rawSourceUrl, sampleCsvUrl } from './api'
+import type { Country, Preview } from './types'
+import { parquetUrl, sampleCsvUrl } from './api'
 import { queryParquet } from './duckdb'
 import { bytes, yearOnly } from './format'
 
@@ -121,57 +121,19 @@ export default function CountryDrawer({
               {country.continent_name} · {country.iso3}
             </div>
           </div>
+          {/* Sample only, deliberately -- the full file (raw JD source or the
+              canonical CSV/XLSX) is never offered from the UI, covered country
+              or not. See CountryTable.tsx's quickDownload for the matching
+              per-row behavior. */}
           <span className="dl-buttons">
-            {country.files_are_source ? (
-              (['xlsx', 'csv'] as Format[])
-                .filter((fmt) => country.files[fmt])
-                .map((fmt) => (
-                  <a
-                    key={fmt}
-                    href={rawSourceUrl(country.files[fmt]!.name!)}
-                    className={fmt === 'csv' ? 'warn' : undefined}
-                    title={
-                      fmt === 'csv'
-                        ? 'Excel strips leading zeros from CSVs — use XLSX for Excel'
-                        : undefined
-                    }
-                    download
-                  >
-                    {fmt.toUpperCase()} {bytes(country.files[fmt]?.bytes ?? 0)}
-                    <span className="raw-tag">raw</span>
-                  </a>
-                ))
-            ) : (
-              <>
-                {country.sample_csv && (
-                  <a
-                    href={sampleCsvUrl(country.iso2)}
-                    download
-                    title={`First ${country.sample_csv.rows} rows only, always all-rows scope — see the CSV/XLSX links for the full file`}
-                  >
-                    Sample CSV {bytes(country.sample_csv.bytes)}
-                  </a>
-                )}
-                {(['xlsx', 'csv'] as const).map(
-                  (fmt) =>
-                    country.drive_links?.[fmt] && (
-                      <a
-                        key={fmt}
-                        href={country.drive_links[fmt]}
-                        className={fmt === 'csv' ? 'warn' : undefined}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={
-                          (fmt === 'csv'
-                            ? 'Excel strips leading zeros from CSVs — use XLSX for Excel. '
-                            : '') + 'Opens in Google Drive — always all rows.'
-                        }
-                      >
-                        {fmt.toUpperCase()} ↗
-                      </a>
-                    ),
-                )}
-              </>
+            {country.sample_csv && (
+              <a
+                href={sampleCsvUrl(country.iso2)}
+                download
+                title={`First ${country.sample_csv.rows} rows only`}
+              >
+                Sample CSV {bytes(country.sample_csv.bytes)}
+              </a>
             )}
           </span>
           <button type="button" className="close" onClick={onClose} aria-label="Close">
@@ -295,9 +257,10 @@ export default function CountryDrawer({
                 its postal-code column is absent or entirely blank across{' '}
                 {country.source_rows.toLocaleString('en-US')} rows, confirmed in both the CSV and
                 XLSX where both exist — so it is not part of the canonical dataset and cannot be
-                previewed here. The download is JD&apos;s original{' '}
-                <code>{country.source_file}</code> ({country.source_batch}) with its own column
-                names and encoding, kept for the administrative levels and coordinates below.
+                previewed here. The Sample CSV above is the first{' '}
+                {country.sample_csv?.rows ?? 100} rows of JD&apos;s original{' '}
+                <code>{country.source_file}</code> ({country.source_batch}), kept for the
+                administrative levels and coordinates below.
               </span>
             </div>
 
