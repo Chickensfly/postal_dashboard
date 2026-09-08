@@ -195,8 +195,13 @@ export default function WorldMap({ countries, selected, onSelect }: Props) {
             const isSelected = !!country && country.iso2 === selected
             const isHovered = !!country && country.iso2 === hovered?.iso2
             return (
+              // Keyed by index, not country.iso2: world-atlas has two features that
+              // both resolve to CY (Cyprus proper, and N. Cyprus via NAME_TO_ISO2
+              // above), so iso2 alone collides. `features` is a fixed array parsed
+              // once from the topology file and never reordered, so index is a
+              // stable, safe key here -- see AdminBoundaryMap.tsx's identical fix.
               <path
-                key={country?.iso2 ?? `geo-${i}`}
+                key={i}
                 className={[
                   'country',
                   country ? 'interactive' : '',

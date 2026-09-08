@@ -38,3 +38,8 @@ export const rawSourceUrl = (filename: string) => `${BASE}raw_sources/${filename
 /** A country's 100-row sample CSV, committed directly to git regardless of the
  *  country's full size -- see build_catalog.py's docstring and SAMPLE_ROWS. */
 export const sampleCsvUrl = (iso2: string) => `${BASE}samples/${iso2}.csv`
+
+/** The Admin Boundaries dataset's own 100-row sample CSV -- mirrors
+ *  sampleCsvUrl() above exactly, see build_admin_boundaries_catalog.py's
+ *  docstring. */
+export const adminSampleCsvUrl = (code: string) => `${BASE}admin-boundaries/samples/${code}.csv`

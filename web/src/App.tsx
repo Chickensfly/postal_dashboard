@@ -13,10 +13,11 @@ import {
 } from './sorting'
 import { ADMIN_BOUNDARY_BIN_LABELS, BIN_LABELS, RAMP_VARS } from './mapScale'
 import CountryDrawer from './CountryDrawer'
-import { fetchAdminBoundaryCatalog, fetchCatalog, sampleCsvUrl } from './api'
+import AdminBoundaryDrawer from './AdminBoundaryDrawer'
+import { adminSampleCsvUrl, fetchAdminBoundaryCatalog, fetchCatalog, sampleCsvUrl } from './api'
 import { downloadSelectionZip } from './zip'
 import { bytes, compactRows, yearRange } from './format'
-import type { AdminBoundaryCatalog, Catalog, Country } from './types'
+import type { AdminBoundaryCatalog, AdminBoundaryCountry, Catalog, Country } from './types'
 
 type Theme = 'light' | 'dark' | null
 
@@ -25,9 +26,6 @@ type Theme = 'light' | 'dark' | null
 // unrelated, pre-existing per-country dedup toggle in CountryDrawer.tsx, and
 // this is a top-level tab between two entirely separate datasets.
 type Tab = 'postal' | 'admin_boundaries'
-
-const ADMIN_BOUNDARIES_DRIVE_URL =
-  'https://drive.google.com/drive/folders/1tnPFlp6gGrCYTkijdozqrbYpRyz9FFkS?usp=sharing'
 
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
@@ -56,6 +54,8 @@ export default function App() {
   const [adminSort, setAdminSort] = useState<AdminBoundarySort>({ key: 'name_en', dir: 'asc' })
   const [adminFocused, setAdminFocused] = useState<string | null>(null)
   const adminRowRefs = useRef<Record<string, HTMLTableRowElement | null>>({})
+  const [adminChecked, setAdminChecked] = useState<Set<string>>(new Set())
+  const [adminZipping, setAdminZipping] = useState(false)
 
   useEffect(() => {
     fetchCatalog().then(setCatalog).catch((e: Error) => setError(e.message))
@@ -127,6 +127,48 @@ export default function App() {
     adminRowRefs.current[code]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
   }
 
+  // Selectable = has a sample CSV to put in the zip -- true for every country in
+  // practice (build_admin_boundaries_catalog.py generates one for all 91), but
+  // guarded rather than assumed, same reasoning as postal codes' `selectable`.
+  const adminSelectable = useMemo(() => adminVisible.filter((c) => !!c.sample_csv), [adminVisible])
+  const adminAllSelected =
+    adminSelectable.length > 0 && adminSelectable.every((c) => adminChecked.has(c.code))
+
+  const adminSelectedCountries = useMemo(() => {
+    if (!adminCatalog) return [] as AdminBoundaryCountry[]
+    return adminCatalog.countries.filter((c) => adminChecked.has(c.code))
+  }, [adminCatalog, adminChecked])
+  const adminSendable = adminSelectedCountries.filter((c) => !!c.sample_csv)
+
+  const adminToggleRow = (code: string) =>
+    setAdminChecked((prev) => {
+      const next = new Set(prev)
+      if (!next.delete(code)) next.add(code)
+      return next
+    })
+
+  const adminToggleAll = () =>
+    setAdminChecked((prev) => {
+      const next = new Set(prev)
+      if (adminAllSelected) adminSelectable.forEach((c) => next.delete(c.code))
+      else adminSelectable.forEach((c) => next.add(c.code))
+      return next
+    })
+
+  const runAdminZip = async () => {
+    setAdminZipping(true)
+    try {
+      await downloadSelectionZip(
+        adminSendable.map((c) => ({ name: `${c.code}.csv`, url: adminSampleCsvUrl(c.code) })),
+        `admin-boundaries-samples-${adminSendable.length}.zip`,
+      )
+    } catch (e) {
+      setAdminError((e as Error).message)
+    } finally {
+      setAdminZipping(false)
+    }
+  }
+
   const toggleRow = (iso2: string) =>
     setChecked((prev) => {
       const next = new Set(prev)
@@ -173,6 +215,9 @@ export default function App() {
 
   const { totals } = catalog
   const focusedCountry = focused ? catalog.countries.find((c) => c.iso2 === focused) : undefined
+  const adminFocusedCountry = adminFocused
+    ? adminCatalog?.countries.find((c) => c.code === adminFocused)
+    : undefined
 
   return (
     <div className="app">
@@ -209,7 +254,6 @@ export default function App() {
               <span>
                 <b>{adminCatalog.totals.total_leaf_records.toLocaleString('en-US')}</b> leaf records
               </span>
-              <span>up to tier {adminCatalog.totals.max_tier_reached}</span>
               <span>
                 {yearRange(
                   adminCatalog.totals.last_updated_range[0],
@@ -417,6 +461,11 @@ export default function App() {
               {adminVisible.length} of {adminCatalog?.totals.countries ?? 0} countries ·{' '}
               {compactRows(adminVisible.reduce((n, c) => n + c.total_rows, 0))} leaf records listed
             </span>
+            {adminChecked.size > 0 && (
+              <button type="button" onClick={() => setAdminChecked(new Set())}>
+                clear selection
+              </button>
+            )}
           </div>
 
           <AdminBoundaryTable
@@ -435,6 +484,10 @@ export default function App() {
                     },
               )
             }
+            selectedRows={adminChecked}
+            onToggleRow={adminToggleRow}
+            onToggleAll={adminToggleAll}
+            allSelected={adminAllSelected}
             focused={adminFocused}
             onFocus={adminFocusCountry}
             rowRefs={adminRowRefs}
@@ -442,17 +495,35 @@ export default function App() {
 
           <div className="selection-bar">
             <span className="summary">
-              Full administrative-levels dataset, all {adminCatalog?.totals.countries ?? 91}{' '}
-              countries, CSVs, available via Google Drive
+              {adminChecked.size === 0 ? (
+                <>Select countries to download their sample CSVs (first 100 rows each) as one zip.</>
+              ) : (
+                <>
+                  <b>{adminSendable.length}</b> selected ·{' '}
+                  <b>
+                    {bytes(adminSendable.reduce((n, c) => n + (c.sample_csv?.bytes ?? 0), 0))}
+                  </b>{' '}
+                  as sample CSVs
+                  {adminSendable.length < adminChecked.size && (
+                    <>
+                      {' '}
+                      ·{' '}
+                      <span style={{ color: 'var(--status-warning)' }}>
+                        {adminChecked.size - adminSendable.length} have no sample available
+                      </span>
+                    </>
+                  )}
+                </>
+              )}
             </span>
-            <a
+            <button
+              type="button"
               className="btn-primary"
-              href={ADMIN_BOUNDARIES_DRIVE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              disabled={adminSendable.length === 0 || adminZipping}
+              onClick={runAdminZip}
             >
-              Open in Drive ↗
-            </a>
+              {adminZipping ? 'Zipping…' : `Download ${adminSendable.length || ''} as .zip`}
+            </button>
           </div>
         </section>
         </>
@@ -461,6 +532,9 @@ export default function App() {
 
       {focusedCountry && (
         <CountryDrawer country={focusedCountry} onClose={() => setFocused(null)} />
+      )}
+      {adminFocusedCountry && (
+        <AdminBoundaryDrawer country={adminFocusedCountry} onClose={() => setAdminFocused(null)} />
       )}
     </div>
   )

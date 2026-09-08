@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
-import type { Country, Format, Preview, View } from './types'
+import type { Country, Format, Preview } from './types'
 import { parquetUrl, rawSourceUrl, sampleCsvUrl } from './api'
 import { queryParquet } from './duckdb'
 import { bytes, yearOnly } from './format'
-
-const VIEWS: View[] = ['postal_codes', 'admin_areas']
-const VIEW_LABEL: Record<View, string> = { postal_codes: 'Postal Codes', admin_areas: 'Admin Areas' }
 
 // Same columns the old server-side search scanned -- postal code fields, place
 // name, and every region_N_en/lc pair. Ordered widest-value-first for readability.
@@ -16,13 +13,8 @@ const SEARCHABLE = [
   ...[1, 2, 3, 4, 5].flatMap((n) => [`region_${n}_en`, `region_${n}_lc`]),
 ]
 
-// This runs directly against whichever file is on screen (all-rows or a dedup
-// view) -- unlike the old server, which joined back to the master parquet so a
-// search term could match a value a view's dedupe had blanked out. There's no
-// master file on a static site to join against, so that's a known, deliberate
-// simplification: a term only a blanked field contained won't surface a match in
-// that view (switching to the other view, or all rows if this country still
-// offers it another way, will still find it).
+// This runs directly against the country's all-rows parquet file -- unlike the
+// old server, which joined back to the master parquet.
 async function searchCountry(
   url: string,
   q: string,
@@ -76,11 +68,6 @@ export default function CountryDrawer({
   const [preview, setPreview] = useState<Preview | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  // Only meaningful when country.view_stats exists (every covered country; the 9
-  // no-postal-code countries don't) -- the toggle is hidden otherwise and the
-  // all-rows file is queried directly.
-  const [view, setView] = useState<View>('postal_codes')
-  const supportsViews = !!country.view_stats
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
@@ -88,11 +75,10 @@ export default function CountryDrawer({
     return () => window.removeEventListener('keydown', onKey)
   }, [onClose])
 
-  // Reset the query (and view, back to its default) when switching countries, so a
-  // stale search or a toggle chosen for one country doesn't silently carry to the next.
+  // Reset the query when switching countries, so a stale search doesn't silently
+  // carry over to the next one.
   useEffect(() => {
     setQuery('')
-    setView('postal_codes')
   }, [country.iso2])
 
   useEffect(() => {
@@ -101,7 +87,7 @@ export default function CountryDrawer({
       return
     }
     let cancelled = false
-    const url = parquetUrl(country.iso2, supportsViews ? view : undefined)
+    const url = parquetUrl(country.iso2)
     const timer = setTimeout(() => {
       setLoading(true)
       setError(null)
@@ -114,9 +100,9 @@ export default function CountryDrawer({
       cancelled = true
       clearTimeout(timer)
     }
-  }, [country.iso2, country.status, query, view, supportsViews])
+  }, [country.iso2, country.status, query])
 
-  const activeRows = supportsViews ? country.view_stats![view].rows : country.rows
+  const activeRows = country.rows
 
   return (
     <div
@@ -178,7 +164,7 @@ export default function CountryDrawer({
                         title={
                           (fmt === 'csv'
                             ? 'Excel strips leading zeros from CSVs — use XLSX for Excel. '
-                            : '') + 'Opens in Google Drive — always all rows, regardless of the view below.'
+                            : '') + 'Opens in Google Drive — always all rows.'
                         }
                       >
                         {fmt.toUpperCase()} ↗
@@ -195,13 +181,7 @@ export default function CountryDrawer({
 
         <div className="drawer-meta">
           <div>
-            <div className="k">
-              {country.files_are_source
-                ? 'Source rows'
-                : supportsViews
-                  ? VIEW_LABEL[view]
-                  : 'Postal codes'}
-            </div>
+            <div className="k">{country.files_are_source ? 'Source rows' : 'Postal codes'}</div>
             <div className="v">
               {(country.files_are_source ? country.source_rows : activeRows).toLocaleString(
                 'en-US',
@@ -260,25 +240,6 @@ export default function CountryDrawer({
             </div>
 
             <div className="preview-controls">
-              {supportsViews && (
-                <span className="fmt-group" role="group" aria-label="View">
-                  {VIEWS.map((v) => (
-                    <button
-                      key={v}
-                      type="button"
-                      aria-pressed={view === v}
-                      onClick={() => setView(v)}
-                      title={
-                        v === 'postal_codes'
-                          ? 'One row per postal code; admin fields blank where they vary'
-                          : 'One row per admin area; postal code blank where it varies'
-                      }
-                    >
-                      {VIEW_LABEL[v]}
-                    </button>
-                  ))}
-                </span>
-              )}
               <input
                 type="search"
                 value={query}

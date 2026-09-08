@@ -697,14 +697,6 @@ table.countries tbody tr.no-data td {
   cursor: not-allowed;
 }
 
-/* .btn-primary is also used on the Admin Boundaries tab's Drive-folder link (a
-   plain <a>, not a <button>) -- an anchor needs display switched to inline-block
-   for the padding above to read the same way, and its default underline removed. */
-a.btn-primary {
-  display: inline-block;
-  text-decoration: none;
-}
-
 .btn-quiet {
   padding: 6px 10px;
   border: 1px solid var(--border-strong);

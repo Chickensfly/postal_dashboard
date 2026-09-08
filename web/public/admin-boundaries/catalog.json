@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-07T11:41:39+08:00",
+ "generated_at": "2026-09-08T10:10:37+08:00",
  "totals": {
   "countries": 91,
   "total_leaf_records": 548318,
@@ -35,7 +35,11 @@
     }
    ],
    "total_rows": 5831,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15766,
+    "rows": 100
+   }
   },
   {
    "code": "AU",
@@ -62,7 +66,11 @@
     }
    ],
    "total_rows": 15946,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 21750,
+    "rows": 100
+   }
   },
   {
    "code": "AT",
@@ -89,7 +97,11 @@
     }
    ],
    "total_rows": 1941,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 16618,
+    "rows": 100
+   }
   },
   {
    "code": "BD",
@@ -116,7 +128,11 @@
     }
    ],
    "total_rows": 5158,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11579,
+    "rows": 100
+   }
   },
   {
    "code": "BY",
@@ -135,7 +151,11 @@
     }
    ],
    "total_rows": 119,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10042,
+    "rows": 100
+   }
   },
   {
    "code": "BE",
@@ -162,7 +182,11 @@
     }
    ],
    "total_rows": 565,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 18577,
+    "rows": 100
+   }
   },
   {
    "code": "BO",
@@ -185,7 +209,11 @@
     }
    ],
    "total_rows": 344,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14076,
+    "rows": 100
+   }
   },
   {
    "code": "BR",
@@ -208,7 +236,11 @@
     }
    ],
    "total_rows": 26220,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 13676,
+    "rows": 100
+   }
   },
   {
    "code": "BN",
@@ -231,7 +263,11 @@
     }
    ],
    "total_rows": 394,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11405,
+    "rows": 100
+   }
   },
   {
    "code": "BG",
@@ -254,7 +290,11 @@
     }
    ],
    "total_rows": 5292,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 17782,
+    "rows": 100
+   }
   },
   {
    "code": "CM",
@@ -277,7 +317,11 @@
     }
    ],
    "total_rows": 360,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14028,
+    "rows": 100
+   }
   },
   {
    "code": "CA",
@@ -300,7 +344,11 @@
     }
    ],
    "total_rows": 5581,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15518,
+    "rows": 100
+   }
   },
   {
    "code": "CL",
@@ -323,7 +371,11 @@
     }
    ],
    "total_rows": 346,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13284,
+    "rows": 100
+   }
   },
   {
    "code": "CO",
@@ -342,7 +394,11 @@
     }
    ],
    "total_rows": 1122,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10100,
+    "rows": 100
+   }
   },
   {
    "code": "CY",
@@ -365,7 +421,11 @@
     }
    ],
    "total_rows": 598,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 14793,
+    "rows": 100
+   }
   },
   {
    "code": "CZ",
@@ -388,7 +448,11 @@
     }
    ],
    "total_rows": 15181,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 20574,
+    "rows": 100
+   }
   },
   {
    "code": "CD",
@@ -407,7 +471,11 @@
     }
    ],
    "total_rows": 244,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 17844,
+    "rows": 100
+   }
   },
   {
    "code": "DK",
@@ -426,7 +494,11 @@
     }
    ],
    "total_rows": 99,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12274,
+    "rows": 99
+   }
   },
   {
    "code": "EC",
@@ -449,7 +521,11 @@
     }
    ],
    "total_rows": 768,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12806,
+    "rows": 100
+   }
   },
   {
    "code": "EG",
@@ -468,7 +544,11 @@
     }
    ],
    "total_rows": 343,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13295,
+    "rows": 100
+   }
   },
   {
    "code": "EE",
@@ -491,7 +571,11 @@
     }
    ],
    "total_rows": 4702,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 12167,
+    "rows": 100
+   }
   },
   {
    "code": "ET",
@@ -514,7 +598,11 @@
     }
    ],
    "total_rows": 1148,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 11934,
+    "rows": 100
+   }
   },
   {
    "code": "FI",
@@ -537,7 +625,11 @@
     }
    ],
    "total_rows": 295,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11744,
+    "rows": 100
+   }
   },
   {
    "code": "FR",
@@ -564,7 +656,11 @@
     }
    ],
    "total_rows": 34819,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 16670,
+    "rows": 100
+   }
   },
   {
    "code": "DE",
@@ -591,7 +687,11 @@
     }
    ],
    "total_rows": 12408,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14645,
+    "rows": 100
+   }
   },
   {
    "code": "GH",
@@ -614,7 +714,11 @@
     }
    ],
    "total_rows": 6577,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 13802,
+    "rows": 100
+   }
   },
   {
    "code": "GR",
@@ -637,7 +741,11 @@
     }
    ],
    "total_rows": 791,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 19853,
+    "rows": 100
+   }
   },
   {
    "code": "GT",
@@ -656,7 +764,11 @@
     }
    ],
    "total_rows": 342,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14148,
+    "rows": 100
+   }
   },
   {
    "code": "HK",
@@ -671,7 +783,11 @@
     }
    ],
    "total_rows": 18,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 2088,
+    "rows": 18
+   }
   },
   {
    "code": "HU",
@@ -698,7 +814,11 @@
     }
    ],
    "total_rows": 3178,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14696,
+    "rows": 100
+   }
   },
   {
    "code": "IN",
@@ -721,7 +841,11 @@
     }
    ],
    "total_rows": 2336,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 12048,
+    "rows": 100
+   }
   },
   {
    "code": "ID",
@@ -748,7 +872,11 @@
     }
    ],
    "total_rows": 81911,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12696,
+    "rows": 100
+   }
   },
   {
    "code": "IQ",
@@ -771,7 +899,11 @@
     }
    ],
    "total_rows": 294,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 16824,
+    "rows": 100
+   }
   },
   {
    "code": "IE",
@@ -790,7 +922,11 @@
     }
    ],
    "total_rows": 29,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 3521,
+    "rows": 29
+   }
   },
   {
    "code": "IL",
@@ -813,7 +949,11 @@
     }
    ],
    "total_rows": 2829,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 15785,
+    "rows": 100
+   }
   },
   {
    "code": "IT",
@@ -836,7 +976,11 @@
     }
    ],
    "total_rows": 7896,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 13030,
+    "rows": 100
+   }
   },
   {
    "code": "JP",
@@ -855,7 +999,11 @@
     }
    ],
    "total_rows": 1892,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12045,
+    "rows": 100
+   }
   },
   {
    "code": "JO",
@@ -874,7 +1022,11 @@
     }
    ],
    "total_rows": 461,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15097,
+    "rows": 100
+   }
   },
   {
    "code": "KZ",
@@ -893,7 +1045,11 @@
     }
    ],
    "total_rows": 218,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14202,
+    "rows": 100
+   }
   },
   {
    "code": "KE",
@@ -916,7 +1072,11 @@
     }
    ],
    "total_rows": 1442,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13380,
+    "rows": 100
+   }
   },
   {
    "code": "KW",
@@ -931,7 +1091,11 @@
     }
    ],
    "total_rows": 6,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 900,
+    "rows": 6
+   }
   },
   {
    "code": "LV",
@@ -954,7 +1118,11 @@
     }
    ],
    "total_rows": 5964,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 12680,
+    "rows": 100
+   }
   },
   {
    "code": "LT",
@@ -981,7 +1149,11 @@
     }
    ],
    "total_rows": 31539,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 16208,
+    "rows": 100
+   }
   },
   {
    "code": "LU",
@@ -1004,7 +1176,11 @@
     }
    ],
    "total_rows": 526,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13552,
+    "rows": 100
+   }
   },
   {
    "code": "MY",
@@ -1031,7 +1207,11 @@
     }
    ],
    "total_rows": 886,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 17902,
+    "rows": 100
+   }
   },
   {
    "code": "ML",
@@ -1054,7 +1234,11 @@
     }
    ],
    "total_rows": 701,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11451,
+    "rows": 100
+   }
   },
   {
    "code": "MX",
@@ -1073,7 +1257,11 @@
     }
    ],
    "total_rows": 2457,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12571,
+    "rows": 100
+   }
   },
   {
    "code": "MN",
@@ -1096,7 +1284,11 @@
     }
    ],
    "total_rows": 339,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15630,
+    "rows": 100
+   }
   },
   {
    "code": "MA",
@@ -1119,7 +1311,11 @@
     }
    ],
    "total_rows": 1507,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 20044,
+    "rows": 100
+   }
   },
   {
    "code": "MM",
@@ -1150,7 +1346,11 @@
     }
    ],
    "total_rows": 15883,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 26924,
+    "rows": 100
+   }
   },
   {
    "code": "NP",
@@ -1173,7 +1373,11 @@
     }
    ],
    "total_rows": 771,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 11655,
+    "rows": 100
+   }
   },
   {
    "code": "NL",
@@ -1196,7 +1400,11 @@
     }
    ],
    "total_rows": 2499,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15012,
+    "rows": 100
+   }
   },
   {
    "code": "NZ",
@@ -1215,7 +1423,11 @@
     }
    ],
    "total_rows": 75,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 9589,
+    "rows": 75
+   }
   },
   {
    "code": "NG",
@@ -1234,7 +1446,11 @@
     }
    ],
    "total_rows": 774,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 9526,
+    "rows": 100
+   }
   },
   {
    "code": "NO",
@@ -1253,7 +1469,11 @@
     }
    ],
    "total_rows": 357,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10898,
+    "rows": 100
+   }
   },
   {
    "code": "OM",
@@ -1272,7 +1492,11 @@
     }
    ],
    "total_rows": 60,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 7989,
+    "rows": 60
+   }
   },
   {
    "code": "PK",
@@ -1295,7 +1519,11 @@
     }
    ],
    "total_rows": 141,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12449,
+    "rows": 100
+   }
   },
   {
    "code": "PA",
@@ -1318,7 +1546,11 @@
     }
    ],
    "total_rows": 724,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11322,
+    "rows": 100
+   }
   },
   {
    "code": "PE",
@@ -1341,7 +1573,11 @@
     }
    ],
    "total_rows": 1815,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10275,
+    "rows": 100
+   }
   },
   {
    "code": "PH",
@@ -1364,7 +1600,11 @@
     }
    ],
    "total_rows": 41947,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 11351,
+    "rows": 100
+   }
   },
   {
    "code": "PL",
@@ -1391,7 +1631,11 @@
     }
    ],
    "total_rows": 52325,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 19232,
+    "rows": 100
+   }
   },
   {
    "code": "PT",
@@ -1414,7 +1658,11 @@
     }
    ],
    "total_rows": 33713,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11547,
+    "rows": 100
+   }
   },
   {
    "code": "QA",
@@ -1433,7 +1681,11 @@
     }
    ],
    "total_rows": 75,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10003,
+    "rows": 75
+   }
   },
   {
    "code": "UZ",
@@ -1452,7 +1704,11 @@
     }
    ],
    "total_rows": 199,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 15772,
+    "rows": 100
+   }
   },
   {
    "code": "CG",
@@ -1471,7 +1727,11 @@
     }
    ],
    "total_rows": 89,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 13410,
+    "rows": 89
+   }
   },
   {
    "code": "RO",
@@ -1490,7 +1750,11 @@
     }
    ],
    "total_rows": 3135,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10844,
+    "rows": 100
+   }
   },
   {
    "code": "RU",
@@ -1509,7 +1773,11 @@
     }
    ],
    "total_rows": 2445,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 15873,
+    "rows": 100
+   }
   },
   {
    "code": "SA",
@@ -1532,7 +1800,11 @@
     }
    ],
    "total_rows": 5111,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 21180,
+    "rows": 100
+   }
   },
   {
    "code": "RS",
@@ -1563,7 +1835,11 @@
     }
    ],
    "total_rows": 1153,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 22712,
+    "rows": 100
+   }
   },
   {
    "code": "SG",
@@ -1586,7 +1862,11 @@
     }
    ],
    "total_rows": 332,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 14832,
+    "rows": 100
+   }
   },
   {
    "code": "SK",
@@ -1609,7 +1889,11 @@
     }
    ],
    "total_rows": 3291,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12979,
+    "rows": 100
+   }
   },
   {
    "code": "SI",
@@ -1628,7 +1912,11 @@
     }
    ],
    "total_rows": 192,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11623,
+    "rows": 100
+   }
   },
   {
    "code": "ZA",
@@ -1663,7 +1951,11 @@
     }
    ],
    "total_rows": 4277,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 15509,
+    "rows": 100
+   }
   },
   {
    "code": "KR",
@@ -1686,7 +1978,11 @@
     }
    ],
    "total_rows": 3932,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 14413,
+    "rows": 100
+   }
   },
   {
    "code": "ES",
@@ -1713,7 +2009,11 @@
     }
    ],
    "total_rows": 12402,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 14247,
+    "rows": 100
+   }
   },
   {
    "code": "SR",
@@ -1732,7 +2032,11 @@
     }
    ],
    "total_rows": 60,
-   "last_updated": "2026-09-04"
+   "last_updated": "2026-09-04",
+   "sample_csv": {
+    "bytes": 6412,
+    "rows": 60
+   }
   },
   {
    "code": "SE",
@@ -1755,7 +2059,11 @@
     }
    ],
    "total_rows": 1804,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12772,
+    "rows": 100
+   }
   },
   {
    "code": "CH",
@@ -1778,7 +2086,11 @@
     }
    ],
    "total_rows": 4240,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13447,
+    "rows": 100
+   }
   },
   {
    "code": "TW",
@@ -1797,7 +2109,11 @@
     }
    ],
    "total_rows": 337,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13046,
+    "rows": 100
+   }
   },
   {
    "code": "TZ",
@@ -1820,7 +2136,11 @@
     }
    ],
    "total_rows": 116,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11057,
+    "rows": 100
+   }
   },
   {
    "code": "TH",
@@ -1839,7 +2159,11 @@
     }
    ],
    "total_rows": 812,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 17934,
+    "rows": 100
+   }
   },
   {
    "code": "TG",
@@ -1862,7 +2186,11 @@
     }
    ],
    "total_rows": 373,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 9987,
+    "rows": 100
+   }
   },
   {
    "code": "TR",
@@ -1885,7 +2213,11 @@
     }
    ],
    "total_rows": 36119,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 10501,
+    "rows": 100
+   }
   },
   {
    "code": "UG",
@@ -1912,7 +2244,11 @@
     }
    ],
    "total_rows": 5340,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 11125,
+    "rows": 100
+   }
   },
   {
    "code": "UA",
@@ -1935,7 +2271,11 @@
     }
    ],
    "total_rows": 1297,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 23872,
+    "rows": 100
+   }
   },
   {
    "code": "AE",
@@ -1958,7 +2298,11 @@
     }
    ],
    "total_rows": 530,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 20849,
+    "rows": 100
+   }
   },
   {
    "code": "GB",
@@ -1985,7 +2329,11 @@
     }
    ],
    "total_rows": 6241,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 18764,
+    "rows": 100
+   }
   },
   {
    "code": "US",
@@ -2004,7 +2352,11 @@
     }
    ],
    "total_rows": 3148,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13272,
+    "rows": 100
+   }
   },
   {
    "code": "UY",
@@ -2027,7 +2379,11 @@
     }
    ],
    "total_rows": 2003,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13554,
+    "rows": 100
+   }
   },
   {
    "code": "VE",
@@ -2046,7 +2402,11 @@
     }
    ],
    "total_rows": 897,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 13200,
+    "rows": 100
+   }
   },
   {
    "code": "VN",
@@ -2065,7 +2425,11 @@
     }
    ],
    "total_rows": 3321,
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-09-02",
+   "sample_csv": {
+    "bytes": 12880,
+    "rows": 100
+   }
   }
  ]
 }

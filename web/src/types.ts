@@ -118,6 +118,11 @@ export type AdminBoundaryCountry = {
    *  as Country['last_updated'] in build_catalog.py (see that script's doc
    *  comment: "last updated" is the source file's mtime, not a fabricated date). */
   last_updated: string
+  /** First 100 rows, committed directly to git
+   *  (web/public/admin-boundaries/samples/<CODE>.csv) -- present for every
+   *  country. Matches Country['sample_csv'] exactly; what the sidebar's bulk
+   *  "select several, download as one zip" feature bundles. */
+  sample_csv?: { bytes: number; rows: number }
 }
 
 export type AdminBoundaryCatalog = {
